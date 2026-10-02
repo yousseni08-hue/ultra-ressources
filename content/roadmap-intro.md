@@ -14,19 +14,6 @@ Ton palier se calcule sur la taille de ton équipe. Un salon de coiffure et une 
 
 Si une fonction est en retard, commence par elle. C'est celle qui te bloquera au prochain palier.
 
-## Ton rituel chiffré du lundi
-
-Dans nos données, les patrons qui regardent leurs chiffres chaque semaine vont 1,41 fois plus souvent au bout de l'accompagnement. C'est le premier réflexe à installer.
-
-Chaque lundi matin, avant le premier chantier, le premier service ou l'ouverture de la boutique, note quatre chiffres de la semaine passée :
-
-- ce que tu as encaissé ;
-- les demandes reçues, et ce que tu as vendu ou signé ;
-- ta trésorerie disponible ;
-- le chiffre clé de ton métier : coût matière, heures facturées, panier moyen ou taux de retour des clients.
-
-Garde-les dans le même tableau. Au bout de quatre lundis, tu vois ce qui monte, ce qui baisse et où intervenir cette semaine.
-
 ## Ton objectif chiffré à 4 mois
 
 Écris maintenant ton objectif pour les quatre prochains mois, puis le moyen précis que tu vas utiliser pour l'atteindre.

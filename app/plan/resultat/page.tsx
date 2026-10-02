@@ -97,7 +97,7 @@ function Fns({ functions, s }: { functions: Roadmap['functions']; s: RoadmapStag
 export default async function RoadmapResult({ searchParams }: { searchParams: Promise<{ t?: string }> }) {
   const { t } = await searchParams;
   const tok = verifyToken<Tok>(t);
-  if (!tok || tok.r !== 'roadmap') redirect('/roadmap');
+  if (!tok || tok.r !== 'roadmap') redirect('/plan');
 
   const rm = getRoadmap();
   const idx = Math.max(0, rm.stages.findIndex((s) => s.id === Number(tok.s)));

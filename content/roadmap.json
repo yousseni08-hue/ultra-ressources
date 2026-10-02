@@ -198,13 +198,13 @@
         "fidelisation": "Choisis une seule suite logique à proposer : entretien, complément ou prochain rendez-vous. Au moment de payer, dis : « La suite logique, c'est ça. Tu veux que je te la bloque maintenant ? » Si le client est content, envoie le lien d'avis avant qu'il parte.",
         "recrutement": "Pendant 5 jours, garde une feuille dans ta poche. Pour chaque tâche, note les minutes passées et si elle fait rentrer de l'argent. Vendredi, entoure les 3 tâches longues qui ne vendent rien : manutention, rangement, livraison ou administratif. Ce sont les premières à confier.",
         "cadre": "Avant la première embauche, appelle ton expert-comptable pendant 30 minutes. Demande le coût total par mois, le type de contrat et qui prépare la paie. Pour un sous-traitant, mets au minimum par écrit le travail, le prix, la date et qui corrige si ça ne va pas.",
-        "finance": "Demande à ta banque un sous-compte pour la TVA et les charges. Chaque lundi avant de démarrer, prends 15 minutes et note sur la même feuille : encaissé la semaine passée, ventes signées, demandes reçues et argent disponible.",
+        "finance": "Demande à ta banque un sous-compte pour la TVA et les charges. À chaque encaissement, vire tout de suite la TVA et les charges dessus : ce qui reste sur le compte principal, c'est ce que tu peux vraiment dépenser.",
         "outils": "Cette semaine, choisis un seul endroit pour les rendez-vous et les relances : ton agenda papier ou celui du téléphone. Chaque demande reçoit tout de suite une date de rappel. Garde ton logiciel actuel pour les devis et factures, s'il fait déjà le travail."
       },
       "top3": [
         "Bloque 45 minutes le même jour chaque semaine et rappelle d'abord les 10 devis les plus élevés.",
         "Pendant 5 jours, calcule ton taux horaire tâche par tâche et entoure les 3 plus bas.",
-        "Chaque lundi avant de démarrer, prends 15 minutes pour noter ton encaissé, tes ventes signées, tes demandes et ta trésorerie."
+        "Ouvre un sous-compte pour la TVA et les charges, et vire-les dessus à chaque encaissement."
       ],
       "examples": {
         "btp": "Tu poses la journée et tu chiffres le soir. Confie la manutention à un apprenti, garde l'heure récupérée pour les relances et demande l'acompte pendant la visite dès que le devis est accepté.",
@@ -256,7 +256,7 @@
         "fidelisation": "Prépare un message court avec la date, l'heure, ce que le client doit prévoir et le nom de son contact. À la fin, la personne qui encaisse propose une seule suite : « Pour garder le résultat, le prochain passage est dans X semaines. Je te le bloque ? »",
         "recrutement": "Écris l'annonce maintenant, même si tu embauches dans 2 mois : horaires réels, 5 tâches, salaire et responsable. Fais un appel de 10 minutes avec les mêmes 5 questions, puis garde les 3 bons numéros dans une note appelée « candidats à rappeler ».",
         "cadre": "Avant le premier jour, fais la déclaration d'embauche, signe le contrat et confirme par écrit les horaires, le lieu et le responsable. Ton expert-comptable ou ton prestataire paie prépare la paie. Personne ne démarre sur une promesse orale.",
-        "finance": "Demande à ton expert-comptable le coût total par mois de chaque poste, charges comprises. En face, note ce que le poste produit ou encaisse avec une règle adaptée au métier. Le lundi, ajoute quatre chiffres : encaissé, ventes signées, demandes et argent disponible.",
+        "finance": "Demande à ton expert-comptable le coût total par mois de chaque poste, charges comprises. En face, note ce que le poste produit ou encaisse avec une règle adaptée au métier. Un poste qui coûte plus qu'il ne rapporte depuis 3 mois, tu le règles avant d'embaucher à nouveau.",
         "outils": "Mets l'équipe sur un seul planning, même si c'est un tableau blanc ou un agenda partagé. Une seule personne le met à jour. Garde le logiciel de devis et factures que l'équipe sait déjà utiliser et supprime seulement les doubles."
       },
       "top3": [
@@ -295,7 +295,7 @@
       "signsOk": [
         "Tu connais les 2 ou 3 prestations qui font l'essentiel du chiffre et de la marge.",
         "L'équipe refuse ou redirige les demandes hors spécialité sans t'appeler.",
-        "Chaque lundi, tu suis les demandes, les ventes signées et l'encaissé.",
+        "Tu sais combien de demandes, de ventes signées et d'encaissé tu as fait le mois dernier, sans fouiller.",
         "Chaque salarié a une fiche de poste et un seul responsable.",
         "Ton tableau de trésorerie couvre les 3 prochains mois."
       ],

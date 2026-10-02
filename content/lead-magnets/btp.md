@@ -104,9 +104,9 @@ Ensuite, laisse-le répondre. Ne remplis pas le silence.
 
 ### 4. Fais payer le démarrage par le chantier
 
-La règle : 30 % d'acompte minimum à la signature. Marvin pousse jusqu'à 50 % de la prestation encaissés avant de démarrer, par exemple 30 % à la signature puis 20 % avant la commande des matériaux. En dessous, c'est toi qui finances le chantier de ton client : tu paies les matériaux, la benne et tes gars avec ton compte, et s'il paie en retard, c'est toi qui prends le retard.
+La règle : en général, on recommande à un artisan du BTP de prendre entre 30 et 50 % d'acompte à la signature, selon le chantier. Plus il y a de matériaux à avancer, plus tu montes vers 50 %. En dessous, c'est toi qui finances le chantier de ton client : tu paies les matériaux, la benne et tes gars avec ton compte, et s'il paie en retard, c'est toi qui prends le retard.
 
-Avant d'envoyer le devis, regarde ce que tu vas sortir avant le premier règlement : matériaux, location, benne, sous-traitance et premières journées de l'équipe. L'acompte doit couvrir ce montant. Dans un audit BTP, Marvin prend l'exemple d'une prestation vendue 200 € qui coûte environ 70 € à produire : avec 35 % encaissés au démarrage, les 70 € sont couverts. Sur ton chantier, pars de tes vrais achats, puis écris le pourcentage, le montant et la date directement sur le devis.
+Avant d'envoyer le devis, regarde ce que tu vas sortir avant le premier règlement : matériaux, location, benne, sous-traitance et premières journées de l'équipe. L'acompte doit couvrir ce montant. Exemple : une prestation vendue 200 € qui coûte environ 70 € à produire. Avec 35 % encaissés à la signature, les 70 € sont couverts. Sur ton chantier, pars de tes vrais achats, puis écris le pourcentage, le montant et la date directement sur le devis.
 
 > Pour confirmer le chantier et lancer les commandes, l'acompte est de [montant] €. Dès qu'il est encaissé, je bloque la date et je commande le matériel.
 

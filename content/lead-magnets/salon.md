@@ -26,7 +26,7 @@ testimonials:
     source: "https://www.ultra-consulting.eu/transformations/amelie-demanet (lu le 02/10/2026)"
   - name: "Charlotte Léonard"
     business: "LC Massage Move, massothérapie à Charleroi (Belgique)"
-    result: "Avant : un chiffre d'affaires limité par les heures qu'elle pouvait masser elle-même, « pas les codes, aucun outil ». Levier : un cadre chaque semaine, un premier recrutement et une formation à 1 800 € créée à partir de sa méthode. Après : un chiffre d'affaires multiplié par 3, avec la barre des 10 000 € passée après deux mois, puis tenue le mois suivant."
+    result: "Avant : un chiffre d'affaires limité par les heures qu'elle pouvait masser elle-même, « pas les codes, aucun outil ». Levier : un cadre chaque semaine, un premier recrutement et une formation à 1 800 € créée à partir de sa méthode. Après : un chiffre d'affaires multiplié par 2,5, avec la barre des 10 000 € passée après deux mois, puis tenue le mois suivant."
     quote: "Je n'ai jamais autant cru en moi que dans ce projet."
     url: "https://www.ultra-consulting.eu/transformations/charlotte-leonard"
     source: "https://www.ultra-consulting.eu/transformations/charlotte-leonard (lu le 02/10/2026)"
@@ -200,6 +200,6 @@ Si ton agenda est complet trois semaines à l'avance sur une prestation, c'est q
 4. **Ouvre ton agenda des quatre dernières semaines** et entoure les trois demi-journées les plus vides : ce sont les premiers créneaux que tu proposes.
 5. **Écris le protocole de ta prestation phare numéro un,** une page, ce soir.
 
-Thalia a doublé son chiffre en écrivant son accueil et sa vente. Amélie a fait +85 % au bilan de ses 5 premières semaines en revalorisant ses tarifs et en ouvrant 6 jours sur 7. Charlotte a multiplié son chiffre par 3 après un premier recrutement et une semaine cadrée. Ce sont leurs résultats, pas une garantie pour ton salon. La méthode te donne quoi regarder, quoi dire et quoi changer avec tes propres chiffres.
+Thalia a doublé son chiffre en écrivant son accueil et sa vente. Amélie a fait +85 % au bilan de ses 5 premières semaines en revalorisant ses tarifs et en ouvrant 6 jours sur 7. Charlotte a multiplié son chiffre par 2,5 après un premier recrutement et une semaine cadrée. Ce sont leurs résultats, pas une garantie pour ton salon. La méthode te donne quoi regarder, quoi dire et quoi changer avec tes propres chiffres.
 
 Si ton salon ou ton institut fait déjà plus de 200 000 € de chiffre d'affaires par an et que tu veux qu'on regarde ensemble lequel de tes 5 chiffres bloque, réserve ton appel avec l'équipe Ultra juste en dessous.

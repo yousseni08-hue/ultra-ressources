@@ -4,7 +4,7 @@ import { getRoadmap, listLeadMagnets } from '@/lib/content';
 // Index interne (non indexé) : sert à l'équipe pour retrouver les liens à mettre dans CloseMate.
 export default function Home() {
   const rm = getRoadmap();
-  const items = [{ slug: 'roadmap', title: rm.title, keyword: rm.keyword, niche: 'Tous secteurs' }, ...listLeadMagnets()];
+  const items = [{ slug: 'plan', title: rm.title, keyword: rm.keyword, niche: 'Tous secteurs' }, ...listLeadMagnets()];
   return (
     <main className="wrap hero">
       <span className="kicker">Ressources gratuites</span>

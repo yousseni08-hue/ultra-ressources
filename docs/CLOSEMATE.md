@@ -8,7 +8,7 @@ Décision Yakine (02/10) : des mots courts et simples que les gens tapent sans r
 
 | Mot-clé | Ressource | Lien |
 |---|---|---|
-| `PLAN` | Le plan pour augmenter ton profit et sortir de l'opérationnel dans les 12 prochains mois (quiz) | `/roadmap?utm_medium=dm&utm_campaign=plan&kw=PLAN` |
+| `PLAN` | Le plan pour augmenter ton profit et sortir de l'opérationnel dans les 12 prochains mois (quiz) | `/plan?utm_medium=dm&utm_campaign=plan&kw=PLAN` |
 | `BTP` | Comment augmenter ton chiffre d'affaires de 30 % quand tu es artisan du BTP | `/btp?utm_medium=dm&utm_campaign=btp&kw=BTP` |
 | `RESTO` | La méthode pour augmenter ton panier moyen de 30 % et doubler ton chiffre d'affaires | `/resto?utm_medium=dm&utm_campaign=resto&kw=RESTO` |
 | `SALON` | La ressource beauté (coiffure, barbier, institut, ongles, cils, spa) | `/salon?utm_medium=dm&utm_campaign=salon&kw=SALON` |

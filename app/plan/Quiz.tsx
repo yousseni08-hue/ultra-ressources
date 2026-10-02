@@ -100,7 +100,7 @@ export default function Quiz({
       <div>
         {header}
         <h2 style={{ marginTop: 4 }}>{q.label}</h2>
-        <p style={{ color: 'var(--muted)' }}>On s’en sert pour écrire ta roadmap à ton nom.</p>
+        <p style={{ color: 'var(--muted)' }}>On s’en sert pour écrire ton plan à ton nom.</p>
         <input
           ref={inputRef}
           className={`txt${textErr ? ' err' : ''}`}

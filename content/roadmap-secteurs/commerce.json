@@ -73,7 +73,7 @@
       "actions": [
         "Sors de ta caisse les ventes des 3 derniers mois par famille. Pour chacune, calcule : ventes moins coût d'achat. Note aussi la valeur du stock qui n'a pas bougé depuis 90 jours.",
         "Classe tes familles. Celles qui vendent bien et te laissent beaucoup, mets-les en vitrine et près de la caisse. Celles qui dorment depuis plus de 3 mois, arrête de les racheter.",
-        "Chaque lundi, regarde quatre chiffres de la semaine passée : entrées, ventes, panier moyen, marge. Dix minutes, toujours le même jour."
+        "Refais ce classement chaque fin de mois avant de passer tes commandes : tu rachètes ce qui tourne et te laisse de la marge, pas ce que le fournisseur te pousse."
       ],
       "money": { "pctOfCA": 0.04, "explain": "Ordre de grandeur affiché : chiffre annuel × 4 %. Confirme-le avec la marge des familles poussées et les achats de stock dormant que tu arrêtes." }
     },
@@ -83,7 +83,7 @@
       "actions": [
         "Écris d'abord les 4 tâches qui bloquent une journée sans toi : ouverture, commande urgente, remise client et caisse du soir. Une demi-page par tâche suffit.",
         "Cette semaine, donne une fiche au vendeur responsable et laisse-le faire un mardi entier. Le soir, contrôle la caisse et les incidents avec lui sans refaire tout ce qu'il a fait.",
-        "Chaque lundi avant l'ouverture, garde 15 minutes debout près de la caisse : entrées, tickets, panier moyen, incidents et une seule priorité pour la semaine."
+        "Quand le mardi passe sans appel, ajoute une deuxième journée la semaine suivante. Ne reprends pas la main sur une tâche qu'il sait faire : corrige la fiche à la place."
       ],
       "money": null,
       "proof": "Raphaël Pasau"

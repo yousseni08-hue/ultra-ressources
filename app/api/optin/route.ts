@@ -82,7 +82,7 @@ export async function POST(req: Request) {
   const notify = await handleLead(lead);
 
   const token = signToken({ r: resource, n: firstName, sec: sector, ...(stage ? { s: stage } : {}), ...tokenExtra });
-  redirect = resource === 'roadmap' ? `/roadmap/resultat?t=${token}` : `/${resource}/ressource?t=${token}`;
+  redirect = resource === 'roadmap' ? `/plan/resultat?t=${token}` : `/${resource}/ressource?t=${token}`;
 
   return NextResponse.json({ ok: true, redirect, notify });
 }

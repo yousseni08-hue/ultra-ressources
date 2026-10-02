@@ -5,15 +5,15 @@ Contenu : Yakine. Infra (sous-domaine, base, Slack, iClosed, CloseMate) : Mason.
 
 ## Voir le rendu sans rien installer
 Ouvre les fichiers du dossier `apercu/` dans ton navigateur :
-- `apercu/roadmap-parcours.html` : le plan, tel que le prospect le vit (quiz 8 questions adapté au métier → numéro → résultat personnalisé)
+- `apercu/plan-parcours.html` : le plan, tel que le prospect le vit (quiz 8 questions adapté au métier → numéro → résultat personnalisé)
 - `apercu/btp.html`, `apercu/resto.html`, `apercu/salon.html` : les 3 ressources (numéro demandé avant l'accès)
-- `apercu/roadmap.html` : le plan avec un mode exploration (tous les paliers × tous les métiers)
+- `apercu/plan.html` : le plan avec un mode exploration (tous les paliers × tous les métiers)
 
 ## Les 4 ressources
 
 | Mot-clé DM | Ressource | Route |
 |---|---|---|
-| `PLAN` | Le plan pour augmenter ton profit et sortir de l'opérationnel dans les 12 prochains mois | `/roadmap` |
+| `PLAN` | Le plan pour augmenter ton profit et sortir de l'opérationnel dans les 12 prochains mois | `/plan` |
 | `BTP` | Comment augmenter ton chiffre d'affaires de 30 % quand tu es artisan du BTP (+ tableau de relance Google Sheets offert) | `/btp` |
 | `RESTO` | La méthode pour augmenter ton panier moyen de 30 % et doubler ton chiffre d'affaires | `/resto` |
 | `SALON` | La ressource beauté : coiffure, barbier, institut, ongles, cils, spa (5 règles chiffrées de Marvin + calculateur) | `/salon` |

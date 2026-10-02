@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
-import { getCountryCallingCode } from 'libphonenumber-js/min';
+import { getCountries, getCountryCallingCode } from 'libphonenumber-js/min';
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const out = path.resolve(root, 'apercu');
@@ -56,22 +56,33 @@ mark{background:var(--orange);color:#0a0a0a;border-radius:5px;padding:0 6px;font
 .cases{display:grid;gap:14px;margin:18px 0}
 .foot{padding:50px 0 70px;color:var(--muted);font-size:13px}
 .note{font-size:13px;color:var(--muted)}
-.phone-row{display:flex;gap:8px}.phone-row select{flex:0 0 112px;width:112px}.phone-row input{flex:1;min-width:0}
+.phone-row{display:flex;gap:8px}.phone-row>input{flex:1;min-width:0}.phone-row .dial{position:relative;flex:0 0 118px}.phone-row .dial .flag{position:absolute;left:0;top:0;bottom:0;width:50px;display:flex;align-items:center;justify-content:center;font-size:20px;pointer-events:none;z-index:1}.phone-row .dial .flag small{font-size:10px;color:#9a9a9a;margin-left:2px}.phone-row .dial select{position:absolute;left:0;top:0;bottom:0;width:50px;opacity:0;z-index:2;cursor:pointer}.phone-row .dial input{width:100%;padding-left:50px;padding-right:8px}
 .pill{display:inline-block;background:var(--orange);color:#0a0a0a;font-family:Montserrat;font-weight:900;border-radius:99px;padding:5px 13px;font-size:13px}
 `;
 
 
 // Sélecteur d'indicatif : les 23 pays du diagnostic d'ultra-consulting.eu, même ordre (même liste que lib/countries.ts)
-const TOP = ['FR', 'BE', 'CH', 'LU', 'MC', 'CA', 'GB', 'DE', 'ES', 'IT', 'PT', 'NL', 'MA', 'DZ', 'TN', 'SN', 'CI', 'CM', 'MU', 'RE', 'GP', 'MQ', 'GF'];
+// Indicatif : tous les pays, tapable à la main (+221…) ou choisi en cliquant sur le drapeau. Même logique que components/PhoneField.tsx.
+const FIRST = ['FR', 'BE', 'CH', 'LU', 'CA', 'MA', 'DZ', 'TN', 'RE', 'GP', 'MQ', 'GF'];
 const rn = new Intl.DisplayNames(['fr'], { type: 'region' });
 const flagOf = (c) => String.fromCodePoint(...[...c].map((ch) => 0x1f1e6 + ch.charCodeAt(0) - 65));
-const COUNTRY_OPTS = TOP.map((c) => `<option value="${c}" title="${esc(rn.of(c))}">${flagOf(c)} +${getCountryCallingCode(c)}</option>`).join('');
-const phoneField = (id) => `<label>Ton numéro de téléphone</label><div class="phone-row"><select aria-label="Indicatif pays">${COUNTRY_OPTS}</select><input id="${id}" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="06 12 34 56 78"></div>`;
+const ALLC = [...FIRST, ...getCountries().filter((c) => !FIRST.includes(c)).sort((a, b) => rn.of(a).localeCompare(rn.of(b), 'fr'))];
+const MAIN = { 1: 'US', 7: 'RU', 44: 'GB', 33: 'FR', 39: 'IT', 47: 'NO', 61: 'AU', 212: 'MA', 262: 'RE', 290: 'SH', 358: 'FI', 590: 'GP', 599: 'CW' };
+const DIAL2FLAG = {};
+for (const c of getCountries()) { const d = getCountryCallingCode(c); if (!DIAL2FLAG[d]) DIAL2FLAG[d] = c; }
+Object.assign(DIAL2FLAG, MAIN);
+const COUNTRY_OPTS = ALLC.map((c) => `<option value="${getCountryCallingCode(c)}"${c === 'FR' ? ' selected' : ''}>${flagOf(c)} ${esc(rn.of(c))} (+${getCountryCallingCode(c)})</option>`).join('');
+const PHONE_JS = `<script>(()=>{const M=${JSON.stringify(Object.fromEntries(Object.entries(DIAL2FLAG).map(([d, c]) => [d, flagOf(c)])))};
+const sync=r=>{const i=r.querySelector('.dial input'),f=r.querySelector('.flag b'),d=i.value.replace(/\\D/g,'').slice(0,4);i.value='+'+d;f.textContent=M[d]||'🌍'};
+document.addEventListener('input',e=>{const r=e.target.closest('.phone-row');if(!r)return;if(e.target.matches('.dial input'))sync(r);
+ if(e.target.matches('.num')){const v=e.target.value.trim().replace(/^00/,'+');const m=v.match(/^\\+(\\d{1,3})/);if(m){for(let k=3;k>0;k--){const d=m[1].slice(0,k);if(M[d]){r.querySelector('.dial input').value='+'+d;e.target.value=v.slice(1+d.length).trim();sync(r);break}}}}});
+document.addEventListener('change',e=>{if(e.target.matches('.dial select')){const r=e.target.closest('.phone-row');r.querySelector('.dial input').value='+'+e.target.value;sync(r)}});})()</script>`;
+const phoneField = (id) => `<label>Ton numéro de téléphone</label><div class="phone-row"><div class="dial"><span class="flag"><b>${flagOf('FR')}</b><small>▾</small></span><select aria-label="Choisir le pays">${COUNTRY_OPTS}</select><input type="tel" inputmode="tel" aria-label="Indicatif" value="+33"></div><input id="${id}" class="num" type="tel" inputmode="tel" autocomplete="tel" placeholder="06 12 34 56 78"></div>`;
 const head = (title) => `<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet"><style>${CSS}</style></head><body>`;
-const nav = `<div class="wrap"><div class="nav"><div class="logo">ULTRA<span>.</span></div><div><a href="index.html">Aperçus</a><a href="roadmap.html">Plan</a><a href="btp.html">BTP</a><a href="resto.html">Resto</a><a href="salon.html">Salon</a></div></div></div>`;
-const foot = `<div class="wrap foot">Aperçu de travail ULTRA · ressource offerte, ne pas diffuser en l'état.</div></body></html>`;
+const nav = `<div class="wrap"><div class="nav"><div class="logo">ULTRA<span>.</span></div><div><a href="index.html">Aperçus</a><a href="plan.html">Plan</a><a href="btp.html">BTP</a><a href="resto.html">Resto</a><a href="salon.html">Salon</a></div></div></div>`;
+const foot = PHONE_JS + `<div class="wrap foot">Aperçu de travail ULTRA · ressource offerte, ne pas diffuser en l'état.</div></body></html>`;
 
 function caseCard(t) {
   const kpi = t.kpi || '';
@@ -209,7 +220,7 @@ function landing(){app.innerHTML='<span class="tag">Diagnostic offert · 2 minut
 function bar(){return'<div style="height:6px;background:#262626;border-radius:99px;margin:36px 0 10px;overflow:hidden"><div style="height:100%;width:'+(step/RM.flow.length*100)+'%;background:var(--orange);transition:width .3s"></div></div><p class="note">Question '+(step+1)+' sur '+RM.flow.length+'</p>'}
 function quiz(){if(step>=RM.flow.length)return optin();const q=qAt(step);
   const back='<button class="btn ghost" style="margin-top:14px;width:auto;padding:10px 16px" onclick="'+(step>0?'step--;quiz()':'landing()')+'">← Retour</button>';
-  if(q.type==='text'){app.innerHTML=bar()+'<h2 style="margin-top:6px">'+E(q.label)+'</h2><p class="note">On s\\'en sert pour écrire ta roadmap à ton nom.</p><input id="tx" maxlength="60" placeholder="'+E(q.placeholder)+'" value="'+E(ans[q.id]||'')+'" style="font-size:19px;padding:16px 18px"><button class="btn" id="txgo" style="margin-top:12px">Continuer</button>'+back;
+  if(q.type==='text'){app.innerHTML=bar()+'<h2 style="margin-top:6px">'+E(q.label)+'</h2><p class="note">On s\\'en sert pour écrire ton plan à ton nom.</p><input id="tx" maxlength="60" placeholder="'+E(q.placeholder)+'" value="'+E(ans[q.id]||'')+'" style="font-size:19px;padding:16px 18px"><button class="btn" id="txgo" style="margin-top:12px">Continuer</button>'+back;
     const i=document.getElementById('tx'),go=()=>{const v=i.value.trim();if(!v){i.style.borderColor='var(--orange)';i.focus();return}ans[q.id]=v;step++;quiz()};
     document.getElementById('txgo').onclick=go;i.onkeydown=e=>{if(e.key==='Enter')go()};setTimeout(()=>i.focus(),50);scrollTo(0,0);return}
   app.innerHTML=bar()+'<h2 style="margin-top:6px">'+E(F(q.label))+'</h2>'+(q.help?'<p class="note">'+E(F(q.help))+'</p>':'')+'<div style="display:grid;gap:10px">'+q.options.map(o=>'<button class="opt'+(ans[q.id]===o.id?' sel':'')+'" data-id="'+o.id+'">'+E(o.label)+'</button>').join('')+'</div>'+back;
@@ -261,15 +272,15 @@ document.getElementById('xgo').onclick=()=>{const sec=document.getElementById('x
   ans={secteur:sec,specialite:sd.specialite?.options?.[0]?.id,nom:'Exemple',effectif:Object.keys(RM.scoring.effectifToStage).find(k=>RM.scoring.effectifToStage[k]===RM.stages[i].id),ca:'300-500k',tresorerie:'5-20k',frein:sd.frein?.options?.[0]?.id,kpi:sd.kpi?.options?.[1]?.id};prenom='';result(i)};
 document.getElementById('xquiz').onclick=landing;landing();
 </script>${foot}`;
-fs.writeFileSync(path.join(out, 'roadmap.html'), roadmapHtml);
+fs.writeFileSync(path.join(out, 'plan.html'), roadmapHtml);
 // Version autonome « parcours prospect » : sans menu interne ni mode exploration
-fs.writeFileSync(path.join(out, 'roadmap-parcours.html'), roadmapHtml
+fs.writeFileSync(path.join(out, 'plan-parcours.html'), roadmapHtml
   .replace(nav, '<div class="wrap"><div class="nav"><div class="logo">ULTRA<span>.</span></div></div></div>')
   .replace(/<div class="wrap"><div class="card" style="margin-top:40px"><div class="mont" style="font-weight:800">Mode exploration[\s\S]*?Refaire le quiz<\/button><\/div><\/div><\/div>/, '<div hidden><select id="xs"></select><select id="xm"></select><button id="xgo"></button><button id="xquiz"></button></div>'));
 
 // ── Index
 fs.writeFileSync(path.join(out, 'index.html'), `${head('Aperçus ressources ULTRA')}${nav}<main class="wrap"><span class="tag">Aperçus de travail</span><h1>Les ressources <span class="o">gratuites</span></h1><p class="lead">Ce que reçoit le prospect après avoir envoyé le mot-clé et laissé son numéro.</p><div class="cases">
-<a class="card" href="roadmap.html" style="text-decoration:none;color:inherit"><span class="tag" style="margin:0 0 8px">Tous secteurs · ${esc(rm.keyword)}</span><h3 style="margin:0">${esc(rm.title)}</h3><p class="note" style="margin:6px 0 0">${esc(rm.promise)}</p></a>
+<a class="card" href="plan.html" style="text-decoration:none;color:inherit"><span class="tag" style="margin:0 0 8px">Tous secteurs · ${esc(rm.keyword)}</span><h3 style="margin:0">${esc(rm.title)}</h3><p class="note" style="margin:6px 0 0">${esc(rm.promise)}</p></a>
 ${index.map((x) => `<a class="card" href="${x.file}" style="text-decoration:none;color:inherit"><span class="tag" style="margin:0 0 8px">${esc(x.niche)} · ${esc(x.kw)}</span><h3 style="margin:0">${esc(x.title)}</h3><p class="note" style="margin:6px 0 0">${esc(x.promise)}</p></a>`).join('')}
 </div></main>${foot}`);
 // Copie de confort hors du repo (dossier de travail de Yakine)
