@@ -251,7 +251,7 @@
       "actions": {
         "offre": "Pendant 5 jours, l'équipe note sur une feuille chaque déplacement, reprise ou petit service fait gratuitement. Vendredi, choisis les 3 plus fréquents, mets un prix dessus et ajoute-les aux nouveaux devis dès lundi. Ne teste qu'un changement à la fois.",
         "production": "Choisis la prestation la plus vendue. La prochaine fois, un salarié te filme avec ton téléphone du début au contrôle final. Coupe la vidéo en étapes, ajoute une check-list d'une page et fais refaire la prestation par un salarié pendant que tu regardes seulement le contrôle final.",
-        "acquisition": "Mets les horaires et le téléphone à jour sur ta fiche Google. La personne qui encaisse envoie ensuite le lien d'avis avec ce message : « Merci pour ta confiance. Tu peux raconter en deux phrases ce qu'on a fait pour toi ? » Le lundi, compte les demandes venues de Google et du bouche-à-oreille.",
+        "acquisition": "Mets les horaires et le téléphone à jour sur ta fiche Google. La personne qui encaisse envoie ensuite le lien d'avis avec ce message : « Merci pour ta confiance. Tu peux raconter en deux phrases ce qu'on a fait pour toi ? » Quand un nouveau client appelle, demande-lui comment il t'a trouvé et note-le sur sa fiche.",
         "vente": "Nomme une seule personne pour rappeler les demandes. Si elle ne peut pas appeler tout de suite, elle envoie un SMS avec deux créneaux dans la journée. Elle pose trois questions : où, quel besoin, pour quand. Le budget vient ensuite, selon ton métier. Quand le client accepte, demande la signature et l'acompte dans le cadre prévu par tes conditions de vente.",
         "fidelisation": "Prépare un message court avec la date, l'heure, ce que le client doit prévoir et le nom de son contact. À la fin, la personne qui encaisse propose une seule suite : « Pour garder le résultat, le prochain passage est dans X semaines. Je te le bloque ? »",
         "recrutement": "Écris l'annonce maintenant, même si tu embauches dans 2 mois : horaires réels, 5 tâches, salaire et responsable. Fais un appel de 10 minutes avec les mêmes 5 questions, puis garde les 3 bons numéros dans une note appelée « candidats à rappeler ».",
@@ -314,7 +314,7 @@
         "fidelisation": "Garde dans le même fichier le téléphone, le dernier achat et la prochaine chose utile à proposer. Le premier lundi du mois, sors 20 anciens clients. Une personne les appelle avec une seule offre et note oui, non ou à rappeler.",
         "recrutement": "Prépare 8 questions identiques et un petit test réel du métier. Appelle deux anciennes références uniquement pour le candidat final. Dans l'équipe, fais tester le rôle de chef pendant 30 jours à la personne la plus fiable, avec trois responsabilités écrites.",
         "cadre": "Avec ton gestionnaire de paie ou ton conseil social, fais une fiche de deux pages : horaires, absences, congés, tenue, sécurité et procédure en cas d'écart. Chaque salarié la reçoit et signe la remise. Le même responsable applique la même règle.",
-        "finance": "Le premier lundi du mois, passe 45 minutes avec ton expert-comptable ou ta responsable administrative sur le résultat du mois et les 3 mois de trésorerie à venir. Chaque lundi avec l'équipe, regarde seulement encaissé, ventes signées, demandes et argent disponible.",
+        "finance": "Le premier lundi du mois, passe 45 minutes avec ton expert-comptable ou ta responsable administrative sur le résultat du mois et les 3 mois de trésorerie à venir.",
         "outils": "Garde trois endroits maximum : un planning, un groupe pour les messages urgents et une liste de tâches. Nomme une personne qui range l'information chaque vendredi. Remplace les mots de passe envoyés par SMS par des accès nominatifs."
       },
       "top3": [
@@ -367,16 +367,16 @@
         "offre": "Prends ton offre la plus vendue et fais trois versions sur une page : essentiel, complet et premium. Ajoute une seule suite pour les clients actuels, comme l'entretien, le forfait ou l'abonnement. Pendant 2 semaines, présente les deux à 20 bons clients et note mot pour mot leurs réponses.",
         "production": "Dans un tableau partagé, note chaque reprise ou réclamation avec une cause courte. Le vendredi, le responsable prend la cause la plus fréquente, corrige la fiche concernée et contrôle 5 prestations la semaine suivante. Une seule correction par semaine.",
         "acquisition": "Ajoute la source à chaque nouveau client et le budget dépensé sur chaque canal. Tous les 3 mois, divise la dépense par le nombre de nouveaux clients, puis compare avec ce qu'ils ont déjà encaissé. Coupe le canal qui coûte et ne vend rien.",
-        "vente": "Prépare un devis à 3 niveaux sur l'offre phare et écris les 5 objections qui reviennent vraiment. Le lundi, le responsable vente prend 20 minutes pour regarder demandes, devis, signatures, montant moyen et raisons des pertes.",
+        "vente": "Prépare un devis à 3 niveaux sur l'offre phare et écris les 5 objections qui reviennent vraiment. Chaque devis perdu, le responsable vente appelle le client et note la vraie raison : prix, délai ou confiance.",
         "fidelisation": "Pose trois rappels simples après la vente : vérifier que tout va bien, demander un avis, proposer la suite. Chaque rappel a une date et un prénom dans le fichier clients. Commence par les 50 derniers clients avant d'automatiser quoi que ce soit.",
         "recrutement": "Fais tester le rôle de manager pendant 30 jours à un salarié fiable : tenir le planning, faire le point d'équipe et remonter quatre chiffres. Forme-le pendant deux semaines avant de changer son titre. Fais valider toute prime de cooptation par la paie avant de l'annoncer.",
         "cadre": "Avec ton conseil social, écris une page pour chaque moment sensible : avertissement, entretien, départ. Sur chaque page, note le document, le délai, le matériel à reprendre et la personne responsable. L'équipe applique cette liste à chaque fois.",
-        "finance": "Avec ton expert-comptable, pose sur une page les encaissements et grosses dépenses des 12 prochains mois. Mets-la à jour 1 heure à la fin de chaque mois. Le lundi, chaque responsable remonte encaissé, ventes signées, demandes et dépenses déjà engagées.",
+        "finance": "Avec ton expert-comptable, pose sur une page les encaissements et grosses dépenses des 12 prochains mois. Mets-la à jour 1 heure à la fin de chaque mois. Au-delà du plafond fixé, aucune dépense ne part sans ta validation.",
         "outils": "Fais l'inventaire du matériel, des fichiers et des accès dans une seule liste avec un nom en face. Le vendredi, chaque responsable met ses quatre chiffres à jour. Quand quelqu'un part, la même liste sert à récupérer le matériel et couper les accès."
       },
       "top3": [
         "Prépare un devis à 3 niveaux sur ton offre phare et teste une offre de suite auprès de 20 clients actuels.",
-        "Donne à chaque responsable 4 chiffres à remonter avant votre point du lundi.",
+        "Donne à chaque responsable un seul chiffre dont il répond : signatures, marge ou délais, selon son poste.",
         "Pose un budget sur 12 mois avec ton expert-comptable et fixe ton enveloppe d'investissement."
       ],
       "examples": {
@@ -422,7 +422,7 @@
         "Des factures arrivent sans commande ni responsable identifié."
       ],
       "actions": {
-        "offre": "Donne chaque offre à un responsable et choisis un seul chiffre pour les 90 jours : prix, montant moyen ou taux de signature. Il montre le chiffre du lundi sur une page. Aucune nouvelle offre ne démarre avant la fin de ce test.",
+        "offre": "Donne chaque offre à un responsable et choisis un seul chiffre pour les 90 jours : prix, montant moyen ou taux de signature. Il montre où en est ce chiffre à chaque point d'équipe. Aucune nouvelle offre ne démarre avant la fin de ce test.",
         "production": "Dès lundi, chaque facture, heure et sous-traitance porte le code du chantier, du service ou du site. À la fin du mois, le responsable compare prévu et réel, puis explique les 3 plus gros écarts avec la facture ou le relevé d'heures devant lui.",
         "acquisition": "Pour les 3 campagnes qui dépensent le plus, note budget, demandes utiles et ventes. À la fin du mois, coupe celle qui n'a produit aucune vente et remets seulement cette enveloppe sur la meilleure. Ne change rien d'autre pendant 30 jours.",
         "vente": "Le responsable vente écoute 2 appels ou accompagne 2 visites par vendeur chaque semaine, puis fait un point de 20 minutes avec un seul axe à corriger. Le dernier vendredi du mois, l'équipe rappelle les devis les plus élevés restés sans réponse.",
@@ -478,14 +478,14 @@
         "Un seul canal apporte presque toutes les demandes."
       ],
       "actions": {
-        "offre": "Pour chaque offre, ouvre un seul test de 90 jours avec un responsable, une date et un chiffre : prix, montant moyen ou taux de signature. Le directeur montre chaque lundi le chiffre de la semaine sur la même page jusqu'à la décision finale.",
+        "offre": "Pour chaque offre, ouvre un seul test de 90 jours avec un responsable, une date et un chiffre : prix, montant moyen ou taux de signature. Le directeur montre où en est ce chiffre à chaque point d'équipe, jusqu'à la décision finale.",
         "production": "Applique la même grille de contrôle sur tous les sites. Un responsable de secteur visite chaque site selon un calendrier fixe, note les écarts et vérifie leur correction au passage suivant.",
         "acquisition": "Choisis un deuxième canal lié au métier : prescripteurs, partenaires ou parrainage. Fais valider une enveloppe fixe, teste-le 90 jours sur un seul territoire et compte les demandes, les ventes et l'encaissé. À J+90, tu gardes ou tu coupes.",
         "vente": "Regarde pendant 2 semaines à quelles heures les demandes arrivent, puis pose des permanences sur ces créneaux. Quand l'équipe est ouverte, chaque demande reçoit un appel ou un SMS avec deux créneaux dans les 5 minutes. Le responsable suit demandes, relances et encaissé par demande.",
         "fidelisation": "Programme les rappels d'entretien, dates de renouvellement et offres de suite dans le fichier clients. Chaque semaine, le service client traite la liste à venir avant que le client appelle.",
         "recrutement": "Fais passer chaque candidature dans la même liste : source, appel, entretien, test, référence et décision. Chaque poste a un responsable interne. Pour les métiers ouverts toute l'année, garde l'annonce active et recontacte les bons candidats chaque mois.",
         "cadre": "Centralise les contrats, congés, absences et entretiens annuels dans un outil RH avec des accès par rôle. Le responsable RH contrôle chaque mois les dossiers incomplets.",
-        "finance": "Fixe un budget pour 3 mois par site, un plafond par carte et le prénom de la personne qui valide au-dessus. Le lundi, chaque site remonte sur la même page encaissé, ventes signées, demandes et argent disponible.",
+        "finance": "Fixe un budget pour 3 mois par site, un plafond par carte et le prénom de la personne qui valide au-dessus.",
         "outils": "Choisis une source unique pour chaque donnée : clients, salariés, ventes et finance. Sauvegarde-la, limite les accès par rôle et teste une restauration des données chaque trimestre."
       },
       "top3": [

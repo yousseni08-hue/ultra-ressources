@@ -74,7 +74,7 @@
       "actions": [
         "Cette semaine, sors les ventes des 3 derniers mois. Pour chaque offre, calcule : encaissé moins coûts directs, puis divise par les heures passées.",
         "Entoure les 2 offres qui laissent le plus par heure. Pendant 30 jours, mets-les en premier sur les devis, le site et tes réponses aux demandes. Ne change rien d'autre.",
-        "Chaque lundi, prends 15 minutes et note sur la même page : encaissé, ventes signées, demandes reçues et argent disponible."
+        "Au bout des 30 jours, refais le calcul. Si les 2 offres ont pris la place des autres, arrête de proposer celle qui laisse le moins par heure."
       ],
       "money": { "pctOfCA": 0.05, "explain": "Ordre de grandeur affiché : chiffre annuel × 5 %. Confirme-le avec les heures déplacées vers les 2 meilleures offres × leur encaissé par heure." },
       "proof": "Julien Bourguignon"
