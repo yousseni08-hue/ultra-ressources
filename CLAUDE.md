@@ -22,7 +22,7 @@ Tu es le Claude de Mason. Ce repo est **prêt à déployer** : pages d'opt-in, r
 2. **Variables** : `SLACK_WEBHOOK_URL`, `LEAD_TOKEN_SECRET`, `NEXT_PUBLIC_ICLOSED_URL` (**avant** le build, sinon les boutons « Réserve un appel diagnostic avec l'équipe Ultra » ne mènent nulle part). Vérifier qu'aucune valeur ne finit par un retour à la ligne.
 3. **Slack** : canal `#leads-magnets`, setters dedans avec notifs mobiles. Un setter rappelle en moins de 5 minutes, pendant que le prospect lit.
 4. **Base / CRM** : brancher `saveToDatabase()` ou `LEAD_FORWARD_WEBHOOK_URL`. Dédoublonner sur le téléphone avec le diagnostic du site (`docs/POUR-MASON.md`).
-5. **CloseMate** (`docs/CLOSEMATE.md`) : 4 mots-clés `PLAN`, `BTP`, `PANIER`, `SOIN` en correspondance exacte (mot seul), lever le blocage « agent IA actif » pour ces mots, tag `LM-{MOTCLE}`, une activation par contact. Vérifier qu'aucune automation ManyChat n'écoute les mêmes mots.
+5. **CloseMate** (`docs/CLOSEMATE.md`) : 4 mots-clés `PLAN`, `DEVIS`, `PANIER`, `SOIN` en correspondance exacte (mot seul), lever le blocage « agent IA actif » pour ces mots, tag `LM-{MOTCLE}`, une activation par contact. Vérifier qu'aucune automation ManyChat n'écoute les mêmes mots.
 6. **Site ultra-consulting.eu** : double diagnostic à régler (`docs/POUR-MASON.md`).
 7. **Pixel Meta** (recommandé) : `NEXT_PUBLIC_META_PIXEL_ID`.
 8. **Suivi par mot-clé** : chaque lead porte `kw` et `utm_*`. Il faut pouvoir lire, par mot-clé : numéros laissés → appels réservés → ventes. Sans ça, impossible de savoir quelle ressource pousser en story.
@@ -47,7 +47,7 @@ Un seul endroit : `saveToDatabase()` dans `lib/leads.ts`. Le lead arrive déjà 
 Un lien par ressource, avec UTM, pour mesurer proprement (le lien faux de la masterclass attribue aujourd'hui tout à la bio) :
 ```
 https://<sous-domaine>/plan?utm_medium=dm&utm_campaign=plan&kw=PLAN
-https://<sous-domaine>/btp?utm_medium=dm&utm_campaign=btp&kw=BTP
+https://<sous-domaine>/btp?utm_medium=dm&utm_campaign=btp&kw=DEVIS
 https://<sous-domaine>/resto?utm_medium=dm&utm_campaign=resto&kw=PANIER
 https://<sous-domaine>/salon?utm_medium=dm&utm_campaign=salon&kw=SOIN
 ```

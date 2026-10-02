@@ -12,11 +12,11 @@ Décision Yakine (02/10) : des mots courts et simples que les gens tapent sans r
 | Mot-clé | Ressource | Lien |
 |---|---|---|
 | `PLAN` | Le plan pour augmenter ton profit et sortir de l'opérationnel dans les 12 prochains mois (quiz) | `/plan?utm_medium=dm&utm_campaign=plan&kw=PLAN` |
-| `BTP` | Comment augmenter ton chiffre d'affaires de 30 % quand tu es artisan du BTP | `/btp?utm_medium=dm&utm_campaign=btp&kw=BTP` |
+| `DEVIS` | Comment augmenter ton chiffre d'affaires de 30 % quand tu es artisan du BTP | `/btp?utm_medium=dm&utm_campaign=btp&kw=DEVIS` |
 | `PANIER` | La méthode pour augmenter ton panier moyen de 30 % et doubler ton chiffre d'affaires | `/resto?utm_medium=dm&utm_campaign=resto&kw=PANIER` |
 | `SOIN` | La ressource beauté (coiffure, barbier, institut, ongles, cils, spa) | `/salon?utm_medium=dm&utm_campaign=salon&kw=SOIN` |
 
-**Réglage indispensable : déclenchement uniquement si le message contient le mot SEUL** (correspondance exacte, insensible à la casse et aux accents : « btp », « BTP », « soin », « Soin »). Ce sont des mots courants : en mode « contient le mot », un prospect qui écrit « je fais du soin du visage » ou « je veux augmenter mon panier » recevrait le lien en pleine conversation (c'est le bug garage/coaching du 14/09). Tag posé : `LM-{MOTCLE}`. Une seule activation par contact.
+**Réglage indispensable : déclenchement uniquement si le message contient le mot SEUL** (correspondance exacte, insensible à la casse et aux accents : « devis », « Devis », « soin », « Soin »). Ce sont des mots courants : en mode « contient le mot », un prospect qui écrit « je t'envoie le devis », « je fais du soin du visage » ou « je veux augmenter mon panier » recevrait le lien en pleine conversation (c'est le bug garage/coaching du 14/09). Tag posé : `LM-{MOTCLE}`. Une seule activation par contact.
 
 ## 3. Le message envoyé : on livre d'abord, on ne qualifie pas avant
 > Voilà ta ressource 👇

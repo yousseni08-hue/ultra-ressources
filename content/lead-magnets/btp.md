@@ -1,6 +1,6 @@
 ---
 slug: btp
-keyword: BTP
+keyword: DEVIS
 niche: BTP
 title: "Comment faire +30 % de chiffre d'affaires quand tu es artisan du BTP"
 promise: "En 10 minutes, tu sais qui rappeler parmi les devis que tu as déjà envoyés, quoi lui dire mot pour mot pour le faire signer, et comment ton équipe garde la marge une fois le chantier lancé."

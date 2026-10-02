@@ -14,7 +14,7 @@ Ouvre les fichiers du dossier `apercu/` dans ton navigateur :
 | Mot-clé DM | Ressource | Route |
 |---|---|---|
 | `PLAN` | Le plan pour augmenter ton profit et sortir de l'opérationnel dans les 12 prochains mois | `/plan` |
-| `BTP` | Comment augmenter ton chiffre d'affaires de 30 % quand tu es artisan du BTP (+ tableau de relance Google Sheets offert) | `/btp` |
+| `DEVIS` | Comment augmenter ton chiffre d'affaires de 30 % quand tu es artisan du BTP (+ tableau de relance Google Sheets offert) | `/btp` |
 | `PANIER` | La méthode pour augmenter ton panier moyen de 30 % et doubler ton chiffre d'affaires | `/resto` |
 | `SOIN` | La ressource beauté : coiffure, barbier, institut, ongles, cils, spa (5 règles chiffrées de Marvin + calculateur) | `/salon` |
 
