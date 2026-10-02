@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import { marked } from 'marked';
+import { getCountryCallingCode } from 'libphonenumber-js/min';
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const out = path.resolve(root, 'apercu');
@@ -55,9 +56,17 @@ mark{background:var(--orange);color:#0a0a0a;border-radius:5px;padding:0 6px;font
 .cases{display:grid;gap:14px;margin:18px 0}
 .foot{padding:50px 0 70px;color:var(--muted);font-size:13px}
 .note{font-size:13px;color:var(--muted)}
+.phone-row{display:flex;gap:8px}.phone-row select{flex:0 0 112px;width:112px}.phone-row input{flex:1;min-width:0}
 .pill{display:inline-block;background:var(--orange);color:#0a0a0a;font-family:Montserrat;font-weight:900;border-radius:99px;padding:5px 13px;font-size:13px}
 `;
 
+
+// Sélecteur d'indicatif : les 23 pays du diagnostic d'ultra-consulting.eu, même ordre (même liste que lib/countries.ts)
+const TOP = ['FR', 'BE', 'CH', 'LU', 'MC', 'CA', 'GB', 'DE', 'ES', 'IT', 'PT', 'NL', 'MA', 'DZ', 'TN', 'SN', 'CI', 'CM', 'MU', 'RE', 'GP', 'MQ', 'GF'];
+const rn = new Intl.DisplayNames(['fr'], { type: 'region' });
+const flagOf = (c) => String.fromCodePoint(...[...c].map((ch) => 0x1f1e6 + ch.charCodeAt(0) - 65));
+const COUNTRY_OPTS = TOP.map((c) => `<option value="${c}" title="${esc(rn.of(c))}">${flagOf(c)} +${getCountryCallingCode(c)}</option>`).join('');
+const phoneField = (id) => `<label>Ton numéro de téléphone</label><div class="phone-row"><select aria-label="Indicatif pays">${COUNTRY_OPTS}</select><input id="${id}" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="06 12 34 56 78"></div>`;
 const head = (title) => `<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet"><style>${CSS}</style></head><body>`;
@@ -71,52 +80,41 @@ function caseCard(t) {
 
 // ── Calculateurs (JS vanilla, injectés à la place de {{calculator:id}})
 const CALC = {
-  'devis-dormants': `<div class="card calc" id="c-devis"><h3>Calcule l'argent qui dort dans tes devis</h3><div class="grid">
-<div><label>Devis envoyés, pas encore signés</label><input type="number" data-k="nb" value="16"></div>
-<div><label>Montant moyen d'un devis (€ HT)</label><input type="number" data-k="moy" value="12000"></div>
-<div><label>Ton taux de signature actuel (%)</label><input type="number" data-k="taux" value="25"></div>
-<div><label>Points gagnés par une vraie relance (%)</label><input type="number" data-k="gain" value="10"></div></div>
-<div class="result"><div>Montant chiffré qui attend une réponse</div><div class="big" data-o="att"></div><p data-o="txt" style="margin:8px 0 0"></p></div></div>
+  'devis-dormants': `<div class="card calc" id="c-devis"><h3>L'argent qui attend une réponse</h3><div class="grid">
+<div><label>Devis envoyés sans réponse</label><input type="number" data-k="nb" value="10"></div>
+<div><label>Montant moyen d'un devis (€ HT)</label><input type="number" data-k="moy" value="8000"></div></div>
+<div class="result"><div class="big" data-o="att"></div><p data-o="txt" style="margin:8px 0 0"></p></div></div>
 <script>(()=>{const r=document.getElementById('c-devis'),v=k=>+r.querySelector('[data-k='+k+']').value||0,e=n=>Math.round(n).toLocaleString('fr-FR')+' €';
-const f=()=>{const a=v('nb')*v('moy'),s=a*v('taux')/100,s2=a*(v('taux')+v('gain'))/100;r.querySelector('[data-o=att]').textContent=e(a);
-r.querySelector('[data-o=txt]').innerHTML='À ton taux actuel, tu en signes environ <b>'+e(s)+'</b>. Avec '+v('gain')+' points de plus, ça passe à <b>'+e(s2)+'</b>, soit <mark>'+e(s2-s)+'</mark> de plus sur des devis que tu as déjà faits.'};
+const f=()=>{r.querySelector('[data-o=att]').textContent=e(v('nb')*v('moy'));r.querySelector('[data-o=txt]').innerHTML='1 signature de plus : <b>+'+e(v('moy'))+'</b> · 2 signatures : <b>+'+e(v('moy')*2)+'</b> · 3 signatures : <mark>+'+e(v('moy')*3)+'</mark>'};
 r.addEventListener('input',f);f()})()</script>`,
   'marge-chantier': `<div class="card calc" id="c-marge"><h3>Ce que ce chantier te laisse vraiment</h3><div class="grid">
 <div><label>Montant du devis (€ HT)</label><input type="number" data-k="ht" value="25000"></div>
-<div><label>Matériaux et fournitures (€)</label><input type="number" data-k="mat" value="7000"></div>
-<div><label>Heures passées, toutes équipes</label><input type="number" data-k="h" value="220"></div>
-<div><label>Coût horaire chargé d'un compagnon (€/h)</label><input type="number" data-k="ch" value="32"></div>
-<div><label>Sous-traitance (€)</label><input type="number" data-k="st" value="0"></div>
-<div><label>Location, déplacements, déchets, divers (€)</label><input type="number" data-k="fr" value="900"></div></div>
-<div class="result"><div>Ce qui reste une fois le chantier payé</div><div class="big" data-o="r"></div><p data-o="txt" style="margin:8px 0 0"></p></div></div>
+<div><label>Matériaux, location et sous-traitance (€)</label><input type="number" data-k="ach" value="8000"></div>
+<div><label>Heures passées, toute l'équipe</label><input type="number" data-k="h" value="220"></div>
+<div><label>Coût horaire chargé (€/h)</label><input type="number" data-k="ch" value="32"></div></div>
+<div class="result"><div class="big" data-o="r"></div><p data-o="txt" style="margin:8px 0 0"></p></div></div>
 <script>(()=>{const r=document.getElementById('c-marge'),v=k=>+r.querySelector('[data-k='+k+']').value||0;
-const f=()=>{const reste=v('ht')-(v('mat')+v('h')*v('ch')+v('st')+v('fr')),p=reste/v('ht')*100;r.querySelector('[data-o=r]').textContent=Math.round(reste).toLocaleString('fr-FR')+' €';
-r.querySelector('[data-o=txt]').innerHTML='Soit <mark>'+(isFinite(p)?p.toFixed(1).replace('.',','):'—')+' %</mark> du devis. Fais-le sur tes 5 derniers chantiers : celui qui te laisse le moins te dit quel type de chantier arrêter de prendre.'};
+const f=()=>{const reste=v('ht')-v('ach')-v('h')*v('ch'),p=reste/v('ht')*100;r.querySelector('[data-o=r]').textContent=Math.round(reste).toLocaleString('fr-FR')+' €';
+r.querySelector('[data-o=txt]').innerHTML='Soit <mark>'+(isFinite(p)?p.toFixed(1).replace('.',','):'—')+' %</mark> du devis qui reste une fois le chantier payé.'};
 r.addEventListener('input',f);f()})()</script>`,
-  'ticket-rush': `<div class="card calc" id="c-rush"><h3>Ce que ton rush peut te rapporter en plus</h3><div class="grid">
-<div><label>Couverts servis un soir de rush aujourd'hui</label><input type="number" data-k="cv" value="80"></div>
-<div><label>Panier moyen par couvert (€)</label><input type="number" data-k="tk" value="22"></div>
-<div><label>Soirées de rush par mois</label><input type="number" data-k="nb" value="8"></div>
-<div><label>Couverts visés un soir de rush</label><input type="number" data-k="cv2" value="120"></div>
-<div><label>Hausse de panier moyen visée (€)</label><input type="number" data-k="up" value="2"></div></div>
-<div class="result"><div>Chiffre d'affaires en plus chaque mois</div><div class="big" data-o="r"></div><p data-o="txt" style="margin:8px 0 0"></p></div></div>
+  'ticket-rush': `<div class="card calc" id="c-rush"><h3>Ce que ta salle peut rapporter en plus sur un an</h3><div class="grid">
+<div><label>Couverts sur un gros service</label><input type="number" data-k="cv" value="80"></div>
+<div><label>Panier moyen par couvert (€)</label><input type="number" data-k="pm" value="22"></div>
+<div><label>Gros services par mois</label><input type="number" data-k="nb" value="20"></div></div>
+<div class="result"><div class="big" data-o="r"></div><p data-o="txt" style="margin:8px 0 0"></p></div></div>
 <script>(()=>{const r=document.getElementById('c-rush'),v=k=>+r.querySelector('[data-k='+k+']').value||0,e=n=>Math.round(n).toLocaleString('fr-FR')+' €';
-const f=()=>{const now=v('cv')*v('tk')*v('nb'),aft=v('cv2')*(v('tk')+v('up'))*v('nb');r.querySelector('[data-o=r]').textContent='+ '+e(aft-now);
-r.querySelector('[data-o=txt]').innerHTML='Aujourd\\'hui tes soirées de rush font <b>'+e(now)+'</b> par mois. Avec '+v('cv2')+' couverts et '+v('up')+' € de plus par couvert, elles font <b>'+e(aft)+'</b>, soit <mark>'+e((aft-now)*12)+'</mark> sur l\\'année, avec la même salle.'};
+const f=()=>{const ca=v('cv')*v('pm')*v('nb')*12;r.querySelector('[data-o=r]').textContent='+ '+e(ca*.3);
+r.querySelector('[data-o=txt]').innerHTML='par an avec <b>+30 % de panier moyen</b>, soit '+(v('pm')*.3).toFixed(2).replace('.',',')+' € de plus par couvert. Et <mark>+'+e(ca*.2)+'</mark> de plus si ta cuisine sort 20 % de couverts en plus.'};
 r.addEventListener('input',f);f()})()</script>`,
-  'salon-5-regles': `<div class="card calc" id="c-salon"><h3>Ton salon passe-t-il les 5 règles ?</h3><div class="grid">
+  'salon-5-regles': `<div class="card calc" id="c-salon"><h3>Ton salon passe-t-il les règles ?</h3><div class="grid">
 <div><label>Chiffre d'affaires du mois (€)</label><input type="number" data-k="ca" value="22000"></div>
-<div><label>Ventes de produits du mois (€)</label><input type="number" data-k="prod" value="3500"></div>
+<div><label>Ventes de produits du mois (€)</label><input type="number" data-k="prod" value="1800"></div>
 <div><label>Salaires du mois, charges comprises (€)</label><input type="number" data-k="sal" value="11000"></div>
-<div><label>Toutes tes charges du mois, salaires compris (€)</label><input type="number" data-k="ch" value="17000"></div>
-<div><label>Argent de côté sur un compte à part (€)</label><input type="number" data-k="cote" value="15000"></div>
-<div><label>Coût d'une collaboratrice par mois, chargée (€)</label><input type="number" data-k="cout" value="2800"></div>
-<div><label>Nombre de collaboratrices</label><input type="number" data-k="nb" value="2"></div>
-<div><label>Prestations faites par une collaboratrice par mois (€)</label><input type="number" data-k="cac" value="6500"></div></div>
-<div class="result"><div>Règles respectées</div><div class="big" data-o="n"></div><div data-o="rules"></div></div></div>
+<div><label>Nombre de collaboratrices</label><input type="number" data-k="nb" value="2"></div></div>
+<div class="result"><div class="big" data-o="n"></div><div data-o="rules"></div></div></div>
 <script>(()=>{const r=document.getElementById('c-salon'),v=k=>+r.querySelector('[data-k='+k+']').value||0,e=n=>Math.round(n).toLocaleString('fr-FR')+' €';
-const f=()=>{const ca=v('ca'),R=[['Produits : au moins 15 % du CA',v('prod')>=ca*.15,'Cible '+e(ca*.15)+' par mois, tu fais '+e(v('prod'))+'.'],['Salaires chargés : 45 % du CA maximum',v('sal')<=ca*.45,'Plafond '+e(ca*.45)+' par mois, tu es à '+e(v('sal'))+'.'],['3 mois de charges de côté',v('cote')>=v('ch')*3,'Il te faut '+e(v('ch')*3)+' sur un compte à part, tu as '+e(v('cote'))+'.'],['Chaque collaboratrice ramène 3 fois son coût',v('cac')>=v('cout')*3,'Cible '+e(v('cout')*3)+' de prestations par mois, elle fait '+e(v('cac'))+'.'],['Objectif de l\\'équipe : '+v('nb')+' × 100\u00a0800 € par an',ca*12>=v('nb')*100800,'Objectif '+e(v('nb')*100800)+', ton rythme actuel donne '+e(ca*12)+' sur l\\'année.']];
-r.querySelector('[data-o=n]').textContent=R.filter(x=>x[1]).length+' sur 5';r.querySelector('[data-o=rules]').innerHTML=R.map(x=>'<p style="margin:10px 0 0"><b style="color:'+(x[1]?'var(--ok)':'var(--bad)')+'">'+(x[1]?'✓ ':'✗ ')+x[0]+'</b><br>'+x[2]+'</p>').join('')};
+const f=()=>{const ca=v('ca'),R=[['Produits : 15 % du CA minimum',v('prod')>=ca*.15,'Cible '+e(ca*.15)+', tu fais '+e(v('prod'))+'.'],['Salaires chargés : 45 % du CA maximum',v('sal')<=ca*.45,'Plafond '+e(ca*.45)+', tu es à '+e(v('sal'))+'.'],['Objectif : 100 800 € par an et par collaboratrice',ca*12>=v('nb')*100800,'Objectif '+e(v('nb')*100800)+', ton rythme donne '+e(ca*12)+'.']];
+r.querySelector('[data-o=n]').textContent=R.filter(x=>x[1]).length+' sur 3';r.querySelector('[data-o=rules]').innerHTML=R.map(x=>'<p style="margin:8px 0 0"><b style="color:'+(x[1]?'var(--ok)':'var(--bad)')+'">'+(x[1]?'✓ ':'✗ ')+x[0]+'</b> · '+x[2]+'</p>').join('')};
 r.addEventListener('input',f);f()})()</script>`,
   'cout-matiere': `<div class="card calc" id="c-cm"><h3>Le coût matière de chaque plat</h3><div class="grid">
 <div><label>TVA sur tes plats (%)</label><input type="number" data-k="tva" value="10"></div><div><label>Seuil d'alerte coût matière (%)</label><input type="number" data-k="seuil" value="30"></div></div>
@@ -153,7 +151,7 @@ for (const [slug, file] of LM) {
 <span class="tag">Méthode offerte · ${esc(data.niche)}</span>
 <h1>${esc(data.title)}</h1><p class="lead">${esc(data.promise)}</p>
 <div class="card cover"><ul class="gets">${(data.deliverables || []).map((d) => `<li>${esc(d)}</li>`).join('')}</ul></div>
-<div id="gate" class="card" style="margin-top:18px"><div class="mont" style="font-weight:800;font-size:20px;margin-bottom:12px">Où on t'envoie la ressource ?</div><label>Ton prénom</label><input value="Karim"><div style="height:12px"></div><label>Ton numéro de téléphone</label><input id="gtel" type="tel" inputmode="tel" placeholder="06 12 34 56 78"><div style="height:14px"></div><button class="btn" id="gogate">${esc(data.cta || 'Je reçois la ressource')}</button><p class="note">Accès immédiat. Quelqu'un de l'équipe Ultra peut t'appeler pour t'aider à l'appliquer. Aperçu : rien n'est envoyé.</p></div>
+<div id="gate" class="card" style="margin-top:18px"><div class="mont" style="font-weight:800;font-size:20px;margin-bottom:12px">Où on t'envoie la ressource ?</div><label>Ton prénom</label><input value="Karim"><div style="height:12px"></div>${phoneField('gtel')}<div style="height:14px"></div><button class="btn" id="gogate">${esc(data.cta || 'Je reçois la ressource')}</button><p class="note">Accès immédiat. Quelqu'un de l'équipe Ultra peut t'appeler pour t'aider à l'appliquer. Aperçu : rien n'est envoyé.</p></div>
 <div id="res" hidden><div class="prose">${renderBody(content)}</div>
 <h2>Ils l'ont fait</h2><div class="cases">${(data.testimonials || []).map(caseCard).join('')}</div>
 <h2>Ton objectif chiffré à 4 mois</h2><div class="card"><textarea rows="3" placeholder="D'ici le … je veux … en …"></textarea></div>
@@ -219,7 +217,7 @@ function quiz(){if(step>=RM.flow.length)return optin();const q=qAt(step);
     app.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');
     if(q.id==='secteur'&&ans.secteur!==b.dataset.id)SEC_DEP.forEach(k=>delete ans[k]);
     ans[q.id]=b.dataset.id;setTimeout(()=>{delete app.dataset.lock;step++;quiz()},320)});scrollTo(0,0)}
-function optin(){const c=ctx();app.innerHTML='<span class="tag">Dernière étape</span><h1>Le plan de <span class="o">'+E(c.nom)+'</span> est prêt.</h1><p class="lead">Dis-nous où te l\\'envoyer, il s\\'affiche juste après.</p><div class="card"><label>Ton prénom</label><input id="fn" value="Karim"><div style="height:12px"></div><label>Ton numéro de téléphone</label><input value="06 12 34 56 78"><p class="note">Aperçu : rien n\\'est envoyé. En vrai, c\\'est ici que Mason branche la prise du numéro.</p><button class="btn" id="go">'+E(RM.cta)+'</button></div><button class="btn ghost" style="margin-top:14px;width:auto;padding:10px 16px" onclick="step=RM.flow.length-1;quiz()">← Retour</button>';
+function optin(){const c=ctx();app.innerHTML='<span class="tag">Dernière étape</span><h1>Le plan de <span class="o">'+E(c.nom)+'</span> est prêt.</h1><p class="lead">Dis-nous où te l\\'envoyer, il s\\'affiche juste après.</p><div class="card"><label>Ton prénom</label><input id="fn" value="Karim"><div style="height:12px"></div>'+${JSON.stringify(phoneField('rtel'))}+'<p class="note">Aperçu : rien n\\'est envoyé. En vrai, c\\'est ici que Mason branche la prise du numéro.</p><button class="btn" id="go">'+E(RM.cta)+'</button></div><button class="btn ghost" style="margin-top:14px;width:auto;padding:10px 16px" onclick="step=RM.flow.length-1;quiz()">← Retour</button>';
   document.getElementById('go').onclick=()=>{prenom=document.getElementById('fn').value.trim();const sid=RM.scoring.effectifToStage[ans.effectif]??RM.stages[0].id;result(RM.stages.findIndex(s=>s.id===sid))}}
 const MID={'moins-100k':70000,'100-300k':200000,'300-500k':400000,'500k-1m':750000,'plus-1m':1500000};
 const EFF={'seul':'Tu tiens tout seul, sans salarié.','seul-renforts':'Tu es seul, avec des extras ou des sous-traitants.','1-4':'Tu as une équipe de 1 à 4 personnes.','5-9':'Tu as une équipe de 5 à 9 personnes.','10-19':'Tu as une équipe de 10 à 19 personnes.','20-49':'Tu as une équipe de 20 à 49 personnes.','50-99':'Tu as une équipe de 50 à 99 personnes.','100-plus':'Tu as plus de 100 personnes.'};

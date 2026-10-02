@@ -66,7 +66,7 @@ Prends tes dix derniers devis sans réponse. Tu les trouves dans ton logiciel, t
 
 Si tu as une personne au bureau, elle prépare ces dix lignes et te demande seulement ce qui manque. Si tu es seul, fais-le en 30 minutes maximum, à l'arrêt dans le camion ou chez toi. Ne remonte pas six mois en arrière ce soir. Tu ajouteras dix anciens devis quand les dix premiers seront traités.
 
-Entre ensuite tes chiffres dans le calculateur. Il te montre ce que représentent une, deux ou trois signatures de plus. Le résultat dépend de tes montants et de ton taux de signature.
+Entre ensuite tes chiffres dans le calculateur. Il te montre ce que représentent une, deux ou trois signatures de plus. Le résultat dépend de tes montants.
 
 {{calculator:devis-dormants}}
 
@@ -280,4 +280,4 @@ Aucun supplément oral ne démarre. Il donne son prix, tu l'acceptes par écrit,
 
 Ça suffit pour démarrer. Romuald l'explique dans son témoignage : « Il y a des gens, à la quatrième relance, ils disent “ah oui, revenez par rapport au devis du mois passé, on va le faire”. »
 
-Si tu veux qu'on regarde ton taux de signature, les heures qui dépassent et ce qui mange encore ta marge, réserve ton appel avec l'équipe de Marvin juste en dessous.
+Si tu veux qu'on regarde ton taux de signature, les heures qui dépassent et ce qui mange encore ta marge, réserve ton appel avec l'équipe Ultra juste en dessous.

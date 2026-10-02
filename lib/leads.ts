@@ -1,3 +1,5 @@
+import { parsePhoneNumberFromString } from 'libphonenumber-js/min';
+import { ALLOWED_COUNTRIES } from './countries';
 // Tout ce qui se passe quand un numéro tombe. Chaque canal est indépendant :
 // une panne Sheet / Close / webhook ne bloque jamais la notif Slack, et rien ne fait échouer l'opt-in.
 
@@ -45,7 +47,10 @@ export function normalizePhone(raw = '') {
 }
 
 export function isValidPhone(raw = '') {
-  return /^\+\d{9,15}$/.test(normalizePhone(raw));
+  const p = normalizePhone(raw);
+  const n = parsePhoneNumberFromString(p);
+  // Valide ET dans un des 23 pays proposés (même filtre que le diagnostic du site)
+  return !!n && n.isValid() && !!n.country && ALLOWED_COUNTRIES.includes(n.country);
 }
 
 export function isPriority(lead: Pick<Lead, 'ca'>) {

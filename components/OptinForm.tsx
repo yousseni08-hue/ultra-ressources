@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { track } from './Pixel';
+import PhoneField from './PhoneField';
 
 const SECTORS = [
   ['btp', 'BTP / artisanat'],
@@ -48,6 +49,7 @@ export default function OptinForm({ resource, keyword, cta, answers, defaultSect
           keyword: qs.get('kw') || keyword,
           firstName: fd.get('firstName'),
           phone: fd.get('phone'),
+          phoneCountry: fd.get('phoneCountry'),
           sector: fd.get('sector') || defaultSector,
           ca: fd.get('ca') || defaultCa,
           website: fd.get('website'),
@@ -72,10 +74,7 @@ export default function OptinForm({ resource, keyword, cta, answers, defaultSect
         <label htmlFor="firstName">Ton prénom</label>
         <input id="firstName" name="firstName" autoComplete="given-name" required />
       </div>
-      <div className="field">
-        <label htmlFor="phone">Ton numéro de téléphone</label>
-        <input id="phone" name="phone" type="tel" inputMode="tel" autoComplete="tel" placeholder="06 12 34 56 78" required />
-      </div>
+      <PhoneField />
       {!hideSector && (
         <div className="field">
           <label htmlFor="sector">Ton secteur</label>

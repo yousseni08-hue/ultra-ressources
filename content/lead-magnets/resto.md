@@ -293,4 +293,4 @@ Kévin est allé de 60 à 80 pizzas jusqu’à 200 pizzas par soirée, avec 10 %
 
 Ce sont leurs résultats. Ce n’est pas une garantie pour ton établissement. La méthode te donne quoi regarder, quoi dire et quoi changer avec tes chiffres.
 
-Si ton restaurant fait déjà plus de 200 000 € de CA par an et que tu veux qu’on regarde où ton panier moyen et ton coup de feu se bloquent, réserve ton appel avec l’équipe de Marvin juste en dessous.
+Si ton restaurant fait déjà plus de 200 000 € de CA par an et que tu veux qu’on regarde où ton panier moyen et ton coup de feu se bloquent, réserve ton appel avec l’équipe Ultra juste en dessous.

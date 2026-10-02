@@ -51,7 +51,7 @@ Marvin donne cinq règles aux patrons de salon et d'institut. Elles marchent par
 
 **Règle 5. Nombre de collaboratrices × 100 800 € = ton objectif de l'année.** 100 800 €, c'est 8 400 € par mois sur douze mois, donc la règle 4 tenue toute l'année. Avec cinq personnes qui la tiennent, ton salon dépasse le demi-million.
 
-Rentre tes chiffres du dernier mois complet. Tu les trouves dans ta caisse ou dans ton agenda en ligne (Planity, Treatwell, Kiute ou autre) pour le chiffre et les produits, et sur ton relevé ou ta fiche de paie pour les salaires.
+Le calculateur vérifie les règles 1, 2 et 5 avec quatre chiffres de ton dernier mois complet. Les règles 3 et 4, tu les fais de tête avec les exemples au-dessus. Tu les trouves dans ta caisse ou dans ton agenda en ligne (Planity, Treatwell, Kiute ou autre) pour le chiffre et les produits, et sur ton relevé ou ta fiche de paie pour les salaires.
 
 {{calculator:salon-5-regles}}
 
@@ -59,8 +59,8 @@ Si une règle est en rouge, c'est là que tu commences :
 
 - produits en rouge : section 2 ;
 - salaires en rouge : sections 1 et 3, parce que le problème vient rarement des salaires, il vient d'un agenda qui se remplit pas assez pour les payer ;
-- réserve en rouge : mets un virement automatique en place dès cette semaine, même 300 € par mois, sur un compte que t'as pas dans ton appli au quotidien ;
-- collaboratrice en rouge : section 4 ;
+- réserve trop basse (règle 3) : mets un virement automatique en place dès cette semaine, même 300 € par mois, sur un compte que t'as pas dans ton appli au quotidien ;
+- collaboratrice sous 3 fois son coût (règle 4) : section 4 ;
 - objectif de l'année en rouge : section 5, puis tout le reste.
 
 ## Le calcul des 30 %
@@ -202,4 +202,4 @@ Si ton agenda est complet trois semaines à l'avance sur une prestation, c'est q
 
 Thalia a doublé son chiffre en écrivant son accueil et sa vente. Amélie a fait +85 % au bilan de ses 5 premières semaines en revalorisant ses tarifs et en ouvrant 6 jours sur 7. Charlotte a multiplié son chiffre par 3 après un premier recrutement et une semaine cadrée. Ce sont leurs résultats, pas une garantie pour ton salon. La méthode te donne quoi regarder, quoi dire et quoi changer avec tes propres chiffres.
 
-Si ton salon ou ton institut fait déjà plus de 200 000 € de chiffre d'affaires par an et que tu veux qu'on regarde ensemble lequel de tes 5 chiffres bloque, réserve ton appel avec l'équipe de Marvin juste en dessous.
+Si ton salon ou ton institut fait déjà plus de 200 000 € de chiffre d'affaires par an et que tu veux qu'on regarde ensemble lequel de tes 5 chiffres bloque, réserve ton appel avec l'équipe Ultra juste en dessous.

@@ -136,3 +136,6 @@ summary { cursor: pointer; color: var(--accent); font-weight: 700; }
 .fn b { font-family: var(--font-head), system-ui, sans-serif; font-size: 15px; }
 @media (min-width: 521px) { .fn { grid-template-columns: 150px 1fr; gap: 12px; padding: 12px 0; } }
 .prose h4 { font-family: var(--font-head), system-ui, sans-serif; font-weight: 800; font-size: 16px; color: var(--accent); margin: 22px 0 6px; }
+.phone-row { display: flex; gap: 8px; }
+.phone-row select { flex: 0 0 auto; width: 112px; }
+.phone-row input { flex: 1; min-width: 0; }
