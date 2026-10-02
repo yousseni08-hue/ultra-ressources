@@ -1,0 +1,93 @@
+{
+  "id": "commerce",
+  "nounDefault": "ta boutique",
+  "nomLabel": "Comment s'appelle ta boutique ?",
+  "nomPlaceholder": "Ex. Maison Laure",
+  "specialite": {
+    "label": "Qu'est-ce que tu vends dans ta boutique ?",
+    "options": [
+      { "id": "vetements", "label": "Vêtements ou accessoires", "noun": "ta boutique de vêtements", "vend": "des vêtements et des accessoires" },
+      { "id": "chaussures", "label": "Chaussures", "noun": "ton magasin de chaussures", "vend": "des chaussures" },
+      { "id": "epicerie", "label": "Épicerie fine ou cave", "noun": "ton épicerie fine", "vend": "des produits fins et des vins" },
+      { "id": "animalerie", "label": "Animalerie", "noun": "ton animalerie", "vend": "des produits pour animaux" },
+      { "id": "deco", "label": "Décoration, maison ou cadeaux", "noun": "ta boutique de déco", "vend": "de la décoration et des idées cadeaux" },
+      { "id": "fleurs", "label": "Fleurs ou plantes", "noun": "ta boutique de fleurs", "vend": "des fleurs et des compositions" },
+      { "id": "autre", "label": "Autre", "noun": "ta boutique", "vend": "des produits" }
+    ]
+  },
+  "effectifLabel": "Combien de personnes travaillent à temps plein, en boutique et en réserve, sans te compter ?",
+  "frein": {
+    "label": "Aujourd'hui, qu'est-ce qui t'empêche le plus de faire plus de chiffre ?",
+    "options": [
+      { "id": "transformation", "label": "Des gens entrent, regardent et ressortent les mains vides" },
+      { "id": "panier", "label": "Les clients achètent un article et personne ne propose ce qui va avec" },
+      { "id": "retour", "label": "Les clients achètent une fois et je ne les revois plus" },
+      { "id": "rayons", "label": "Je connais le chiffre du jour, mais pas la marge de chaque rayon" },
+      { "id": "dependance", "label": "Tout est dans ma tête : si je ne suis pas en boutique, ça ne tourne pas" }
+    ]
+  },
+  "kpi": {
+    "label": "Sur 10 personnes qui passent ta porte, combien repartent avec un achat ?",
+    "help": "Si tu ne comptes pas les entrées, estime sur une journée normale.",
+    "options": [
+      { "id": "moins-2", "label": "Moins de 2", "level": "bas", "read": "Chez {nom}, plus de 8 visiteurs sur 10 ressortent sans achat. Pendant 7 jours, fais un trait par entrée sur une feuille et note le prénom du vendeur présent sur chaque créneau." },
+      { "id": "2-4", "label": "Entre 2 et 4", "level": "moyen", "read": "La majorité des visiteurs repart les mains vides. Pendant une semaine, compte les entrées et les tickets par demi-journée avant de changer la vitrine ou de lancer une promotion." },
+      { "id": "5-plus", "label": "5 ou plus", "level": "bon", "read": "Tu fais acheter au moins un visiteur sur deux. Chez {nom}, travaille maintenant le panier moyen et le nombre de retours dans l'année." },
+      { "id": "inconnu", "label": "Je ne compte pas les entrées", "level": "inconnu", "read": "Pendant 7 jours, fais un trait sur une feuille à chaque entrée. Le soir, divise le nombre de tickets par le nombre de traits. Aucun logiciel n'est nécessaire." }
+    ]
+  },
+  "levers": {
+    "transformation": {
+      "title": "Ton chantier n°1 : faire acheter une personne de plus sur 10",
+      "diagnosis": "Chez {nom}, des gens entrent puis ressortent sans qu'on sache ce qu'ils cherchaient. Pendant une semaine, compte les entrées et les tickets par demi-journée, puis regarde qui était présent. Tu verras le créneau précis où le passage ne devient pas une vente.",
+      "actions": [
+        "Pendant 7 jours, mets une feuille près de la caisse. Fais un trait par entrée et écris le soir : tickets, encaissé, vendeur présent. Ça prend 3 minutes.",
+        "Donne à l'équipe le même accueil : « Bonjour, je te laisse regarder. Tu cherches quelque chose pour toi ou pour offrir ? » Après la réponse, montre un seul produit adapté au lieu de réciter tout le magasin.",
+        "Le lundi suivant, repère les deux demi-journées avec beaucoup d'entrées et peu de tickets. Place ton meilleur vendeur sur l'une d'elles pendant 2 semaines et compare le taux avant de toucher à l'autre."
+      ],
+      "money": { "pctOfCA": 0.08, "explain": "Exemple de calcul : passer de 25 à 27 acheteurs sur 100 entrées ajoute 8 % de chiffre si le panier moyen reste identique. Mesure-le sur tes propres entrées." }
+    },
+    "panier": {
+      "title": "Ton chantier n°1 : ajouter un article à chaque ticket",
+      "diagnosis": "Chez {nom}, le client vient pour un article, le paie et repart. Personne ne lui montre ce qui va avec. Commence par les 5 articles les plus vendus et mesure le panier moyen, au lieu de demander à l'équipe de proposer tout le magasin.",
+      "actions": [
+        "Sors ton panier moyen du mois dernier sur ta caisse, encaissé divisé par nombre de tickets, et affiche-le derrière le comptoir.",
+        "Pour tes 5 articles les plus vendus, choisis l'article qui va avec et place-le juste à côté, en rayon et près de la caisse.",
+        "Donne à toute l'équipe cette phrase : « Avec ça, les clients prennent souvent [complément] parce que [usage concret]. Je te le montre ? » Chaque samedi, compare le panier moyen de la semaine à celui du mois dernier."
+      ],
+      "money": { "pctOfCA": 0.06, "explain": "Exemple de calcul : 3 € de plus sur un panier moyen de 50 € donne 6 % de chiffre en plus, à nombre de tickets égal. Remplace 3 € et 50 € par tes chiffres de caisse." }
+    },
+    "retour": {
+      "title": "Ton chantier n°1 : récupérer le contact à la caisse",
+      "diagnosis": "Un client qui a déjà acheté chez {nom} connaît la boutique. Si tu n'as aucun moyen autorisé de le prévenir d'un arrivage qui l'intéresse, tu attends qu'il repasse devant la vitrine par hasard.",
+      "actions": [
+        "Dès demain, propose en caisse une seule raison de laisser son numéro ou son mail : « Tu veux que je te prévienne quand on reçoit [produit précis] ? » Enregistre uniquement les clients qui disent oui dans l'outil de caisse ou une liste dédiée.",
+        "Le jour de l'arrivage, envoie un message court aux personnes concernées : « Bonjour [prénom], le [produit] que tu voulais vient d'arriver. Je peux te le garder jusqu'à demain soir. »",
+        "Une fois par mois, appelle ou écris personnellement à 10 bons clients avec un produit réellement lié à leur dernier achat. Note la réponse pour ne pas relancer ceux qui ne veulent plus de messages."
+      ],
+      "money": { "pctOfCA": 0.07, "explain": "Ordre de grandeur affiché : chiffre annuel × 7 %. Confirme-le avec les tickets réellement revenus après un message, à panier moyen égal." }
+    },
+    "rayons": {
+      "title": "Ton chantier n°1 : compter la marge et le stock par rayon",
+      "diagnosis": "Chez {nom}, le chiffre du jour peut être bon pendant que certains rayons laissent peu et que du stock dort depuis 3 mois. Sans marge ni rotation par famille, tu repasses les commandes au feeling.",
+      "actions": [
+        "Sors de ta caisse les ventes des 3 derniers mois par famille. Pour chacune, calcule : ventes moins coût d'achat. Note aussi la valeur du stock qui n'a pas bougé depuis 90 jours.",
+        "Classe tes familles. Celles qui vendent bien et te laissent beaucoup, mets-les en vitrine et près de la caisse. Celles qui dorment depuis plus de 3 mois, arrête de les racheter.",
+        "Chaque lundi, regarde quatre chiffres de la semaine passée : entrées, ventes, panier moyen, marge. Dix minutes, toujours le même jour."
+      ],
+      "money": { "pctOfCA": 0.04, "explain": "Ordre de grandeur affiché : chiffre annuel × 4 %. Confirme-le avec la marge des familles poussées et les achats de stock dormant que tu arrêtes." }
+    },
+    "dependance": {
+      "title": "Ton chantier n°1 : laisser la boutique une journée entière",
+      "diagnosis": "Aujourd'hui, tout est dans ta tête : les commandes, les prix, les fournisseurs, la façon de vendre. Chez {nom}, le jour où tu n'es pas là, les ventes baissent ou rien ne se décide. Et tant que tu ne peux pas être à deux endroits à la fois, un deuxième point de vente reste un projet.",
+      "actions": [
+        "Écris d'abord les 4 tâches qui bloquent une journée sans toi : ouverture, commande urgente, remise client et caisse du soir. Une demi-page par tâche suffit.",
+        "Cette semaine, donne une fiche au vendeur responsable et laisse-le faire un mardi entier. Le soir, contrôle la caisse et les incidents avec lui sans refaire tout ce qu'il a fait.",
+        "Chaque lundi avant l'ouverture, garde 15 minutes debout près de la caisse : entrées, tickets, panier moyen, incidents et une seule priorité pour la semaine."
+      ],
+      "money": null,
+      "proof": "Raphaël Pasau"
+    }
+  },
+  "proofs": ["Alexis", "Tom", "Raphaël Pasau"]
+}

@@ -1,0 +1,94 @@
+{
+  "id": "autre",
+  "nounDefault": "ton entreprise",
+  "nomLabel": "Comment s'appelle ton entreprise ?",
+  "nomPlaceholder": "Ex. Atelier Martin",
+  "specialite": {
+    "label": "Quel type d'activité as-tu ?",
+    "options": [
+      { "id": "transport", "label": "Transport, livraison, logistique", "noun": "ton entreprise de transport", "vend": "du transport et de la livraison" },
+      { "id": "impression", "label": "Impression, enseignes, marquage, signalétique", "noun": "ton atelier", "vend": "de l'impression et du marquage" },
+      { "id": "services-pro", "label": "Services sur site pour les entreprises (sécurité, maintenance, espaces verts)", "noun": "ton entreprise", "vend": "des services sur site pour les entreprises" },
+      { "id": "services-particuliers", "label": "Services aux particuliers (déménagement, jardinage, aide à domicile)", "noun": "ton entreprise", "vend": "des services aux particuliers" },
+      { "id": "sport-sante", "label": "Salle de sport, centre de loisirs, cabinet de soins", "noun": "ton centre", "vend": "des séances et des abonnements" },
+      { "id": "fabrication", "label": "Fabrication, atelier, production agricole", "noun": "ton atelier", "vend": "ce que tu fabriques" },
+      { "id": "autre", "label": "Autre activité", "noun": "ton entreprise", "vend": "tes produits et tes services" }
+    ]
+  },
+  "effectifLabel": "Combien de personnes travaillent à temps plein avec toi, sans te compter ?",
+  "frein": {
+    "label": "Aujourd'hui, qu'est-ce qui t'empêche le plus de faire plus de chiffre ?",
+    "options": [
+      { "id": "dependance", "label": "Tout remonte à moi : si je pars une semaine, le travail s'empile" },
+      { "id": "prix", "label": "Mes prix n'ont pas bougé et je rends beaucoup de services gratuits" },
+      { "id": "devis", "label": "Beaucoup de demandes et de devis restent sans suite" },
+      { "id": "pilotage", "label": "Je regarde le chiffre total, mais je ne sais pas ce qui me rapporte vraiment" },
+      { "id": "recurrent", "label": "Mes clients achètent une fois, puis je ne les revois plus" }
+    ]
+  },
+  "kpi": {
+    "label": "Sur 10 personnes qui te demandent un prix ou un devis, combien finissent par acheter ?",
+    "help": "Pense au mois dernier. Une estimation honnête suffit.",
+    "options": [
+      { "id": "moins-3", "label": "Moins de 3", "level": "bas", "read": "Plus de 7 demandes sur 10 ne donnent aucune vente. Vendredi, prends les 10 montants les plus élevés, appelle avant d'envoyer un message et note la raison exacte d'un non." },
+      { "id": "3-5", "label": "Entre 3 et 5", "level": "bon", "read": "Tu signes entre 3 et 5 demandes sur 10. Garde 45 minutes par semaine pour relancer les autres, puis regarde le montant moyen de chaque vente." },
+      { "id": "6-plus", "label": "6 ou plus", "level": "moyen", "read": "Au moins 6 personnes sur 10 disent oui. Ajoute 5 % sur une seule offre pendant 30 jours, puis compare demandes et ventes avec les 30 jours précédents." },
+      { "id": "ne-sais-pas", "label": "Je ne sais pas", "level": "inconnu", "read": "Pendant 30 jours, fais un trait par demande sur une feuille et écris vendu ou perdu. Chaque vendredi, divise les ventes par les demandes. Aucun logiciel n'est nécessaire." }
+    ]
+  },
+  "levers": {
+    "dependance": {
+      "title": "Ton chantier n°1 : partir une journée sans rattraper le soir",
+      "diagnosis": "Les devis, la production, les clients et l'administratif finissent chez toi. Quand tu t'absentes, tu retrouves le travail empilé au retour. Commence par écrire la tâche qui revient le plus et donne-la entièrement à quelqu'un.",
+      "actions": [
+        "Pendant 5 jours, garde une feuille près de toi. Note chaque tâche, les minutes passées et si elle fait rentrer de l'argent. Vendredi, entoure les 3 tâches longues qui ne vendent rien.",
+        "Choisis une seule tâche entourée. Filme-la avec ton téléphone, écris les points de contrôle sur une page et confie-la à quelqu'un pendant une période calme. Tu contrôles le résultat, tu ne refais pas la tâche.",
+        "Fixe un point debout de 15 minutes chaque lundi. Chacun donne le travail prévu, le chiffre qu'il suit et le seul blocage qui demande une décision de ta part."
+      ],
+      "money": null,
+      "proof": "Alexandre Lagache"
+    },
+    "prix": {
+      "title": "Ton chantier n°1 : facturer ce que tu offres aujourd'hui",
+      "diagnosis": "Un prix fixé une fois, jamais revu, et des petits services offerts pour faire plaisir : chez {nom}, une partie du travail sort sans être payée. Tes coûts, eux, ont augmenté. Tu travailles autant pour garder moins.",
+      "actions": [
+        "Pendant 5 jours, liste chaque déplacement, modification, conseil ou retouche offert et les minutes prises.",
+        "Vendredi, choisis les 3 plus fréquents. Mets une ligne et un prix clair sur le devis, puis annonce le prix avant de faire ce travail dès lundi.",
+        "Ajoute 5 % sur une seule offre pour les nouvelles demandes pendant 30 jours. Compte demandes et ventes, puis garde ou retire le nouveau prix avant de toucher au reste."
+      ],
+      "money": { "pctOfCA": 0.06, "explain": "Ordre de grandeur affiché : chiffre annuel × 6 %. Remplace-le par ton vrai calcul : services offerts chaque mois × prix décidé, plus l'effet du test de prix." }
+    },
+    "devis": {
+      "title": "Ton chantier n°1 : relancer chaque devis jusqu'au oui ou au non",
+      "diagnosis": "Chaque devis sans réponse, c'est du temps passé pour rien. Le client n'a pas dit non : il compare, il oublie, ou il attend qu'on le rappelle. Si personne ne le rappelle chez {nom}, il signe ailleurs.",
+      "actions": [
+        "Vendredi, mets les devis sans réponse sur une feuille : nom, téléphone, montant et date. Appelle d'abord les 10 montants les plus élevés.",
+        "Relance les nouveaux devis à J+2 puis J+7, par téléphone avant le message : « Tu veux qu'on avance, qu'on revoie le devis ensemble ou que je ferme le dossier ? »",
+        "Pour une nouvelle demande, appelle tout de suite si tu peux. Si tu es sur le terrain, envoie deux heures de rappel dans la journée et tiens le créneau choisi."
+      ],
+      "money": { "pctOfCA": 0.08, "explain": "Ordre de grandeur affiché : chiffre annuel × 8 %. Vérifie-le avec le montant réel des devis rappelés puis acceptés." }
+    },
+    "pilotage": {
+      "title": "Ton chantier n°1 : classer tes offres par encaissé à l'heure",
+      "diagnosis": "Tu suis le chiffre total, mais pas ce que chaque produit, chaque service ou chaque client te laisse. Le plus souvent, deux offres font l'essentiel de ce que gagne {nom}, et les autres prennent du temps pour pas grand-chose. Proposer tout, c'est ne rien mettre en avant.",
+      "actions": [
+        "Cette semaine, sors les ventes des 3 derniers mois. Pour chaque offre, calcule : encaissé moins coûts directs, puis divise par les heures passées.",
+        "Entoure les 2 offres qui laissent le plus par heure. Pendant 30 jours, mets-les en premier sur les devis, le site et tes réponses aux demandes. Ne change rien d'autre.",
+        "Chaque lundi, prends 15 minutes et note sur la même page : encaissé, ventes signées, demandes reçues et argent disponible."
+      ],
+      "money": { "pctOfCA": 0.05, "explain": "Ordre de grandeur affiché : chiffre annuel × 5 %. Confirme-le avec les heures déplacées vers les 2 meilleures offres × leur encaissé par heure." },
+      "proof": "Julien Bourguignon"
+    },
+    "recurrent": {
+      "title": "Ton chantier n°1 : proposer une suite aux anciens clients",
+      "diagnosis": "Tes clients achètent une fois, puis disparaissent, alors que ce sont les plus faciles à faire revenir : ils te connaissent et ils ont été contents. Sans suivi, {nom} recommence chaque mois à zéro.",
+      "actions": [
+        "Cette semaine, sors les clients des 12 derniers mois avec dernier achat, date et téléphone. Commence par les 20 plus gros, pas par toute la liste.",
+        "Choisis une seule suite logique : contrat, abonnement, entretien ou nouvelle commande à une date précise. Écris ce qui est inclus, le prix et le moment où ça sert au client.",
+        "Le vendredi, appelle 5 clients : « Depuis [achat], où tu en es avec [besoin] ? J'ai préparé [suite] pour éviter [problème concret]. Tu veux que je te l'explique ? » Note oui, non ou à rappeler."
+      ],
+      "money": { "pctOfCA": 0.07, "explain": "Ordre de grandeur affiché : chiffre annuel × 7 %. Confirme-le avec le nombre d'anciens clients revenus × le montant encaissé sur l'offre de suite." }
+    }
+  },
+  "proofs": ["Alexandre Lagache", "Julien Bourguignon", "Romain Pottier", "Emmanuel"]
+}

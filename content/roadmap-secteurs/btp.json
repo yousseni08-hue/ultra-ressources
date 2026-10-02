@@ -1,0 +1,196 @@
+{
+  "id": "btp",
+  "nounDefault": "ton entreprise",
+  "nomLabel": "Comment s'appelle ton entreprise ?",
+  "nomPlaceholder": "Ex. Durand Rénovation",
+  "specialite": {
+    "label": "Quel est ton métier ?",
+    "options": [
+      {
+        "id": "renovation",
+        "label": "Rénovation tous corps d'état",
+        "noun": "ton entreprise de rénovation",
+        "vend": "des chantiers de rénovation"
+      },
+      {
+        "id": "maconnerie",
+        "label": "Maçonnerie ou gros œuvre",
+        "noun": "ton entreprise de maçonnerie",
+        "vend": "des chantiers de maçonnerie"
+      },
+      {
+        "id": "plomberie",
+        "label": "Plomberie ou chauffage",
+        "noun": "ton entreprise de plomberie",
+        "vend": "des installations de plomberie et de chauffage"
+      },
+      {
+        "id": "electricite",
+        "label": "Électricité",
+        "noun": "ton entreprise d'électricité",
+        "vend": "des chantiers d'électricité"
+      },
+      {
+        "id": "carrelage",
+        "label": "Carrelage ou revêtements de sol",
+        "noun": "ton entreprise de carrelage",
+        "vend": "de la pose de carrelage et de revêtements"
+      },
+      {
+        "id": "menuiserie",
+        "label": "Menuiserie",
+        "noun": "ta menuiserie",
+        "vend": "des fenêtres, des portes et de l'agencement"
+      },
+      {
+        "id": "peinture",
+        "label": "Peinture ou plâtrerie",
+        "noun": "ton entreprise de peinture",
+        "vend": "des chantiers de peinture"
+      },
+      {
+        "id": "autre",
+        "label": "Autre",
+        "noun": "ton entreprise",
+        "vend": "des chantiers"
+      }
+    ]
+  },
+  "effectifLabel": "Combien de personnes travaillent à temps plein, sur les chantiers et au bureau, sans te compter ?",
+  "frein": {
+    "label": "Aujourd'hui, qu'est-ce qui t'empêche le plus de faire plus de chiffre ?",
+    "options": [
+      {
+        "id": "devis",
+        "label": "J'envoie mes devis le soir et je ne trouve jamais le temps de les relancer"
+      },
+      {
+        "id": "prix",
+        "label": "Je baisse mes prix dès que le client me parle du concurrent"
+      },
+      {
+        "id": "chantier",
+        "label": "Je facture mes chantiers, mais je ne sais pas ce qu'il reste à la fin"
+      },
+      {
+        "id": "bras",
+        "label": "Mon carnet est plein et je refuse des chantiers faute de compagnons"
+      },
+      {
+        "id": "dependance",
+        "label": "Je suis sur le chantier du matin au soir : sans moi, rien n'avance"
+      }
+    ]
+  },
+  "kpi": {
+    "label": "Sur 10 devis que tu envoies, combien sont signés ?",
+    "help": "Compte sur les 3 derniers mois : devis signés divisés par devis envoyés.",
+    "options": [
+      {
+        "id": "moins-2",
+        "label": "Moins de 2",
+        "level": "bas",
+        "read": "Moins de 2 sur 10, donc chez {nom}, plus de 8 visites et chiffrages sur 10 ne donnent aucun chantier. Vendredi, rappelle d'abord les 10 devis les plus élevés qui n'ont reçu ni oui ni non."
+      },
+      {
+        "id": "2-3",
+        "label": "2 ou 3",
+        "level": "moyen",
+        "read": "2 ou 3 sur 10, il reste du chiffre dans les devis déjà envoyés. Bloque 45 minutes vendredi, appelle avant d'envoyer un SMS et note la raison exacte quand le client dit non."
+      },
+      {
+        "id": "4-5",
+        "label": "4 ou 5",
+        "level": "bon",
+        "read": "4 ou 5 sur 10, la vente tient. Chez {nom}, regarde maintenant le prix signé et le nombre de chantiers que l'équipe peut vraiment prendre."
+      },
+      {
+        "id": "6-plus",
+        "label": "6 ou plus",
+        "level": "moyen",
+        "read": "6 devis sur 10 ou plus, ton prix mérite un test. Ajoute 5 % sur un seul type de chantier pendant 30 jours, puis compare devis envoyés et signés avec les 30 jours précédents."
+      },
+      {
+        "id": "inconnu",
+        "label": "Je ne sais pas",
+        "level": "inconnu",
+        "read": "Vendredi, compte les devis envoyés et signés sur les 3 derniers mois. Une feuille suffit. Sans ce chiffre, tu ne sais pas combien de visites et de soirées de chiffrage finissent sans chantier."
+      }
+    ]
+  },
+  "levers": {
+    "devis": {
+      "title": "Ton chantier n°1 : rappeler les devis qui dorment",
+      "diagnosis": "Chez {nom}, tu fais la visite, tu prends les mesures et tu chiffres le soir. Le lendemain à 7 h, tu repars sur le chantier et le devis reste dans la boîte mail. Le client compare ou attend. Tant que personne ne rappelle, tes heures de visite et de chiffrage ne donnent aucun oui ni non.",
+      "actions": [
+        "Vendredi, reprends les devis des 3 derniers mois. Sur une feuille, note client, téléphone, montant hors taxes, date et signé oui ou non. Additionne les devis sans réponse et calcule : signés divisés par envoyés.",
+        "Appelle d'abord les 10 montants les plus élevés. Dis : « Je reviens sur le devis pour votre chantier. Vous voulez qu'on avance, qu'on le revoie ensemble ou que je ferme le dossier ? » Note la réponse sur la feuille.",
+        "Garde ensuite 45 minutes chaque vendredi. Pour les nouveaux devis, rappelle à J+2 puis J+7. Quand le client accepte, fais signer et demande l'acompte prévu dans tes conditions de vente."
+      ],
+      "money": {
+        "pctOfCA": 0.1,
+        "explain": "Exemple de calcul : si 20 devis signés donnent ton chiffre actuel, 2 devis du même montant ajoutent 10 %. Ton vrai gain dépend du montant et de la marge des devis rappelés."
+      },
+      "proof": "Romuald"
+    },
+    "prix": {
+      "title": "Ton chantier n°1 : chiffrer avec tes coûts et ta marge",
+      "diagnosis": "Quand le client cite un concurrent, tu baisses le devis avant d'avoir calculé ce que {nom} doit garder. La remise ressort ensuite en heures offertes ou en fournitures payées de ta poche. Si presque tous tes devis passent, teste le prix sur un seul type de chantier avant de prendre plus de volume.",
+      "actions": [
+        "Avec ton expert-comptable, additionne les frais du mois même sans chantier : salaires chargés, véhicules, assurances, local et comptable. Divise par le nombre de jours réellement facturables. Tu obtiens les frais fixes à couvrir par jour.",
+        "Samedi matin, reprends les 5 derniers chantiers. Sur une feuille, note facturé, fournitures, sous-traitance, jours passés et frais fixes par jour. Entoure les remises et ce qu'elles ont retiré au résultat.",
+        "Pendant 30 jours, ajoute 5 % sur un seul type de chantier. Note devis envoyés et signés. Si le taux tient, garde le prix. S'il chute, relis les refus avant de toucher aux autres tarifs."
+      ],
+      "money": {
+        "pctOfCA": 0.06,
+        "explain": "Exemple de calcul : sur 100 000 € de chantiers concernés, 6 % de hausse représente 6 000 € facturés en plus si le même nombre de devis est signé. Ce n'est pas une garantie."
+      }
+    },
+    "chantier": {
+      "title": "Ton chantier n°1 : compter ce qu'il reste sur chaque chantier",
+      "diagnosis": "Chez {nom}, les factures tombent dans la compta sans nom de chantier. Tu connais le montant facturé, puis tu découvres trop tard les fournitures en plus, la reprise et les allers-retours au négoce. Le chantier semblait bon sur le devis, sauf qu'il ne laisse presque rien à la fin.",
+      "actions": [
+        "Dès lundi, le compagnon qui réceptionne écrit le nom du chantier sur chaque facture et bon de livraison. Range-les dans un dossier par chantier.",
+        "Avant de quitter le chantier, le chef d'équipe envoie une photo de la feuille d'heures avec le nom du chantier et les heures de chaque compagnon. Une seule personne reporte ces heures le vendredi.",
+        "À la réception, note sur une page : facturé, fournitures, sous-traitance, heures prévues, heures réelles et reprises. Après 10 chantiers, classe-les par euros gardés et regarde ce qui a mangé les 3 derniers."
+      ],
+      "money": {
+        "pctOfCA": 0.04,
+        "explain": "Ordre de grandeur affiché : chiffre annuel × 4 %. Confirme-le en additionnant sur 10 chantiers les fournitures, reprises et heures qui dépassent le devis."
+      }
+    },
+    "bras": {
+      "title": "Ton chantier n°1 : chiffrer le premier recrutement",
+      "diagnosis": "Le carnet de {nom} est plein et les nouveaux chantiers attendent un créneau que tu n'as plus. Pendant que tu poses, les devis, les relances et la préparation s'empilent. Le prochain recrutement doit reprendre des heures précises et libérer du temps pour chiffrer la suite.",
+      "actions": [
+        "Pendant 5 jours, garde une feuille dans la poche et note tes minutes de manutention, chargement, rangement et courses au négoce. Vendredi, additionne les heures qu'un renfort pourrait reprendre.",
+        "Appelle ton comptable avec deux chiffres : heures à reprendre et chantiers refusés depuis 3 mois. Demande le coût total par mois d'un apprenti ou d'un poseur, charges comprises, puis vérifie combien de mois ton compte peut tenir ce coût.",
+        "À la prochaine démonstration, un compagnon te filme avec ton téléphone. Fais une vidéo par geste et une check-list d'une page. Le premier jour, la recrue regarde, refait le geste et le chef d'équipe contrôle."
+      ],
+      "money": {
+        "pctOfCA": 0.12,
+        "explain": "Ordre de grandeur affiché : chiffre annuel × 12 %. Vérifie-le avec le montant des chantiers réellement refusés et le coût total du poste avant d'embaucher."
+      },
+      "proof": "Hallan Kiddi"
+    },
+    "dependance": {
+      "title": "Ton chantier n°1 : sortir d'abord 2 heures du chantier",
+      "diagnosis": "Aujourd'hui, {nom} avance parce que tu poses du matin au soir, puis tu fais les devis chez toi. Personne ne garde un vrai créneau pour vendre, préparer les prochains chantiers et suivre l'argent. Commence par 2 heures fixes, avec un compagnon qui sait ouvrir le chantier sans toi.",
+      "actions": [
+        "Pendant une semaine, note tes tâches par blocs de 30 minutes. Vendredi, surligne celles qu'un compagnon peut prendre avec une consigne écrite.",
+        "Au prochain chantier, le même compagnon réceptionne le matériel et ouvre avec une check-list. Tu l'appelles une fois à midi, tu contrôles le soir et tu ajoutes à la fiche ce qui a manqué.",
+        "Vendredi suivant, sors 2 heures du chantier pour devis et relances. Quand ce créneau tient 3 semaines sans rattrapage le soir, ajoute 2 heures pour les chiffres et le planning."
+      ],
+      "money": null,
+      "proof": "Jean"
+    }
+  },
+  "proofs": [
+    "Damien",
+    "Romuald",
+    "Issam",
+    "Mickael",
+    "Hallan Kiddi",
+    "Jean"
+  ]
+}

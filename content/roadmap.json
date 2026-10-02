@@ -1,0 +1,820 @@
+{
+  "slug": "roadmap",
+  "keyword": "PLAN",
+  "title": "Le plan pour augmenter ton profit et sortir de l'opérationnel dans les 12 prochains mois",
+  "promise": "En 2 minutes, tu sais où en est ton entreprise, ce qui bloque sa croissance et les actions à lancer dès aujourd'hui pour qu'elle tourne de plus en plus sans toi, en faisant de plus en plus d'argent.",
+  "audience": "Patrons de business physiques (BTP et artisanat, restauration, garage, salon et institut, commerce, nettoyage) dont l'activité tourne déjà et qui veulent structurer leur croissance.",
+  "deliverables": [
+    "Comment augmenter ton chiffre d'affaires",
+    "Comment structurer une équipe qui développe ton entreprise à ta place",
+    "Surtout, par quoi commencer dès aujourd'hui"
+  ],
+  "cta": "Je reçois mon plan",
+  "functions": [
+    {
+      "id": "offre",
+      "label": "Offre et prix"
+    },
+    {
+      "id": "production",
+      "label": "Production"
+    },
+    {
+      "id": "acquisition",
+      "label": "Acquisition"
+    },
+    {
+      "id": "vente",
+      "label": "Vente"
+    },
+    {
+      "id": "fidelisation",
+      "label": "Fidélisation"
+    },
+    {
+      "id": "recrutement",
+      "label": "Recrutement"
+    },
+    {
+      "id": "cadre",
+      "label": "Cadre social"
+    },
+    {
+      "id": "finance",
+      "label": "Pilotage financier"
+    },
+    {
+      "id": "outils",
+      "label": "Outils"
+    }
+  ],
+  "questions": [
+    {
+      "id": "secteur",
+      "label": "Dans quel secteur est ton entreprise ?",
+      "options": [
+        {
+          "id": "btp",
+          "label": "BTP / artisanat"
+        },
+        {
+          "id": "resto",
+          "label": "Restauration / métiers de bouche"
+        },
+        {
+          "id": "auto",
+          "label": "Garage / automobile"
+        },
+        {
+          "id": "beaute",
+          "label": "Salon / institut / beauté"
+        },
+        {
+          "id": "commerce",
+          "label": "Commerce / boutique"
+        },
+        {
+          "id": "nettoyage",
+          "label": "Nettoyage / entretien"
+        },
+        {
+          "id": "autre",
+          "label": "Autre"
+        }
+      ]
+    },
+    {
+      "id": "effectif",
+      "label": "Combien de personnes travaillent à temps plein dans ton entreprise, sans te compter ?",
+      "options": [
+        {
+          "id": "seul",
+          "label": "Aucune, il n'y a que moi"
+        },
+        {
+          "id": "seul-renforts",
+          "label": "Aucune, mais j'ai des extras ou des sous-traitants"
+        },
+        {
+          "id": "1-4",
+          "label": "De 1 à 4"
+        },
+        {
+          "id": "5-9",
+          "label": "De 5 à 9"
+        },
+        {
+          "id": "10-19",
+          "label": "De 10 à 19"
+        },
+        {
+          "id": "20-49",
+          "label": "De 20 à 49"
+        },
+        {
+          "id": "50-99",
+          "label": "De 50 à 99"
+        },
+        {
+          "id": "100-plus",
+          "label": "100 ou plus"
+        }
+      ]
+    },
+    {
+      "id": "ca",
+      "label": "Quel est ton chiffre d'affaires annuel ?",
+      "options": [
+        {
+          "id": "moins-100k",
+          "label": "Moins de 100 000 €"
+        },
+        {
+          "id": "100-300k",
+          "label": "Entre 100 000 et 300 000 €"
+        },
+        {
+          "id": "300-500k",
+          "label": "Entre 300 000 et 500 000 €"
+        },
+        {
+          "id": "500k-1m",
+          "label": "Entre 500 000 € et 1 M€"
+        },
+        {
+          "id": "plus-1m",
+          "label": "Plus de 1 M€"
+        }
+      ]
+    },
+    {
+      "id": "tresorerie",
+      "label": "Combien as-tu de disponible sur ton compte pro aujourd'hui ?",
+      "options": [
+        {
+          "id": "moins-5k",
+          "label": "Moins de 5 000 €"
+        },
+        {
+          "id": "5-20k",
+          "label": "Entre 5 000 et 20 000 €"
+        },
+        {
+          "id": "20-50k",
+          "label": "Entre 20 000 et 50 000 €"
+        },
+        {
+          "id": "plus-50k",
+          "label": "Plus de 50 000 €"
+        }
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "id": 1,
+      "name": "Cadrer",
+      "effectif": "0 salarié",
+      "founderRole": "Tu fais le travail, les devis, les ventes et les factures.",
+      "summary": "Tu portes la boîte, avec parfois un extra ou un sous-traitant. Quand tu produis, personne ne répond aux demandes ni ne relance les devis. Ton chiffre dépend encore du nombre d'heures que tu peux caser dans ta semaine.",
+      "bottleneck": "Ton temps bloque tout : soit tu produis, soit tu vends. Personne ne prend le relais.",
+      "signsOk": [
+        "Tu fixes tes prix avec tes coûts et le temps passé.",
+        "Chaque demande reçoit une réponse, puis une relance dans la semaine.",
+        "Ton compte pro est séparé et la TVA attend sur un compte dédié.",
+        "Tu as écrit les 3 premières tâches à confier à une recrue."
+      ],
+      "signsKo": [
+        "Tu fais tes devis et tes relances le soir, quand il te reste du jus.",
+        "Une grosse semaine de production fait baisser tes ventes la semaine suivante.",
+        "Tu connais ton chiffre du mois, mais pas ce que te rapporte une heure.",
+        "Des demandes restent sans réponse parce que tu es sur le terrain."
+      ],
+      "actions": {
+        "offre": "Vendredi, sors les factures des 3 derniers mois et classe tes prestations par chiffre encaissé. Sur la première, ajoute 5 % aux nouveaux devis pendant 30 jours. Note seulement deux nombres sur une feuille : devis envoyés et devis signés, puis compare avec les 30 jours précédents.",
+        "production": "À la prochaine prestation, pose ton téléphone et filme les 5 moments qui comptent : préparation, matériel, geste, contrôle et rangement. Dimanche soir, écris la liste sur une page. Une recrue doit pouvoir la suivre sans t'appeler toutes les 10 minutes.",
+        "acquisition": "Choisis un seul canal pour les 30 prochains jours : recommandations, fiche Google ou réseaux. Bloque 45 minutes le vendredi pour t'en occuper. Sur une feuille, note le nom de chaque demande et d'où elle vient. À la fin du mois, compte les ventes de ce canal.",
+        "vente": "Si tu peux décrocher, rappelle une nouvelle demande tout de suite. Si tu es sur le terrain, envoie : « Je suis en intervention. Je vous rappelle aujourd'hui à 12 h 30 ou à 18 h. Quel créneau vous va ? » Le vendredi, garde 45 minutes pour les devis sans réponse et appelle avant d'envoyer un SMS.",
+        "fidelisation": "Choisis une seule suite logique à proposer : entretien, complément ou prochain rendez-vous. Au moment de payer, dis : « La suite logique, c'est ça. Tu veux que je te la bloque maintenant ? » Si le client est content, envoie le lien d'avis avant qu'il parte.",
+        "recrutement": "Pendant 5 jours, garde une feuille dans ta poche. Pour chaque tâche, note les minutes passées et si elle fait rentrer de l'argent. Vendredi, entoure les 3 tâches longues qui ne vendent rien : manutention, rangement, livraison ou administratif. Ce sont les premières à confier.",
+        "cadre": "Avant la première embauche, appelle ton expert-comptable pendant 30 minutes. Demande le coût total par mois, le type de contrat et qui prépare la paie. Pour un sous-traitant, mets au minimum par écrit le travail, le prix, la date et qui corrige si ça ne va pas.",
+        "finance": "Demande à ta banque un sous-compte pour la TVA et les charges. Chaque lundi avant de démarrer, prends 15 minutes et note sur la même feuille : encaissé la semaine passée, ventes signées, demandes reçues et argent disponible.",
+        "outils": "Cette semaine, choisis un seul endroit pour les rendez-vous et les relances : ton agenda papier ou celui du téléphone. Chaque demande reçoit tout de suite une date de rappel. Garde ton logiciel actuel pour les devis et factures, s'il fait déjà le travail."
+      },
+      "top3": [
+        "Bloque 45 minutes le même jour chaque semaine et rappelle d'abord les 10 devis les plus élevés.",
+        "Pendant 5 jours, calcule ton taux horaire tâche par tâche et entoure les 3 plus bas.",
+        "Chaque lundi avant de démarrer, prends 15 minutes pour noter ton encaissé, tes ventes signées, tes demandes et ta trésorerie."
+      ],
+      "examples": {
+        "btp": "Tu poses la journée et tu chiffres le soir. Confie la manutention à un apprenti, garde l'heure récupérée pour les relances et demande l'acompte pendant la visite dès que le devis est accepté.",
+        "resto": "Tu es en cuisine, au passe et à la caisse. Chaque soir, sors l'encaissé et le panier moyen de la caisse. Demain, donne au serveur un seul supplément à proposer à chaque table.",
+        "auto": "Tu es mécano, secrétaire et chauffeur dans la même journée. Pendant une semaine, note le temps et le montant facturé par intervention. Mets ensuite un prix sur les 3 petits services que tu offres le plus souvent.",
+        "beaute": "Ton agenda est plein grâce à tes mains. Sors le chiffre et le temps passé par prestation sur 3 mois, puis revois d'abord le prix de celle qui rapporte le moins à l'heure.",
+        "commerce": "Tu ouvres, tu vends, tu commandes et tu fais la compta. Pendant 30 jours, note chaque soir les entrées, les tickets et le panier moyen. Repère les créneaux avec du passage et peu de ventes, puis teste une seule nouvelle phrase d'accueil pendant une semaine.",
+        "nettoyage": "Tu nettoies le jour et tu fais les devis le soir. Sur tes 10 plus gros clients, calcule le montant encaissé par heure, trajet compris. Renégocie d'abord le contrat le plus bas."
+      },
+      "graduateBy": "Libère une demi-journée fixe pour vendre et relancer, puis recrute sur les tâches qui te rapportent le moins à l'heure.",
+      "graduateWhen": "Tu passes au palier 2 quand quelqu'un produit sans toi pendant que tu vends, chaque semaine.",
+      "cta": {
+        "title": "Ton chiffre a encore la taille de tes journées.",
+        "text": "Sur l'appel, on chiffre les heures que tu peux libérer ce mois-ci, la première tâche à confier et ce que tu vas faire du temps récupéré.",
+        "button": "Réserve un appel diagnostic avec l'équipe Ultra"
+      },
+      "stat": {
+        "figure": "76 %",
+        "text": "76 % des entreprises françaises n'ont aucun salarié. C'est le point de départ de presque tout le monde : le vrai scaling commence à la première embauche.",
+        "source": "Source : Insee, SIDE 2024 (5,99 millions d'entreprises actives)"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Lâcher",
+      "effectif": "1 à 4 salariés",
+      "founderRole": "Tu travailles avec l'équipe, tu la formes et chaque décision remonte encore à toi.",
+      "summary": "Tu as embauché, mais les devis, le planning, les questions et les urgences finissent encore sur ton téléphone. Tu produis avec l'équipe le jour et tu fais ton boulot de patron après. Tu as du travail, sauf que l'équipe n'en prend pas encore assez sans toi.",
+      "bottleneck": "Tes salariés ont des bras, mais pas encore assez de consignes ni de décisions à prendre seuls.",
+      "signsOk": [
+        "Tes salariés font la prestation principale sans t'appeler.",
+        "Tu gardes une journée fixe par semaine pour vendre, piloter ou recruter.",
+        "Tu filtres les demandes avec une zone, un budget et un type de prestation précis.",
+        "Chaque salarié a signé son contrat et connaît les règles de la boîte.",
+        "Tu es déjà parti une semaine et l'activité a tenu."
+      ],
+      "signsKo": [
+        "Ton équipe t'appelle pour l'ordre des tâches, les prix ou le moindre imprévu.",
+        "Tu repasses derrière le travail en disant que ça va plus vite.",
+        "Tu recrutes quand tu es déjà sous l'eau.",
+        "Les devis et la compta débordent encore le soir et le week-end.",
+        "Tu connais les salaires, mais pas ce que chaque poste produit ou encaisse."
+      ],
+      "actions": {
+        "offre": "Pendant 5 jours, l'équipe note sur une feuille chaque déplacement, reprise ou petit service fait gratuitement. Vendredi, choisis les 3 plus fréquents, mets un prix dessus et ajoute-les aux nouveaux devis dès lundi. Ne teste qu'un changement à la fois.",
+        "production": "Choisis la prestation la plus vendue. La prochaine fois, un salarié te filme avec ton téléphone du début au contrôle final. Coupe la vidéo en étapes, ajoute une check-list d'une page et fais refaire la prestation par un salarié pendant que tu regardes seulement le contrôle final.",
+        "acquisition": "Mets les horaires et le téléphone à jour sur ta fiche Google. La personne qui encaisse envoie ensuite le lien d'avis avec ce message : « Merci pour ta confiance. Tu peux raconter en deux phrases ce qu'on a fait pour toi ? » Le lundi, compte les demandes venues de Google et du bouche-à-oreille.",
+        "vente": "Nomme une seule personne pour rappeler les demandes. Si elle ne peut pas appeler tout de suite, elle envoie un SMS avec deux créneaux dans la journée. Elle pose trois questions : où, quel besoin, pour quand. Le budget vient ensuite, selon ton métier. Quand le client accepte, demande la signature et l'acompte dans le cadre prévu par tes conditions de vente.",
+        "fidelisation": "Prépare un message court avec la date, l'heure, ce que le client doit prévoir et le nom de son contact. À la fin, la personne qui encaisse propose une seule suite : « Pour garder le résultat, le prochain passage est dans X semaines. Je te le bloque ? »",
+        "recrutement": "Écris l'annonce maintenant, même si tu embauches dans 2 mois : horaires réels, 5 tâches, salaire et responsable. Fais un appel de 10 minutes avec les mêmes 5 questions, puis garde les 3 bons numéros dans une note appelée « candidats à rappeler ».",
+        "cadre": "Avant le premier jour, fais la déclaration d'embauche, signe le contrat et confirme par écrit les horaires, le lieu et le responsable. Ton expert-comptable ou ton prestataire paie prépare la paie. Personne ne démarre sur une promesse orale.",
+        "finance": "Demande à ton expert-comptable le coût total par mois de chaque poste, charges comprises. En face, note ce que le poste produit ou encaisse avec une règle adaptée au métier. Le lundi, ajoute quatre chiffres : encaissé, ventes signées, demandes et argent disponible.",
+        "outils": "Mets l'équipe sur un seul planning, même si c'est un tableau blanc ou un agenda partagé. Une seule personne le met à jour. Garde le logiciel de devis et factures que l'équipe sait déjà utiliser et supprime seulement les doubles."
+      },
+      "top3": [
+        "Chaque vendredi, rappelle d'abord les 10 devis les plus élevés et demande l'acompte quand le client signe.",
+        "Confie une tâche complète ce mois-ci, avec une vidéo tournée au téléphone, une page de contrôle et une date de vérification.",
+        "Teste d'abord une journée hors du terrain. Quand elle tient sans rattrapage le soir, prépare le test d'une semaine."
+      ],
+      "examples": {
+        "btp": "Ton poseur et ton apprenti attendent tes consignes chaque matin. Le chef d'équipe prépare le chantier la veille avec une liste écrite. Toi, tu gardes une journée fixe pour chiffrer, relancer et encaisser les acomptes.",
+        "resto": "Tu as un cuisinier et un serveur, mais tu contrôles encore chaque assiette. Affiche les fiches de tes 10 plats les plus vendus et donne au serveur une formule ou un supplément précis à proposer à chaque table.",
+        "auto": "Ton ouvrier sait réparer, mais il t'appelle pour chaque décision. Écris le montant des petits devis qu'il peut valider, les pièces qu'il peut commander et l'ordre de passage qu'il peut changer seul.",
+        "beaute": "Ta collaboratrice fait les soins, mais les clientes réclament ton agenda. Filme le protocole de tes 2 soins phares, fais-lui prendre 5 clientes dessus et présente-la comme la spécialiste de ces soins.",
+        "commerce": "Ton vendeur tient la boutique tant que tu es là. Donne-lui les fiches d'ouverture, de fermeture et de vente additionnelle, puis laisse-lui un mardi entier. Le soir, contrôle la caisse et les incidents sans refaire sa journée.",
+        "nettoyage": "Tes agents travaillent, mais tu repasses derrière eux. Chaque agent remplit la check-list du site, le chef d'équipe la contrôle et t'envoie seulement les écarts à corriger."
+      },
+      "graduateBy": "Filme ta prestation principale, forme l'équipe avec la vidéo, puis teste une journée entière hors du terrain sans tout rattraper le soir.",
+      "graduateWhen": "Tu passes au palier 3 quand l'équipe tient cette journée sans t'appeler pour les mêmes questions et que tu gardes ce créneau chaque semaine.",
+      "cta": {
+        "title": "Ton téléphone tient encore l'équipe debout.",
+        "text": "Sur l'appel, on choisit la première décision à confier, la personne qui la prend et le contrôle à garder pour que le travail sorte correctement sans toi.",
+        "button": "Réserve un appel diagnostic avec l'équipe Ultra"
+      },
+      "stat": {
+        "figure": "Moins d'1 sur 4",
+        "text": "Seulement 24 % des entreprises françaises ont au moins un salarié. Avec ton équipe, tu fais déjà partie de cette minorité.",
+        "source": "Source : Insee, SIDE 2024"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Trier",
+      "effectif": "5 à 9 salariés",
+      "founderRole": "Tu manages encore chaque salarié en direct.",
+      "summary": "L'équipe tourne, sauf que tu as empilé les demandes, les chantiers et les prestations. Chacun touche un peu à tout, la qualité change selon la personne et tu dois encore arbitrer chaque semaine.",
+      "bottleneck": "Tu vends trop de choses différentes pour les faire répéter proprement par l'équipe.",
+      "signsOk": [
+        "Tu connais les 2 ou 3 prestations qui font l'essentiel du chiffre et de la marge.",
+        "L'équipe refuse ou redirige les demandes hors spécialité sans t'appeler.",
+        "Chaque lundi, tu suis les demandes, les ventes signées et l'encaissé.",
+        "Chaque salarié a une fiche de poste et un seul responsable.",
+        "Ton tableau de trésorerie couvre les 3 prochains mois."
+      ],
+      "signsKo": [
+        "Ta carte, ton catalogue ou ta grille de prix gagne des lignes chaque année.",
+        "Presque tous tes devis passent alors que tes prix n'ont pas bougé.",
+        "Personne ne mesure le délai entre une demande et le premier appel.",
+        "Les horaires, congés ou tenues se négocient au cas par cas.",
+        "Une grosse commande ou une paie suffit à mettre ton compte sous tension."
+      ],
+      "actions": {
+        "offre": "Bloque 2 heures avec ton comptable ou ta responsable administrative. Sur les 12 derniers mois, mets chaque prestation dans un tableau avec chiffre, achats et heures. Entoure celles qui font l'essentiel du chiffre. Ce mois-ci, arrête d'en proposer une qui prend du temps et laisse peu. Si 7 devis sur 10 passent, teste 5 % de hausse sur une seule prestation pendant 30 jours.",
+        "production": "Prends tes 3 prestations phares. Filme chacune une fois avec un téléphone et écris sur une page les points qui font refuser le travail. Le chef d'équipe contrôle 5 prestations par semaine avec cette page et corrige seulement les écarts notés.",
+        "acquisition": "Pendant 90 jours, garde le canal qui apporte déjà des ventes. Au premier appel, demande où se trouve le client, ce qu'il veut et pour quand. Note chaque semaine les demandes reçues, celles refusées avec la raison et les ventes signées.",
+        "vente": "Sur un tableau simple, mets une ligne par demande avec quatre colonnes : reçue, devis envoyé, signé, encaissé. Calcule les signatures sur toutes les demandes. Le dernier vendredi du mois, une personne rappelle les 20 dossiers les plus intéressants restés sans réponse.",
+        "fidelisation": "Garde dans le même fichier le téléphone, le dernier achat et la prochaine chose utile à proposer. Le premier lundi du mois, sors 20 anciens clients. Une personne les appelle avec une seule offre et note oui, non ou à rappeler.",
+        "recrutement": "Prépare 8 questions identiques et un petit test réel du métier. Appelle deux anciennes références uniquement pour le candidat final. Dans l'équipe, fais tester le rôle de chef pendant 30 jours à la personne la plus fiable, avec trois responsabilités écrites.",
+        "cadre": "Avec ton gestionnaire de paie ou ton conseil social, fais une fiche de deux pages : horaires, absences, congés, tenue, sécurité et procédure en cas d'écart. Chaque salarié la reçoit et signe la remise. Le même responsable applique la même règle.",
+        "finance": "Le premier lundi du mois, passe 45 minutes avec ton expert-comptable ou ta responsable administrative sur le résultat du mois et les 3 mois de trésorerie à venir. Chaque lundi avec l'équipe, regarde seulement encaissé, ventes signées, demandes et argent disponible.",
+        "outils": "Garde trois endroits maximum : un planning, un groupe pour les messages urgents et une liste de tâches. Nomme une personne qui range l'information chaque vendredi. Remplace les mots de passe envoyés par SMS par des accès nominatifs."
+      },
+      "top3": [
+        "Teste 5 % de hausse pendant 30 jours sur ta prestation phare si 7 devis sur 10 passent.",
+        "Classe tes prestations par chiffre, marge et temps passé, puis retire une offre faible ce mois-ci.",
+        "Choisis ton futur chef d'équipe et teste pendant 30 jours une fiche de responsabilités précise."
+      ],
+      "examples": {
+        "btp": "Tu acceptes carrelage, plomberie et électricité sur le même chantier. Calcule la marge et les heures par corps de métier, garde ceux que tes compagnons répètent bien et monte le prix si 7 devis sur 10 passent.",
+        "resto": "Ta carte fait plusieurs pages et chaque cuisinier a sa recette. Garde 8 à 12 plats qui se vendent vraiment, puis affiche leur grammage, leur photo et leurs étapes au poste.",
+        "auto": "Mécanique, carrosserie, pneus et clim entrent dans le même planning. Calcule l'encaissé par heure pour chaque famille, réserve les créneaux aux 2 meilleures et revois le prix des autres.",
+        "beaute": "Ta grille fait plusieurs pages. Sors le chiffre par prestation, garde 4 offres phares et retire d'abord celle qui rapporte le moins à l'heure. Propose aux clientes l'offre phare la plus proche.",
+        "commerce": "Tu as ajouté une famille de produits à chaque demande. Chaque mois, sors la marge et la rotation par rayon. Mets les 2 meilleurs en vitrine et arrête de racheter le stock qui dort.",
+        "nettoyage": "Bureaux, vitres, fins de chantier et particuliers remplissent le planning. Calcule la marge contrat par contrat et réserve tes équipes aux clients récurrents qui paient correctement les heures et les trajets."
+      },
+      "graduateBy": "Concentre la boîte sur les 2 ou 3 prestations qui font 80 % du chiffre, puis donne le terrain à un chef d'équipe.",
+      "graduateWhen": "Tu passes au palier 4 quand le chef d'équipe tient la production et refuse les demandes hors spécialité sans t'appeler.",
+      "cta": {
+        "title": "Ton équipe s'éparpille sur trop de prestations.",
+        "text": "Sur l'appel, on classe tes prestations par chiffre, marge et temps passé. Tu repars avec celle à arrêter, celle à pousser et le prix à tester.",
+        "button": "Réserve un appel diagnostic avec l'équipe Ultra"
+      },
+      "stat": {
+        "figure": "1 sur 3",
+        "text": "Parmi les établissements qui emploient, seulement 1 sur 3 compte 5 salariés ou plus. Tu as passé ce cap.",
+        "source": "Source : Insee, Flores 2023 (établissements employeurs)"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Monter en gamme",
+      "effectif": "10 à 19 salariés",
+      "founderRole": "Tu pilotes 2 ou 3 responsables qui tiennent chacun leur équipe.",
+      "summary": "Tu as tes premiers responsables et la production tient. Maintenant, beaucoup de clients achètent une fois puis disparaissent. Chaque mois, l'équipe doit repartir chercher du chiffre neuf alors qu'une partie dort déjà dans le fichier clients.",
+      "bottleneck": "Tes clients achètent une offre une fois, puis personne ne leur propose la suite.",
+      "signsOk": [
+        "Une partie des clients rachète un forfait, un contrat, un abonnement ou une offre premium.",
+        "Tes responsables règlent le terrain et t'apportent leurs chiffres chaque semaine.",
+        "Tu connais le coût d'un nouveau client et son chiffre sur 12 mois.",
+        "Ton budget te donne le montant disponible pour recruter, acheter ou communiquer."
+      ],
+      "signsKo": [
+        "Les ventes montent, mais très peu de clients achètent une deuxième fois.",
+        "Les commerciaux promettent des choses que la production doit rattraper.",
+        "Tu cherches des managers dehors sans avoir testé les bons éléments de l'équipe.",
+        "Un départ emporte encore des fichiers, des contacts ou une façon de faire.",
+        "Chaque investissement se décide au solde du compte."
+      ],
+      "actions": {
+        "offre": "Prends ton offre la plus vendue et fais trois versions sur une page : essentiel, complet et premium. Ajoute une seule suite pour les clients actuels, comme l'entretien, le forfait ou l'abonnement. Pendant 2 semaines, présente les deux à 20 bons clients et note mot pour mot leurs réponses.",
+        "production": "Dans un tableau partagé, note chaque reprise ou réclamation avec une cause courte. Le vendredi, le responsable prend la cause la plus fréquente, corrige la fiche concernée et contrôle 5 prestations la semaine suivante. Une seule correction par semaine.",
+        "acquisition": "Ajoute la source à chaque nouveau client et le budget dépensé sur chaque canal. Tous les 3 mois, divise la dépense par le nombre de nouveaux clients, puis compare avec ce qu'ils ont déjà encaissé. Coupe le canal qui coûte et ne vend rien.",
+        "vente": "Prépare un devis à 3 niveaux sur l'offre phare et écris les 5 objections qui reviennent vraiment. Le lundi, le responsable vente prend 20 minutes pour regarder demandes, devis, signatures, montant moyen et raisons des pertes.",
+        "fidelisation": "Pose trois rappels simples après la vente : vérifier que tout va bien, demander un avis, proposer la suite. Chaque rappel a une date et un prénom dans le fichier clients. Commence par les 50 derniers clients avant d'automatiser quoi que ce soit.",
+        "recrutement": "Fais tester le rôle de manager pendant 30 jours à un salarié fiable : tenir le planning, faire le point d'équipe et remonter quatre chiffres. Forme-le pendant deux semaines avant de changer son titre. Fais valider toute prime de cooptation par la paie avant de l'annoncer.",
+        "cadre": "Avec ton conseil social, écris une page pour chaque moment sensible : avertissement, entretien, départ. Sur chaque page, note le document, le délai, le matériel à reprendre et la personne responsable. L'équipe applique cette liste à chaque fois.",
+        "finance": "Avec ton expert-comptable, pose sur une page les encaissements et grosses dépenses des 12 prochains mois. Mets-la à jour 1 heure à la fin de chaque mois. Le lundi, chaque responsable remonte encaissé, ventes signées, demandes et dépenses déjà engagées.",
+        "outils": "Fais l'inventaire du matériel, des fichiers et des accès dans une seule liste avec un nom en face. Le vendredi, chaque responsable met ses quatre chiffres à jour. Quand quelqu'un part, la même liste sert à récupérer le matériel et couper les accès."
+      },
+      "top3": [
+        "Prépare un devis à 3 niveaux sur ton offre phare et teste une offre de suite auprès de 20 clients actuels.",
+        "Donne à chaque responsable 4 chiffres à remonter avant votre point du lundi.",
+        "Pose un budget sur 12 mois avec ton expert-comptable et fixe ton enveloppe d'investissement."
+      ],
+      "examples": {
+        "btp": "Sur chaque devis, propose un niveau essentiel, complet et premium. À la réception du chantier, présente un contrat d'entretien ou de maintenance avec une date de rappel déjà posée.",
+        "resto": "Ta salle tourne, mais le panier moyen bouge peu. Choisis une formule, un supplément et une offre entreprise. Le responsable de salle suit leur nombre vendu à chaque service.",
+        "auto": "Tes clients reviennent à la prochaine panne. À la restitution du véhicule, propose le prochain entretien daté. Puis présente une offre flotte aux 20 entreprises situées autour du garage.",
+        "beaute": "Chaque cliente réserve un soin. À l'encaissement, propose le prochain rendez-vous, le forfait sur la prestation phare et un seul produit qui entretient le résultat.",
+        "commerce": "Tes clients paient puis repartent. À la caisse, récupère leur contact avec une raison précise, puis propose sous 30 jours un arrivage, un service de livraison ou une offre réservée aux pros.",
+        "nettoyage": "Tes contrats couvrent l'entretien courant. À la revue trimestrielle, propose les vitres, la remise en état ou la fin de chantier et chiffre chaque option séparément."
+      },
+      "graduateBy": "Passe ton offre phare sur 3 niveaux et propose une seule offre de suite aux 20 meilleurs clients actuels.",
+      "graduateWhen": "Tu passes au palier 5 quand le rachat client apparaît chaque mois dans tes chiffres et que les responsables règlent le terrain sans toi.",
+      "cta": {
+        "title": "Ton prochain chiffre dort dans ton fichier clients.",
+        "text": "Sur l'appel, on choisit l'offre de suite, les 20 premiers clients à appeler et la phrase que ton équipe utilisera pour la proposer.",
+        "button": "Réserve un appel diagnostic avec l'équipe Ultra"
+      },
+      "stat": {
+        "figure": "4 %",
+        "text": "Seulement 4 % des entreprises françaises ont 10 salariés ou plus. Tu fais partie de ce petit groupe.",
+        "source": "Source : Insee, SIDE 2024"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Serrer les boulons",
+      "effectif": "20 à 49 salariés",
+      "founderRole": "Tu pilotes des responsables qui encadrent eux-mêmes les équipes.",
+      "summary": "La boîte a grandi avec plusieurs offres, équipes ou sites. En route, tu as accumulé des heures offertes, des reprises, des achats mal rattachés et des départs mal préparés. Le chiffre monte, mais trop d'argent se perd entre la vente et le compte bancaire.",
+      "bottleneck": "Les petites fuites répétées mangent le résultat : heures offertes, reprises, achats et turnover.",
+      "signsOk": [
+        "Chaque offre a un responsable et un chiffre à améliorer ce trimestre.",
+        "Un nouveau est formé par un parrain, des vidéos et des contrôles prévus.",
+        "Chaque coût porte le nom du chantier, du service ou du site concerné.",
+        "Chaque semaine, tu suis les factures clients à encaisser et les fournisseurs à payer.",
+        "Les accès, le matériel et la formation suivent une check-list d'arrivée et de départ."
+      ],
+      "signsKo": [
+        "Le chiffre monte plus vite que le résultat.",
+        "L'offre principale signe moins et personne n'écoute les ventes perdues.",
+        "Des clients partent sans motif noté dans ton fichier.",
+        "La majorité des recrutements remplace des départs.",
+        "Des factures arrivent sans commande ni responsable identifié."
+      ],
+      "actions": {
+        "offre": "Donne chaque offre à un responsable et choisis un seul chiffre pour les 90 jours : prix, montant moyen ou taux de signature. Il montre le chiffre du lundi sur une page. Aucune nouvelle offre ne démarre avant la fin de ce test.",
+        "production": "Dès lundi, chaque facture, heure et sous-traitance porte le code du chantier, du service ou du site. À la fin du mois, le responsable compare prévu et réel, puis explique les 3 plus gros écarts avec la facture ou le relevé d'heures devant lui.",
+        "acquisition": "Pour les 3 campagnes qui dépensent le plus, note budget, demandes utiles et ventes. À la fin du mois, coupe celle qui n'a produit aucune vente et remets seulement cette enveloppe sur la meilleure. Ne change rien d'autre pendant 30 jours.",
+        "vente": "Le responsable vente écoute 2 appels ou accompagne 2 visites par vendeur chaque semaine, puis fait un point de 20 minutes avec un seul axe à corriger. Le dernier vendredi du mois, l'équipe rappelle les devis les plus élevés restés sans réponse.",
+        "fidelisation": "Dans le fichier clients, garde l'offre achetée et la date de renouvellement ou de prochain besoin. Chaque lundi, le responsable sort les échéances des 30 prochains jours, les répartit dans l'équipe et vérifie les réponses le vendredi.",
+        "recrutement": "Garde une annonce prête pour chaque poste qui revient et une liste simple de candidats avec zone, disponibilité et dernier contact. Pour un poste clé, fais deux entretiens avec deux responsables différents et appelle les références du candidat final.",
+        "cadre": "Pour chaque poste clé, écris sur une page le salaire fixe, le variable calculable, les avantages et ce qu'il faut tenir pour passer à l'étape suivante. Le responsable direct reprend cette page deux fois par an avec le salarié.",
+        "finance": "Chaque vendredi, la compta sort deux listes : factures clients en retard et fournisseurs à payer. À la fin du mois, les responsables chiffrent les reprises, déplacements et suppléments non facturés, puis ajoutent la ligne manquante au devis ou à la fiche de travail.",
+        "outils": "Garde une seule check-list d'arrivée et de départ avec accès, matériel, clés et responsable. Le premier jour, tout est coché. Le dernier jour, les accès sont coupés et le matériel est rendu avant le départ."
+      },
+      "top3": [
+        "Vendredi, liste le travail offert ce mois-ci et rattache chaque coût au chantier, au service ou au site concerné.",
+        "Donne à chaque nouveau un parrain, des vidéos et un contrôle prévu chaque semaine du premier mois.",
+        "Nomme un responsable par offre avec un seul chiffre à faire bouger dans les 90 jours."
+      ],
+      "examples": {
+        "btp": "Plusieurs équipes tournent sur plusieurs chantiers. Chaque facture et bon de livraison reçoit le code du chantier le jour même. Le conducteur explique chaque semaine les écarts de fournitures et d'heures.",
+        "resto": "Les équipes changent entre les cuisines. Pèse les portions des 10 meilleures ventes, affiche les grammages et fais contrôler 5 assiettes par service par le responsable de cuisine.",
+        "auto": "L'atelier est plein et le résultat stagne. Chaque vendredi, compare les heures pointées aux heures facturées par technicien et note chaque retour atelier avec sa cause.",
+        "beaute": "Tu as plusieurs praticiennes ou instituts. Chaque lundi, suis le chiffre par praticienne, les clientes qui reprennent rendez-vous et les produits consommés par soin.",
+        "commerce": "Tu as plusieurs boutiques. Chaque responsable remonte la démarque, le stock sans vente depuis 90 jours et la marge du point de vente. Une boutique qui perd de l'argent reçoit une date limite et un plan précis.",
+        "nettoyage": "Tes agents sont répartis sur beaucoup de sites. Chaque semaine, compare les heures vendues aux heures pointées. Renégocie d'abord le contrat qui perd le plus d'heures."
+      },
+      "graduateBy": "Facture le travail réalisé et rattache chaque coût au bon chantier, service ou site.",
+      "graduateWhen": "Tu passes au palier 6 quand le résultat suit le chiffre et qu'un nouveau est formé sans ton intervention.",
+      "cta": {
+        "title": "Une partie de ton chiffre se perd avant d'arriver au compte.",
+        "text": "Sur l'appel, on chiffre tes heures offertes, tes reprises, tes écarts d'achat et ton turnover. Tu repars avec la fuite à traiter cette semaine et son responsable.",
+        "button": "Réserve un appel diagnostic avec l'équipe Ultra"
+      },
+      "stat": {
+        "figure": "2 %",
+        "text": "Seulement 2 % des entreprises françaises ont 20 salariés ou plus. Très peu de patrons arrivent jusqu'ici.",
+        "source": "Source : Insee, SIDE 2024"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Organiser la croissance",
+      "effectif": "50 à 99 salariés",
+      "founderRole": "Tu diriges des directeurs, souvent répartis sur plusieurs sites.",
+      "summary": "Tu as plusieurs sites ou de grosses équipes, avec des responsables à chaque étage. Ce qui tenait encore à 20 personnes déborde à 50 : demandes oubliées, postes ouverts trop longtemps, achats sans validation et données éparpillées.",
+      "bottleneck": "Le volume dépasse tes circuits de réponse, de recrutement, d'achat et de remontée des chiffres.",
+      "signsOk": [
+        "Chaque site ou service a un budget, un responsable et un point mensuel.",
+        "Chaque demande reçoit un premier appel dans le délai fixé par la direction.",
+        "Tous les recrutements avancent dans le même outil avec les mêmes étapes.",
+        "Les données clients, salariés et financières ont une seule source à jour."
+      ],
+      "signsKo": [
+        "Tes journées sautent d'une urgence de site à une autre.",
+        "Des dépenses partent sans plafond ni validation identifiée.",
+        "Les contrats, congés et entretiens salariés vivent dans plusieurs dossiers.",
+        "Un seul canal apporte presque toutes les demandes."
+      ],
+      "actions": {
+        "offre": "Pour chaque offre, ouvre un seul test de 90 jours avec un responsable, une date et un chiffre : prix, montant moyen ou taux de signature. Le directeur montre chaque lundi le chiffre de la semaine sur la même page jusqu'à la décision finale.",
+        "production": "Applique la même grille de contrôle sur tous les sites. Un responsable de secteur visite chaque site selon un calendrier fixe, note les écarts et vérifie leur correction au passage suivant.",
+        "acquisition": "Choisis un deuxième canal lié au métier : prescripteurs, partenaires ou parrainage. Fais valider une enveloppe fixe, teste-le 90 jours sur un seul territoire et compte les demandes, les ventes et l'encaissé. À J+90, tu gardes ou tu coupes.",
+        "vente": "Regarde pendant 2 semaines à quelles heures les demandes arrivent, puis pose des permanences sur ces créneaux. Quand l'équipe est ouverte, chaque demande reçoit un appel ou un SMS avec deux créneaux dans les 5 minutes. Le responsable suit demandes, relances et encaissé par demande.",
+        "fidelisation": "Programme les rappels d'entretien, dates de renouvellement et offres de suite dans le fichier clients. Chaque semaine, le service client traite la liste à venir avant que le client appelle.",
+        "recrutement": "Fais passer chaque candidature dans la même liste : source, appel, entretien, test, référence et décision. Chaque poste a un responsable interne. Pour les métiers ouverts toute l'année, garde l'annonce active et recontacte les bons candidats chaque mois.",
+        "cadre": "Centralise les contrats, congés, absences et entretiens annuels dans un outil RH avec des accès par rôle. Le responsable RH contrôle chaque mois les dossiers incomplets.",
+        "finance": "Fixe un budget pour 3 mois par site, un plafond par carte et le prénom de la personne qui valide au-dessus. Le lundi, chaque site remonte sur la même page encaissé, ventes signées, demandes et argent disponible.",
+        "outils": "Choisis une source unique pour chaque donnée : clients, salariés, ventes et finance. Sauvegarde-la, limite les accès par rôle et teste une restauration des données chaque trimestre."
+      },
+      "top3": [
+        "Donne à chaque site un budget trimestriel, un plafond de dépense et un responsable.",
+        "Mets toutes les demandes dans un seul outil, avec un responsable, un délai de rappel et l'encaissé suivi chaque semaine.",
+        "Teste pendant 90 jours un deuxième canal avec une enveloppe fixe, sur un seul territoire, puis garde-le ou coupe-le."
+      ],
+      "examples": {
+        "btp": "Tes conducteurs gèrent plusieurs dizaines de compagnons. Ils travaillent sur un planning commun, tiennent un budget par équipe et regroupent les commandes chez les fournisseurs négociés.",
+        "resto": "À partir du troisième établissement, nomme un responsable de secteur qui contrôle les chiffres, l'hygiène et les process de chaque site. Toi, tu gardes les bilans, le comptable et la banque.",
+        "auto": "Chaque atelier a son chef, son budget et ses heures facturées. Les pièces courantes sont achetées au niveau du groupe et tous les sites utilisent le même tableau de bord.",
+        "beaute": "Chaque institut a une responsable et le même protocole. Une formatrice interne valide chaque nouvelle praticienne avant qu'elle prenne seule des clientes.",
+        "commerce": "Chaque boutique a sa société, son responsable et son compte de résultat. Tous les trimestres, la direction tranche : investir, corriger avec une date limite ou fermer.",
+        "nettoyage": "Répartis les sites entre des chefs d'équipe nommés. Ils contrôlent les check-lists, gèrent les remplacements et recrutent toute l'année dans un vivier commun."
+      },
+      "graduateBy": "Donne à chaque site un responsable, un budget et des chiffres hebdomadaires, puis ouvre un deuxième canal de demandes.",
+      "graduateWhen": "Tu passes au palier 7 quand chaque site tient son budget et ses urgences sans ton intervention quotidienne.",
+      "cta": {
+        "title": "Ce qui tenait à 20 personnes déborde à 50.",
+        "text": "Sur l'appel, on prend le flux qui déborde le plus, on chiffre les pertes et on pose le responsable, l'outil et le délai de traitement.",
+        "button": "Réserve un appel diagnostic avec l'équipe Ultra"
+      },
+      "stat": {
+        "figure": "Moins d'1 sur 100",
+        "text": "Moins d'une entreprise française sur 100 a 50 salariés ou plus. À ce niveau, tu joues dans une autre catégorie.",
+        "source": "Source : Insee, SIDE 2024"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Capitaliser",
+      "effectif": "100 salariés et plus",
+      "founderRole": "Tu décides où va l'argent pendant que les directeurs tiennent le quotidien.",
+      "summary": "Les directeurs font tourner l'entreprise. Ton travail se déplace vers les décisions que personne d'autre ne peut prendre : racheter une boîte, lancer une enseigne, entrer sur une zone ou préparer la transmission.",
+      "bottleneck": "Tu dois choisir où remettre le cash sans fragiliser ce qui tourne déjà.",
+      "signsOk": [
+        "Tes directeurs prennent les décisions du quotidien sans t'attendre.",
+        "Les comptes permettent à une banque ou un acheteur de comprendre la boîte rapidement.",
+        "Tu conduis toi-même le recrutement des directeurs.",
+        "Ton prochain relais a un budget, un responsable et une date de décision."
+      ],
+      "signsKo": [
+        "Une nouvelle offre détourne les équipes de celles qui paient déjà la boîte.",
+        "Les départs montent dans une équipe ou un site sans alerte claire.",
+        "Les outils obligent encore à recoller les chiffres à la main.",
+        "Tu n'as ni valorisation récente ni liste d'acheteurs ou de cibles possibles."
+      ],
+      "actions": {
+        "offre": "Choisis un seul relais à étudier ce trimestre : un rachat ou une nouvelle offre. Nomme un responsable qui n'exploite pas le quotidien, fixe le budget maximum et écris 3 raisons d'arrêter avant de dépenser le premier euro.",
+        "production": "Découpe les équipes par activité ou territoire. Chaque direction garde ses standards, son compte de résultat et 5 chiffres mensuels comparables au reste du groupe.",
+        "acquisition": "Écris une phrase commune qui dit ce que le groupe vend et à qui. Chaque mois, le directeur commercial rapproche sur la même page les dépenses de communication et les ventes encaissées par canal, marque et territoire.",
+        "vente": "Répartis les vendeurs par offre, type de client ou territoire. Chaque directeur suit l'encaissé par demande, le montant moyen et les ventes perdues sur son périmètre.",
+        "fidelisation": "Attribue chaque type de client à un conseiller et impose le même parcours sur tous les sites : accueil, suivi, renouvellement et offre suivante.",
+        "recrutement": "Mène toi-même les entretiens finaux des directeurs. Demande un cas pratique, appelle leurs anciennes références et fais rencontrer les futurs responsables avant la décision.",
+        "cadre": "Fais un plan des effectifs sur 24 mois avec trois colonnes : poste à ouvrir, compétence manquante, remplaçant possible. Commence par les 10 postes qui bloqueraient la boîte demain, y compris le tien.",
+        "finance": "Fais arrêter des comptes propres et demander une valorisation argumentée. Mets dans une même salle ton expert-comptable, ton conseil et la banque avant tout rachat, dette ou cession.",
+        "outils": "Choisis une source commune pour les ventes, la finance et les salariés. Nomme l'équipe qui gère les accès et les changements. Un site qui veut ajouter un outil remplit une demande d'une page avec le besoin, le coût et le responsable."
+      },
+      "top3": [
+        "Fais arrêter les comptes puis demander une valorisation documentée de l'entreprise.",
+        "Étudie un seul relais ce trimestre avec un budget plafond et des conditions d'arrêt.",
+        "Nomme un remplaçant possible pour chaque poste clé, y compris le tien."
+      ],
+      "examples": {
+        "btp": "Ton groupe a plusieurs sociétés ou agences. Étudie le rachat d'un corps de métier complémentaire avec ses comptes, son carnet, ses compagnons clés et le coût réel de l'intégration.",
+        "resto": "Tu diriges plusieurs établissements. Compare trois options avec le même tableau : franchise, associé opérateur qui investit ou rachat d'un fonds existant.",
+        "auto": "Tu as plusieurs garages. Avant de racheter un atelier ou d'ajouter les flottes, la carrosserie ou le detailing, chiffre le responsable, le matériel et le délai de retour sur le cash investi.",
+        "beaute": "Tu as un réseau d'instituts. Pour chaque nouvelle ouverture, chiffre ce que la gérante investit, ce que le groupe finance et les standards qu'elle doit tenir.",
+        "commerce": "Tu as plusieurs boutiques. Compare une nouvelle enseigne, la vente aux pros et le rachat d'un concurrent sur 3 chiffres : cash investi, résultat attendu et temps de direction demandé.",
+        "nettoyage": "Tu as plusieurs agences. Pour racheter une société voisine, vérifie contrat par contrat la marge, la concentration clients et les chefs d'équipe qui resteront."
+      },
+      "graduateBy": "Fais arrêter les comptes, valoriser l'entreprise et chiffrer un seul relais de croissance.",
+      "graduateWhen": "Tu as franchi ce palier quand les directeurs tiennent le quotidien et que ton capital finance la prochaine marche.",
+      "cta": {
+        "title": "Ton prochain choix engage le cash de tout le groupe.",
+        "text": "Sur l'appel, on cadre la valorisation actuelle, le relais à étudier et les chiffres qui doivent être vrais avant d'engager un euro.",
+        "button": "Réserve un appel diagnostic avec l'équipe Ultra"
+      },
+      "stat": {
+        "figure": "1,5 %",
+        "text": "Parmi les établissements qui emploient, seulement 1,5 % ont 100 salariés ou plus.",
+        "source": "Source : Insee, Flores 2023 (établissements employeurs)"
+      }
+    }
+  ],
+  "stageRule": "Ton palier se calcule sur un seul chiffre : le nombre de personnes qui travaillent à temps plein dans ton entreprise, sans te compter. Le chiffre d'affaires change beaucoup d'un métier à l'autre, alors qu'à taille d'équipe égale, un restaurant, un garage et une entreprise du bâtiment rencontrent les mêmes problèmes d'organisation. Tes autres réponses servent à préciser ton blocage, pas à changer ton palier.",
+  "scoring": {
+    "effectifToStage": {
+      "seul": 1,
+      "seul-renforts": 1,
+      "1-4": 2,
+      "5-9": 3,
+      "10-19": 4,
+      "20-49": 5,
+      "50-99": 6,
+      "100-plus": 7
+    }
+  },
+  "testimonials": [
+    {
+      "name": "Hallan Kiddi",
+      "business": "Tradisol, carrelage et revêtements (PACA)",
+      "result": "Avant : 150 000 € de CA sur toute l’année 2025, et tout reposait sur lui : « j’avais tout dans la tête ». Levier : des tâches standardisées, la qualité tenue jusqu’au choix des sous-traitants, de la vidéo pour faire venir les clients. Après : 500 000 € de CA en 4 mois d’accompagnement.",
+      "quote": "Quand j’ai payé Ultra, j’ai payé du temps. Tu payes un raccourci.",
+      "url": "https://www.ultra-consulting.eu/transformations/hallan-kiddi",
+      "source": "https://www.ultra-consulting.eu/transformations/hallan-kiddi",
+      "stages": [
+        2
+      ]
+    },
+    {
+      "name": "Kévin Carraud",
+      "business": "Le Monä, pizzeria",
+      "result": "Avant : « ici du matin au soir, 7 sur 7 », une organisation plafonnée à 60-80 pizzas par soirée. Levier : recruter, former, déléguer, documenter. Après : jusqu’à 200 pizzas par soirée, une semaine de vacances avec une équipe autonome, et un 2ᵉ restaurant signé.",
+      "quote": "Aujourd’hui, le restaurant est 100% autonome : il fonctionne sans moi.",
+      "url": "https://www.ultra-consulting.eu/transformations/kevin-carraud",
+      "source": "https://www.ultra-consulting.eu/transformations/kevin-carraud ; citation : https://www.ultra-consulting.eu (témoignages de la page d’accueil, lus le 02/10/2026)",
+      "stages": [
+        3
+      ]
+    },
+    {
+      "name": "Rémi & Florian",
+      "business": "Am Detailing, nettoyage automobile",
+      "result": "Avant : 10 heures de nettoyage par jour à deux, environ 8 000 € de CA par mois. Levier : trois recrutements d’affilée et une sortie du terrain assumée. Après : une équipe de 8, l’objectif annuel de 100 000 € dépassé en 7 mois d’accompagnement, et une heure de nettoyage par mois pour les fondateurs.",
+      "quote": "C’est comme si on était dans un jeu vidéo et qu’en fait, on te donne tous les codes de triche.",
+      "url": "https://www.ultra-consulting.eu/transformations/remi-et-florian",
+      "source": "https://www.ultra-consulting.eu/transformations/remi-et-florian",
+      "stages": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Alexandre Lagache",
+      "business": "Floc it, atelier d’impression textile (Belgique)",
+      "result": "Avant : 100 % seul sur tout, « devis, production, expédition, communication », pour 15 000 € de CA par mois. Levier : passage en société et premier recrutement un mois après le début. Après : deux employés, un CA mensuel passé de 15 000 € à 30-40 000 €, et son premier salaire.",
+      "quote": "C’est comme si j’avais eu plein d’associés d’un coup.",
+      "url": "https://www.ultra-consulting.eu/transformations/alexandre-lagache",
+      "source": "https://www.ultra-consulting.eu/transformations/alexandre-lagache",
+      "stages": [
+        1
+      ]
+    },
+    {
+      "name": "Valentin Fourmont",
+      "business": "Morfal, smash burgers (Pays basque)",
+      "result": "Avant : seul le midi, seul le soir, avec une journée et demie de fermeture par semaine faute de bras. Levier : une embauche, l’ouverture 7 jours sur 7, des prix et des fournisseurs retravaillés. Après : +98 % de CA en juin et +114 % en juillet par rapport à l’an dernier.",
+      "quote": "Je ne savais pas monter une boîte.",
+      "url": "https://www.ultra-consulting.eu/transformations/valentin-fourmont",
+      "source": "https://www.ultra-consulting.eu/transformations/valentin-fourmont",
+      "stages": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Jean",
+      "business": "Carreleur, BTP & Artisanat",
+      "result": "Avant : sur le chantier du matin au soir, ses devis le soir chez lui. Levier : la délégation posée, l’entreprise structurée. Après : sorti de l’opérationnel, +10 % de chiffre d’affaires, et enfin des vacances en famille.",
+      "quote": "J’ai quitté l’opérationnel. Maintenant, je peux me consacrer à 100% sur le développement de la société.",
+      "url": "https://www.ultra-consulting.eu",
+      "source": "https://www.ultra-consulting.eu (témoignages de la page d’accueil, lus le 02/10/2026) ; métier et « avant » : VSL BTP",
+      "stages": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Thalia Zammuto",
+      "business": "Hair’itage Coiffure, salon de coiffure (Bruxelles)",
+      "result": "Avant : « on vient le matin, on voit ce qui se passe », des meilleurs mois autour de 9 000 €, 6 jours de travail sur 7. Levier : l’accueil, le diagnostic et la vente scriptés, l’expérience client travaillée. Après : 18 000 € en juin, des avis triplés, et un salon qui tourne sans elle à 5 jours sur 7.",
+      "quote": "J’ai doublé mon chiffre en 4 mois de temps. Et ça ne s’arrête pas.",
+      "url": "https://www.ultra-consulting.eu/transformations/thalia-zammuto",
+      "source": "https://www.ultra-consulting.eu/transformations/thalia-zammuto",
+      "stages": [
+        2
+      ]
+    },
+    {
+      "name": "Florent & Dimitri",
+      "business": "Mealthy, poké bowls (Belgique)",
+      "result": "Avant : environ 30 000 € de CA, « une boîte d’un petit indépendant », sans process écrits. Levier : un cadre posé, des process écrits pour chaque poste, une équipe entièrement recomposée. Après : environ 50 000 € de CA, « quasiment fois deux » et stabilisé.",
+      "quote": "Quelqu’un qui arrive, tout est écrit, il ne doit pas réfléchir.",
+      "url": "https://www.ultra-consulting.eu/transformations/mealthy",
+      "source": "https://www.ultra-consulting.eu/transformations/mealthy",
+      "stages": [
+        2,
+        3
+      ]
+    },
+    {
+      "name": "Julien Bourguignon",
+      "business": "Empreinte Digitale, lettrage de véhicules et enseignes (Belgique)",
+      "result": "Avant : il posait lui-même, déléguait peu et gardait son CRM « dans [sa] tête ». Levier : un poseur recruté, l’offre recentrée, un planning complet sur 4 semaines. Après : une équipe passée de 4 à 6, un CA mensuel de 28-30 000 € à 40 000 €, et lui ne fait plus que vendre.",
+      "quote": "Je suis passé d’artiste, de poseur à businessman.",
+      "url": "https://www.ultra-consulting.eu/transformations/julien-bourguignon",
+      "source": "https://www.ultra-consulting.eu/transformations/julien-bourguignon",
+      "stages": [
+        2,
+        3
+      ]
+    },
+    {
+      "name": "Reda",
+      "business": "Nettoyage & Entretien",
+      "result": "Avant : 2 ouvriers. Levier : une vision claire des objectifs, la structuration enclenchée. Après : 7 ouvriers en 4 mois d’accompagnement.",
+      "quote": "Cet accompagnement, il m’a clairement fait comprendre que ma boîte, c’est un actif et ce n’est pas une gestion.",
+      "url": "https://www.ultra-consulting.eu",
+      "source": "https://www.ultra-consulting.eu (témoignages de la page d’accueil, lus le 02/10/2026)",
+      "stages": [
+        2,
+        3
+      ]
+    },
+    {
+      "name": "Dorian et Amandine Arnaud",
+      "business": "Boulangerie Arnaud",
+      "result": "Avant : 350 000 € de CA par an et une marge mal connue. Levier : des tarifs augmentés sans « trop d’émotion », la marge recalculée avec le comptable, un call chaque semaine avec leur coach. Après : +19 000 € de CA par mois, une marge de 65 à 73 %, et presque 500 000 € par an.",
+      "quote": "C’est même eux qui font attention maintenant à la rentabilité.",
+      "url": "https://www.ultra-consulting.eu/transformations/dorian-et-amandine",
+      "source": "https://www.ultra-consulting.eu/transformations/dorian-et-amandine",
+      "stages": [
+        3
+      ]
+    },
+    {
+      "name": "Alexis",
+      "business": "Commerce, plusieurs boutiques",
+      "result": "Avant : deux boutiques, une troisième en projet. Levier : la structure revue, un suivi publicitaire en place. Après : quatre boutiques avant la fin de l’année et +25 % de chiffre d’affaires.",
+      "quote": "J’avais deux boutiques, avec comme projection d’en ouvrir une troisième. Au final, on en aura quatre avant la fin de l’année.",
+      "url": "https://www.ultra-consulting.eu",
+      "source": "https://www.ultra-consulting.eu (témoignages de la page d’accueil, lus le 02/10/2026)",
+      "stages": [
+        3,
+        4
+      ]
+    },
+    {
+      "name": "Tom",
+      "business": "Commerce spécialisé",
+      "result": "Avant : 49 000 € de CA par mois. Levier : l’acquisition par le contenu. Après : 82 500 € par mois (+69 %), plus d’un million de vues, et un 2ᵉ point de vente en lancement.",
+      "quote": "On a dépassé le million de vues sur un mois.",
+      "url": "https://www.ultra-consulting.eu",
+      "source": "https://www.ultra-consulting.eu (témoignages de la page d’accueil, lus le 02/10/2026)",
+      "stages": [
+        3,
+        4
+      ]
+    },
+    {
+      "name": "Romain Pottier",
+      "business": "RTN, transport et logistique",
+      "result": "Avant : un transporteur sous la barre du million d’euros de CA. Levier : l’audit terrain et le plan d’action Ultra. Après : des mois à 100 000, 108 000 puis 122 000 € depuis novembre, et le million d’euros de CA franchi.",
+      "quote": "Ce matin, on vient officiellement de passer le million d’euros de chiffre d’affaires.",
+      "url": "https://www.ultra-consulting.eu",
+      "source": "https://www.ultra-consulting.eu (témoignages de la page d’accueil, lus le 02/10/2026)",
+      "stages": [
+        4,
+        5
+      ]
+    },
+    {
+      "name": "Raphaël Pasau",
+      "business": "Aveve Bastogne, magasin (boulangerie, animalerie, jardinage), Belgique",
+      "result": "Avant : un magasin de 3 M€ de CA retombé à 2,7 M€, et un patron qui « faisai[t] tout, tout le temps, tout seul », sans réunion d’équipe. Levier : une recrue en comptabilité, une réunion du personnel chaque mardi, des vidéos lancées en autonomie. Après : +16 % de CA en juin, quand la centrale fait +0,5 à 1 %, et des réseaux passés de 8 000 à 26 000 abonnés.",
+      "quote": "Ce que je sais mieux faire, c’est vendre.",
+      "url": "https://www.ultra-consulting.eu/transformations/raf-pasau",
+      "source": "https://www.ultra-consulting.eu/transformations/raf-pasau",
+      "stages": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "name": "Emmanuel",
+      "business": "Transport",
+      "result": "Avant : une entreprise de transport installée qui lance une nouvelle activité. Levier : l’audit terrain et le plan d’action Ultra appliqués à cette activité. Après : un chiffre d’affaires doublé sur la nouvelle activité.",
+      "quote": "On a doublé le CA sur cette activité depuis son lancement, ça commence à envoyer du très très lourd.",
+      "url": "https://www.ultra-consulting.eu",
+      "source": "https://www.ultra-consulting.eu (témoignages de la page d’accueil, lus le 02/10/2026)",
+      "stages": [
+        6,
+        7
+      ]
+    },
+    {
+      "name": "Damien",
+      "business": "VR Système, menuiserie extérieure (fenêtres, portes, volets)",
+      "result": "Avant : à son compte depuis 5 ans, des devis revus à la baisse, des offres pas claires, « pas assez organisé ». Levier : un CRM créé, des relances et un suivi chaque semaine, des devis et des offres enfin assumés. Après : « on est à x4, x5 » au bout de 4 mois de plan d’action.",
+      "quote": "On est à x4, x5 — c’est énorme.",
+      "url": "https://www.ultra-consulting.eu/transformations/damien",
+      "source": "https://www.ultra-consulting.eu/transformations/damien"
+    },
+    {
+      "name": "Romuald",
+      "business": "Satelink, digitalisation et connectivité des entreprises (Belgique)",
+      "result": "Avant : 9 000 à 10 000 € de CA par mois, sans CRM ni processus de relance, avec une offre floue. Levier : un CRM, des relances structurées et une offre en 3 niveaux. Après : environ 59 000 € facturés sur ses 3 mois d’accompagnement, +118 % par rapport aux 3 mois précédents.",
+      "quote": "Il y a des gens, à la quatrième relance, ils disent “ah oui, revenez par rapport au devis du mois passé, on va le faire”.",
+      "url": "https://www.ultra-consulting.eu/transformations/romuald",
+      "source": "https://www.ultra-consulting.eu/transformations/romuald"
+    },
+    {
+      "name": "Issam",
+      "business": "BTP & Artisanat",
+      "result": "Avant : un objectif de 25 000 € par mois et « aucune stratégie commerciale ». Levier : un vrai plan d’action commercial, construit ensemble. Après : 75 000 € de CA sur son premier mois, trois fois l’objectif.",
+      "quote": "Je n’avais aucune stratégie commerciale. Ensemble, on a pu mettre en place un vrai plan d’action.",
+      "url": "https://www.ultra-consulting.eu",
+      "source": "https://www.ultra-consulting.eu (témoignages de la page d’accueil, lus le 02/10/2026)"
+    },
+    {
+      "name": "Mickael",
+      "business": "Électricité et solaire, BTP & Artisanat",
+      "result": "Avant : un patron exécutant, sans prospection ni relance organisées. Levier : prospection, relances et réponses aux marchés publics structurées. Après : des contrats signés dès le premier mois et l’accès à des chantiers beaucoup plus importants.",
+      "quote": "Un mois de beaux résultats, de nouvelles perspectives.",
+      "url": "https://www.ultra-consulting.eu",
+      "source": "https://www.ultra-consulting.eu (témoignages de la page d’accueil, lus le 02/10/2026) ; « avant » et chantiers plus gros : reel Instagram de Marvin https://www.instagram.com/p/DYhEPHKuosD/"
+    }
+  ],
+  "flow": [
+    "secteur",
+    "specialite",
+    "nom",
+    "effectif",
+    "ca",
+    "tresorerie",
+    "frein",
+    "kpi"
+  ],
+  "flowNote": "secteur, effectif, ca, tresorerie = questions globales (ci-dessus). specialite, nom, frein, kpi = propres au secteur, dans content/roadmap-secteurs/<secteur>.json. Le libellé de effectif est remplacé par effectifLabel du secteur."
+}

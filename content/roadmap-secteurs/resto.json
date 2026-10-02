@@ -1,0 +1,96 @@
+{
+  "id": "resto",
+  "nounDefault": "ton restaurant",
+  "nomLabel": "Comment s'appelle ton établissement ?",
+  "nomPlaceholder": "Ex. Chez Karim",
+  "specialite": {
+    "label": "Quel type d'établissement tu tiens ?",
+    "options": [
+      { "id": "pizzeria", "label": "Pizzeria", "noun": "ta pizzeria", "vend": "des pizzas" },
+      { "id": "traditionnel", "label": "Restaurant traditionnel ou bistrot", "noun": "ton restaurant", "vend": "des repas à table" },
+      { "id": "fast-food", "label": "Burger, tacos, snack ou food truck", "noun": "ton snack", "vend": "des burgers et des menus" },
+      { "id": "boulangerie", "label": "Boulangerie ou pâtisserie", "noun": "ta boulangerie", "vend": "du pain et des pâtisseries" },
+      { "id": "boucherie", "label": "Boucherie, charcuterie ou traiteur", "noun": "ta boucherie", "vend": "de la viande et des plats traiteur" },
+      { "id": "bar", "label": "Bar, café ou brasserie", "noun": "ton bar", "vend": "des boissons et de quoi manger" },
+      { "id": "autre", "label": "Autre", "noun": "ton restaurant", "vend": "des repas" }
+    ]
+  },
+  "effectifLabel": "Combien de personnes travaillent à temps plein, en cuisine et en salle, sans te compter ?",
+  "frein": {
+    "label": "Aujourd'hui, qu'est-ce qui t'empêche le plus de faire plus de chiffre ?",
+    "options": [
+      { "id": "rush", "label": "Au coup de feu, les bons s'empilent et des clients attendent ou repartent" },
+      { "id": "ticket", "label": "Les clients prennent le plat, personne ne recommande la suite et le panier moyen ne bouge pas" },
+      { "id": "cout-matiere", "label": "Je ne sais pas ce que me coûte vraiment chaque plat" },
+      { "id": "creux", "label": "J'ai des services creux et des jours fermés alors que le loyer tombe quand même" },
+      { "id": "dependance", "label": "Tout repose sur moi : si je ne suis pas là, le service ne tourne pas" }
+    ]
+  },
+  "kpi": {
+    "label": "Sur les 12 derniers mois, ton panier moyen a bougé comment ?",
+    "help": "Panier moyen = ce que tu encaisses divisé par le nombre de couverts. Pour la vente à emporter, divise par le nombre de commandes. Ta caisse te le donne.",
+    "options": [
+      { "id": "plus-10", "label": "Il a pris plus de 10 %", "level": "bon", "read": "Chez {nom}, le panier moyen a déjà pris plus de 10 %. Note les plats, formules et phrases qui ont produit ça, puis fais-les utiliser par toute la salle." },
+      { "id": "un-peu", "label": "Il a un peu bougé, moins de 10 %", "level": "moyen", "read": "Le panier moyen monte un peu. Choisis un plat phare et son complément, fais-les goûter à l'équipe, puis compare le panier moyen chaque samedi." },
+      { "id": "stable", "label": "Il n'a pas bougé, ou il a baissé", "level": "bas", "read": "Le panier moyen stagne pendant que les factures fournisseurs montent. Dès le prochain service, fais recommander le même plat phare et son complément, puis mesure le résultat." },
+      { "id": "inconnu", "label": "Je ne connais pas mon panier moyen", "level": "inconnu", "read": "Regarde ta caisse ce soir : encaissé divisé par nombre de couverts. Sans ce chiffre, tu ne vois pas si {noun} vend davantage à chaque client." }
+    ]
+  },
+  "levers": {
+    "rush": {
+      "title": "Ton chantier n°1 : trouver le poste qui bloque le coup de feu",
+      "diagnosis": "Au coup de feu chez {nom}, un poste finit par bloquer : le four, la plancha, le dressage, la caisse ou la plonge. Tant que tu ne sais pas lequel, les clients attendent et tes plats les plus demandés sortent trop lentement.",
+      "actions": [
+        "À ton prochain coup de feu, mets une feuille au passe. Toutes les 15 minutes, fais une croix devant le poste où les bons attendent. Le lendemain, le poste qui a le plus de croix devient ton chantier de la semaine.",
+        "Prépare d'abord les 3 plats qui font l'essentiel de tes ventes. Écris des quantités, « 30 portions prêtes », puis affiche un prénom par poste avant le service.",
+        "Pendant le rush, tiens le passe au lieu de reprendre le poste le plus dur. Le soir, note seulement les couverts servis, le panier moyen et le poste qui a bloqué."
+      ],
+      "money": { "pctOfCA": 0.1, "explain": "Exemple de calcul : 40 % de couverts en plus sur des services qui pèsent un quart du chiffre donne 10 % de chiffre total en plus." },
+      "proof": "Kévin Carraud"
+    },
+    "ticket": {
+      "title": "Ton chantier n°1 : faire recommander les plats qui paient ta carte",
+      "diagnosis": "Chez {nom}, environ 20 % de la carte font probablement l'essentiel du résultat. Si la salle ne connaît ni ces plats ni ce qu'elle doit proposer avec, elle laisse le client choisir seul et le panier moyen ne bouge pas.",
+      "actions": [
+        "Sors les ventes par plat des 4 dernières semaines. Pour chaque plat, note les quantités vendues et ce qu'il reste par assiette après la matière. Entoure les 3 plats qui se vendent le plus et laissent le plus d'argent.",
+        "Avant un service calme, fais goûter ces 3 plats à la salle. Donne 2 ou 3 phrases par plat : ce que c'est, pour quel client et quel complément proposer. Ensuite, fais un brief de 5 minutes avant chaque service.",
+        "Chaque samedi, compare le panier moyen par serveur sur des services comparables. Garde les phrases qui fonctionnent et corrige-en une seule pour la semaine suivante, sans forcer les clients."
+      ],
+      "money": { "pctOfCA": 0.06, "explain": "Exemple de calcul : 1,30 € de plus sur un panier moyen de 22 € représente environ 6 % de chiffre en plus, à nombre de clients égal." }
+    },
+    "cout-matiere": {
+      "title": "Ton chantier n°1 : trouver les plats qui font 80 % du résultat",
+      "diagnosis": "Chez {nom}, certains plats se vendent beaucoup sans laisser assez d'argent, pendant que d'autres prennent de la place sur la carte et sortent à peine. Tant que tu ne regardes pas les ventes et ce qu'il reste par assiette, tu gardes des plats qui ralentissent la cuisine sans payer les charges.",
+      "actions": [
+        "Sors 4 semaines de ventes par plat depuis la caisse. Pour chaque plat, calcule le reste par assiette : prix hors taxes moins coût matière hors taxes, puis multiplie par les quantités vendues.",
+        "Classe les plats du plus gros reste total au plus petit. Garde et pousse ceux qui font environ 80 % du total. Retire les faibles, fusionne ceux qui se ressemblent et garde seulement 1 ou 2 plats d'appel avec une raison écrite.",
+        "Pour les 3 plats phares, affiche au poste une fiche plastifiée : photo, étapes et grammages. La portion doit rester la même quel que soit celui qui la prépare."
+      ],
+      "money": { "pctOfCA": 0.04, "explain": "Hypothèse de calcul : 4 points de coût matière regagnés sur la carte, à nombre de ventes égal." },
+      "proof": "Dorian et Amandine Arnaud"
+    },
+    "creux": {
+      "title": "Ton chantier n°1 : décider quoi faire de chaque service creux",
+      "diagnosis": "Le loyer et les charges de {nom} tombent même quand les tables restent vides. Sors le chiffre service par service avant d'ouvrir plus : certains créneaux doivent recevoir une offre et un test, d'autres une équipe allégée.",
+      "actions": [
+        "Sors de ta caisse le chiffre de chaque service sur les 4 dernières semaines, jour par jour, et entoure les 3 services les plus faibles.",
+        "Pour chacun, choisis cette semaine un test précis : formule du midi, plat du jour à prix fixe ou offre pour les bureaux. Si tu ne testes rien, allège l'équipe sur ce créneau.",
+        "Si tu fermes un jour ou plus, teste une ouverture supplémentaire pendant 4 semaines. Compare le chiffre encaissé aux salaires, à la matière et aux autres coûts directs de ce service."
+      ],
+      "money": { "pctOfCA": 0.05, "explain": "Hypothèse de calcul : une ouverture de plus ou des créneaux faibles mieux remplis ajoutent 5 % au chiffre annuel. Le test sur 4 semaines doit le confirmer." },
+      "proof": "Valentin Fourmont"
+    },
+    "dependance": {
+      "title": "Ton chantier n°1 : sortir d'un service par semaine",
+      "diagnosis": "Aujourd'hui, chez {nom}, le service tient parce que tu es là. Le jour où tu manques, la qualité baisse ou tout s'arrête. Tant que tes recettes et tes gestes sont dans ta tête, chaque nouvelle recrue dépend de toi, et tu ne pourras ni souffler, ni ouvrir un deuxième établissement.",
+      "actions": [
+        "Sors les ventes des 4 dernières semaines et trouve les 3 produits qui font l'essentiel du résultat. Fais une fiche technique par produit : photo, étapes numérotées et grammages. Commence par ces 3-là, pas toute la carte.",
+        "La prochaine fois que tu montres un geste sur un de ces plats, demande qu'on te filme au téléphone. Range les 3 vidéos dans un dossier partagé pour les prochaines recrues.",
+        "Choisis un service par semaine où tu n'es ni en cuisine ni au comptoir. Le responsable tient le service. Après, vous notez ce qui a coincé et vous corrigez la fiche ensemble."
+      ],
+      "money": null,
+      "proof": "Florent & Dimitri"
+    }
+  },
+  "proofs": ["Kévin Carraud", "Valentin Fourmont", "Florent & Dimitri", "Dorian et Amandine Arnaud"]
+}

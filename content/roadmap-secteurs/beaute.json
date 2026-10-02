@@ -1,0 +1,96 @@
+{
+  "id": "beaute",
+  "nounDefault": "ton salon",
+  "nomLabel": "Comment s'appelle ton salon ou ton institut ?",
+  "nomPlaceholder": "Ex. Belle Peau",
+  "specialite": {
+    "label": "Quel est ton métier principal ?",
+    "options": [
+      { "id": "institut", "label": "Institut d'esthétique (soins visage et corps, épilation)", "noun": "ton institut", "vend": "des soins visage et corps" },
+      { "id": "coiffure", "label": "Salon de coiffure", "noun": "ton salon", "vend": "des coupes, des couleurs et des soins du cheveu" },
+      { "id": "barbier", "label": "Barbier", "noun": "ton barbershop", "vend": "des coupes et des tailles de barbe" },
+      { "id": "ongles", "label": "Onglerie ou prothésie ongulaire", "noun": "ton onglerie", "vend": "des poses et des soins des ongles" },
+      { "id": "regard", "label": "Cils et sourcils (extensions, rehaussement, brow lift)", "noun": "ton studio", "vend": "des prestations cils et sourcils" },
+      { "id": "spa", "label": "Spa, massages ou bien-être", "noun": "ton spa", "vend": "des massages et des soins bien-être" },
+      { "id": "laser", "label": "Centre laser ou esthétique avancée", "noun": "ton centre", "vend": "des séances laser et des soins techniques" },
+      { "id": "autre", "label": "Autre activité beauté ou bien-être", "noun": "ton salon", "vend": "des prestations beauté" }
+    ]
+  },
+  "effectifLabel": "Combien de personnes travaillent à temps plein avec toi, sans te compter ?",
+  "frein": {
+    "label": "Aujourd'hui, qu'est-ce qui t'empêche le plus de faire plus de chiffre ?",
+    "options": [
+      { "id": "dependance", "label": "Les clientes ne veulent que moi : quand je m'absente, l'agenda se vide" },
+      { "id": "rebooking", "label": "Les clients viennent une fois, puis je ne les revois pas assez souvent" },
+      { "id": "creux", "label": "Le samedi est plein, mais la semaine il y a des trous dans l'agenda" },
+      { "id": "panier", "label": "Chaque cliente repart avec un seul soin et presque jamais un produit en plus" },
+      { "id": "carte", "label": "Ma carte de prestations est trop longue : je fais beaucoup de choses qui rapportent peu" }
+    ]
+  },
+  "kpi": {
+    "label": "Sur 10 personnes qui passent chez toi, combien reprennent leur prochain rendez-vous avant de partir ?",
+    "help": "Regarde ton agenda ou ton logiciel de réservation sur les deux dernières semaines. Une estimation honnête suffit.",
+    "options": [
+      { "id": "moins-3", "label": "Moins de 3", "level": "bas", "read": "Plus de 7 clientes sur 10 repartent sans date. Dès demain, dans {Noun}, la personne qui encaisse propose le prochain rendez-vous avant de prendre le paiement, avec le bon délai pour la prestation." },
+      { "id": "3-5", "label": "Entre 3 et 5", "level": "moyen", "read": "Entre 5 et 7 clientes sur 10 repartent encore sans date. Pendant une semaine, toute l'équipe dit la même phrase et fait un trait sur une feuille à chaque rendez-vous repris." },
+      { "id": "6-plus", "label": "6 ou plus", "level": "bon", "read": "Au moins 6 clientes sur 10 repartent avec une date. Regarde maintenant les produits : dans son script de septembre, Marvin fixe un minimum de 15 % du chiffre d'affaires. Prends le CA du mois et multiplie-le par 0,15." },
+      { "id": "pas-propose", "label": "On ne propose pas de reprendre rendez-vous en partant", "level": "bas", "read": "Dès demain, termine chaque encaissement par : « Pour cette prestation, on se revoit dans X semaines. Je te mets plutôt mardi ou jeudi ? » Remplace X par le vrai délai du soin." },
+      { "id": "ne-sais-pas", "label": "Je ne sais pas", "level": "inconnu", "read": "Aujourd'hui, ouvre ton agenda sur les 2 dernières semaines. Compte les clientes reparties avec une date et divise par le nombre de passages. Dix minutes suffisent pour arrêter de piloter {nom} au ressenti." }
+    ]
+  },
+  "levers": {
+    "dependance": {
+      "title": "Ton chantier n°1 : remplir l'agenda de ta collaboratrice",
+      "diagnosis": "Les clientes réservent ton nom et laissent les créneaux de ta collaboratrice vides. Chaque absence se voit dans le chiffre. Il faut lui transmettre 2 prestations, contrôler le résultat et regarder ce qu'elle ramène. Pour la coiffure, Marvin donne une règle chiffrée : une coiffeuse doit ramener 3 fois ce qu'elle coûte, charges comprises.",
+      "actions": [
+        "Cette semaine, écris sur une page le protocole de tes 2 prestations phares : accueil, diagnostic, gestes, contrôle, conseil de fin et encaissement.",
+        "Pendant une heure creuse, forme ta collaboratrice et filme la démonstration avec ton téléphone. Elle refait la prestation sur un modèle, puis tu contrôles avec la page avant de lui confier des clientes.",
+        "Si tu as une coiffeuse, prends son coût total mensuel, charges comprises, et multiplie-le par 3, comme Marvin l'explique dans son script de septembre. Exemple : 2 800 € coûtés donnent 8 400 € de prestations à ramener. Suis ce chiffre chaque lundi dans la caisse et présente-la comme la spécialiste de ses 2 prestations."
+      ],
+      "money": null,
+      "proof": "Thalia Zammuto"
+    },
+    "rebooking": {
+      "title": "Ton chantier n°1 : reprendre rendez-vous à la caisse",
+      "diagnosis": "Une cliente qui repart sans date revient quand elle y pense, ou part ailleurs. Chez {nom}, chaque visite doit se terminer par une proposition de prochain rendez-vous au bon délai. La cliente est déjà devant toi, donc l'équipe peut le faire sans publicité ni outil de plus.",
+      "actions": [
+        "Pour tes 5 prestations les plus vendues, écris le vrai délai de retour conseillé par l'équipe et affiche cette petite liste à côté de la caisse.",
+        "Avant de prendre le paiement, toute l'équipe dit : « Pour cette prestation, on se revoit dans X semaines. Je te mets plutôt mardi ou jeudi ? »",
+        "Pendant une semaine, fais deux traits sur une feuille : passages et rendez-vous repris. Lundi, divise le second par le premier, puis rappelle seulement les clientes qui ont dépassé leur délai."
+      ],
+      "money": { "pctOfCA": 0.08, "explain": "Ordre de grandeur affiché : chiffre annuel × 8 %. Confirme-le avec ton vrai calcul : rendez-vous repris en plus × montant moyen par visite." }
+    },
+    "creux": {
+      "title": "Ton chantier n°1 : remplir les demi-journées creuses",
+      "diagnosis": "Tes charges tournent toute la semaine, alors qu'une grosse partie du chiffre se fait sur 2 jours. Avant de recruter ou de faire une remise, regarde les trous de l'agenda, le poids des salaires et le cash de sécurité. Marvin fixe deux repères dans son script de septembre : salaires chargés à 45 % maximum du CA, et 3 mois de charges de côté sur un compte séparé.",
+      "actions": [
+        "Cette semaine, compte les créneaux vides par demi-journée sur les 4 dernières semaines. Entoure le créneau qui revient le plus et appelle d'abord les clientes arrivées à leur délai de retour pour leur proposer ce créneau.",
+        "Prends le CA du mois et multiplie-le par 0,45, la limite donnée par Marvin en septembre. Compare avec tous les salaires, charges comprises. Si tu es au-dessus, ne rajoute pas un poste avant d'avoir rempli les heures déjà payées ou revu le planning.",
+        "Additionne toutes les charges d'un mois et multiplie par 3, autre règle donnée par Marvin. Ouvre un compte séparé pour cette réserve. Programme un virement chaque semaine jusqu'au montant cible et n'utilise pas ce compte pour les dépenses courantes."
+      ],
+      "money": { "pctOfCA": 0.06, "explain": "Ordre de grandeur affiché : chiffre annuel × 6 %. Confirme-le avec le nombre de créneaux vides que tu peux vraiment remplir × le montant moyen d'une prestation." }
+    },
+    "panier": {
+      "title": "Ton chantier n°1 : proposer un complément après chaque soin",
+      "diagnosis": "Tes clientes viennent pour une prestation et repartent souvent sans le produit qui entretient le résultat. Chez {nom}, la recommandation se fait pendant le diagnostic, avec un produit précis. Dans son script de septembre, Marvin fixe la vente de produits à 15 % minimum du chiffre d'affaires.",
+      "actions": [
+        "Prends le CA encaissé le mois dernier et multiplie-le par 0,15. Enlève les ventes de produits du même mois. Le résultat, c'est l'écart à rattraper selon la règle donnée par Marvin.",
+        "Pour tes 4 prestations phares, choisis un seul produit d'entretien et pose-le au poste. Toute l'équipe dit : « Pour garder le résultat jusqu'au prochain rendez-vous, utilise celui-ci de cette façon. Tu veux que je te le mette avec ? »",
+        "Chaque lundi, relève dans la caisse ventes de produits divisées par CA total. Affiche le pourcentage en salle de pause. Tant qu'il est sous 15 %, travaille la recommandation et le stock avant d'ajouter une nouvelle référence."
+      ],
+      "money": { "pctOfCA": 0.08, "explain": "Ordre de grandeur affiché : chiffre annuel × 8 %. Le repère attribué à Marvin est différent : ventes de produits ÷ CA total doit atteindre au moins 15 %. Utilise ta caisse pour mesurer l'écart réel." },
+      "proof": "Thalia Zammuto"
+    },
+    "carte": {
+      "title": "Ton chantier n°1 : garder 4 prestations phares",
+      "diagnosis": "Chaque ligne de la carte demande du stock, du temps de formation et une place dans l'agenda. Chez {nom}, quelques prestations font déjà l'essentiel du chiffre. Classe-les par chiffre à l'heure avant de continuer à tout proposer.",
+      "actions": [
+        "Cette semaine, sors du logiciel le chiffre et le temps passé de chaque prestation sur les 3 derniers mois. Divise le chiffre par les heures et classe les prestations.",
+        "Choisis 4 prestations phares maximum. Pendant 30 jours, mets seulement celles-ci en avant sur la vitrine, la réservation en ligne et les réponses au téléphone.",
+        "Le mois suivant, retire une prestation du bas. Appelle les clientes qui la prennent souvent et propose la prestation phare la plus proche avant de la supprimer."
+      ],
+      "money": { "pctOfCA": 0.05, "explain": "Ordre de grandeur affiché : chiffre annuel × 5 %. Confirme-le avec les heures libérées × l'écart de chiffre à l'heure entre la prestation retirée et la prestation phare." }
+    }
+  },
+  "proofs": ["Thalia Zammuto"]
+}

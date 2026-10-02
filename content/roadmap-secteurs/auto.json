@@ -1,0 +1,94 @@
+{
+  "id": "auto",
+  "nounDefault": "ton garage",
+  "nomLabel": "Comment s'appelle ton garage ?",
+  "nomPlaceholder": "Ex. Garage du Centre",
+  "specialite": {
+    "label": "Quelle est ton activité principale ?",
+    "options": [
+      { "id": "mecanique", "label": "Mécanique générale, entretien et réparation", "noun": "ton garage", "vend": "de l'entretien et de la réparation" },
+      { "id": "carrosserie", "label": "Carrosserie et peinture", "noun": "ta carrosserie", "vend": "de la carrosserie et de la peinture" },
+      { "id": "centre-auto", "label": "Pneus, freins, entretien rapide", "noun": "ton centre auto", "vend": "des pneus et de l'entretien rapide" },
+      { "id": "detailing", "label": "Nettoyage, detailing, préparation esthétique", "noun": "ton atelier", "vend": "du nettoyage et de la préparation esthétique de véhicules" },
+      { "id": "vo", "label": "Achat et revente de véhicules d'occasion", "noun": "ton garage", "vend": "des véhicules d'occasion" },
+      { "id": "deux-roues", "label": "Motos et scooters", "noun": "ton garage moto", "vend": "de l'entretien et de la réparation de deux-roues" },
+      { "id": "autre", "label": "Autre activité automobile", "noun": "ton garage", "vend": "des services automobiles" }
+    ]
+  },
+  "effectifLabel": "Combien de personnes travaillent à temps plein avec toi, sans te compter ?",
+  "frein": {
+    "label": "Aujourd'hui, qu'est-ce qui t'empêche le plus de faire plus de chiffre ?",
+    "options": [
+      { "id": "dependance", "label": "Je suis mécano, secrétaire et chauffeur : si je manque demain, l'atelier s'arrête" },
+      { "id": "marge-intervention", "label": "L'atelier est plein, mais je ne sais pas ce que chaque intervention me laisse" },
+      { "id": "prix", "label": "Je rends plein de petits services gratuits et mes tarifs n'ont pas bougé" },
+      { "id": "devis", "label": "Les clients repartent avec un devis et personne ne les rappelle" },
+      { "id": "recurrent", "label": "Les clients viennent seulement à la panne, donc je ne prévois rien" }
+    ]
+  },
+  "kpi": {
+    "label": "Sur 10 devis que tu fais, combien sont acceptés ?",
+    "help": "Compte les devis du mois dernier, écrits ou annoncés à l'oral.",
+    "options": [
+      { "id": "moins-4", "label": "Moins de 4", "level": "bas", "read": "Dans {noun}, plus de 6 devis sur 10 restent sans réparation. Vendredi, mets les devis en attente sur une feuille et rappelle d'abord les 10 montants les plus élevés." },
+      { "id": "4-6", "label": "Entre 4 et 6", "level": "bon", "read": "Tu signes entre 4 et 6 devis sur 10. Garde 30 minutes le vendredi pour les autres, puis regarde l'encaissé par heure sur les interventions qui remplissent l'atelier." },
+      { "id": "7-plus", "label": "7 ou plus", "level": "moyen", "read": "7 clients sur 10 disent oui. Ajoute 5 % sur une seule famille d'interventions pendant 30 jours, puis compare devis faits et acceptés avec le mois précédent." },
+      { "id": "oral", "label": "Je n'en fais pas vraiment, j'annonce le prix à l'oral", "level": "bas", "read": "À l'oral, tu ne peux ni relancer ni vérifier ce que le client a accepté. Dès demain, toute réparation qui n'est pas faite tout de suite reçoit un devis écrit de {nom}." },
+      { "id": "ne-sais-pas", "label": "Je ne sais pas", "level": "inconnu", "read": "Vendredi, prends 10 minutes : compte les devis faits et acceptés ce mois-ci. Une feuille suffit. Sans ce chiffre, tu ne sais pas combien de diagnostics finissent sans réparation." }
+    ]
+  },
+  "levers": {
+    "dependance": {
+      "title": "Ton chantier n°1 : une journée d'atelier sans toi",
+      "diagnosis": "Tu répares, tu décroches, tu chiffres et tu ramènes les voitures. Ton ouvrier attend ton accord pour les petits travaux, les pièces et l'ordre des véhicules, donc {nom} ralentit dès que tu sors. Il lui faut une liste courte de décisions qu'il prend seul.",
+      "actions": [
+        "Cette semaine, écris sur une page ce que ton ouvrier décide seul : travaux jusqu'à un montant fixé, ordre des véhicules et liste des pièces courantes qu'il peut commander.",
+        "Nomme la personne qui décroche pendant les heures d'ouverture. Si personne n'est disponible, le répondeur annonce deux heures de rappel et tu traites les appels à midi puis avant de fermer. Note les 10 questions qui reviennent et leur réponse.",
+        "Avant la fin du mois, teste une matinée hors de l'atelier. N'autorise qu'un seul appel pour les vraies urgences. Le soir, transforme les questions reçues en règles sur la page, puis teste une journée entière."
+      ],
+      "money": null,
+      "proof": "Rémi & Florian"
+    },
+    "marge-intervention": {
+      "title": "Ton chantier n°1 : compter l'encaissé par heure de pont",
+      "diagnosis": "Mécanique, pneus, clim et carrosserie prennent les mêmes créneaux, mais ne laissent pas la même chose. Tant que {nom} ne compte pas l'encaissé par heure et par type d'intervention, l'atelier peut être plein avec les mauvais travaux.",
+      "actions": [
+        "Cette semaine, prends les 30 dernières factures. Pour chacune, note famille d'intervention, heures réellement passées, coût des pièces et montant encaissé.",
+        "Pour chaque famille, enlève le coût des pièces du montant encaissé, puis divise par les heures passées. Entoure les 2 meilleures et la dernière.",
+        "Garde les créneaux de pont les plus demandés pour les 2 meilleures familles. Sur la dernière, ajoute 5 % aux nouveaux devis pendant 30 jours et compte les accords."
+      ],
+      "money": { "pctOfCA": 0.06, "explain": "Ordre de grandeur affiché : chiffre annuel × 6 %. Confirme-le avec les heures de pont disponibles et l'écart d'encaissé par heure entre tes interventions." }
+    },
+    "prix": {
+      "title": "Ton chantier n°1 : facturer les petits services",
+      "diagnosis": "Contrôle de niveau, diagnostic rapide, ampoule changée, véhicule rendu au client : chez {nom}, ces minutes s'additionnent sans ligne sur la facture. En face, les pièces et les salaires ont augmenté. Compte d'abord les services offerts, puis mets un prix dessus.",
+      "actions": [
+        "Pendant 5 jours, note chaque service fait gratuitement, le salarié concerné et les minutes prises.",
+        "Vendredi, garde les 3 qui reviennent le plus. Mets une ligne et un prix clair sur le devis, par exemple diagnostic, enlèvement-livraison ou petite intervention. Annonce le prix avant de faire le travail.",
+        "Teste le nouveau tarif sur les nouveaux clients pendant 30 jours. Compte les devis acceptés et les services enfin facturés avant de l'appliquer aux clients habituels."
+      ],
+      "money": { "pctOfCA": 0.05, "explain": "Ordre de grandeur affiché : chiffre annuel × 5 %. Remplace-le par ton vrai calcul : nombre mensuel de services offerts × prix décidé." }
+    },
+    "devis": {
+      "title": "Ton chantier n°1 : rappeler chaque devis en attente",
+      "diagnosis": "Chaque devis sans réponse, c'est un diagnostic déjà fait et aucun créneau réservé. Le client compare, attend ou oublie. Chez {nom}, une personne doit porter la relance jusqu'au oui ou au non.",
+      "actions": [
+        "Vendredi, mets les devis sans réponse sur une feuille : nom, téléphone, véhicule, montant et date. Commence par les 10 montants les plus élevés.",
+        "Rappelle à J+2 puis J+7 : « Je reviens sur le devis de votre voiture. Je peux la prendre jeudi, vous voulez que je bloque le créneau ou que je ferme le dossier ? »",
+        "Quand le client accepte une grosse réparation, bloque le créneau au comptoir et demande l'acompte prévu dans tes conditions de vente. Note payé ou non sur la même feuille."
+      ],
+      "money": { "pctOfCA": 0.08, "explain": "Ordre de grandeur affiché : chiffre annuel × 8 %. Vérifie-le avec le montant réel des devis rappelés puis acceptés." }
+    },
+    "recurrent": {
+      "title": "Ton chantier n°1 : des entretiens prévus avant la panne",
+      "diagnosis": "Tes clients reviennent quand un voyant s'allume ou qu'une pièce casse. Ton planning dépend donc des pannes. Avec des dates d'entretien posées et quelques flottes locales, {nom} connaît une partie du travail avant le début du mois.",
+      "actions": [
+        "Cette semaine, liste 10 entreprises à moins de 15 minutes qui ont plusieurs véhicules : artisans, livreurs, taxis ou sociétés de services. Commence par celles dont tu entretiens déjà un véhicule.",
+        "Prépare une page flotte avec ce que tu peux vraiment tenir : type d'entretien, délai de prise en charge, prix ou mode de calcul, contact unique et facture regroupée. Appelle les 3 contacts les plus chauds.",
+        "À la restitution d'un véhicule particulier, dis : « La prochaine révision tombe vers [mois]. Je te mets un rappel deux semaines avant ? » Note le mois et le numéro dans ton agenda."
+      ],
+      "money": { "pctOfCA": 0.07, "explain": "Ordre de grandeur affiché : chiffre annuel × 7 %. Confirme-le avec le montant annuel des flottes signées et des entretiens revenus grâce au rappel." }
+    }
+  },
+  "proofs": ["Rémi & Florian"]
+}

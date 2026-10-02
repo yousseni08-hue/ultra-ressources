@@ -1,0 +1,95 @@
+{
+  "id": "nettoyage",
+  "nounDefault": "ton entreprise de nettoyage",
+  "nomLabel": "Comment s'appelle ton entreprise ?",
+  "nomPlaceholder": "Ex. Clair Net Services",
+  "specialite": {
+    "label": "Quelle est ton activité principale ?",
+    "options": [
+      { "id": "bureaux", "label": "Bureaux, commerces et locaux professionnels", "noun": "ton entreprise de nettoyage", "vend": "l'entretien de bureaux et de locaux professionnels" },
+      { "id": "copro", "label": "Copropriétés et parties communes", "noun": "ton entreprise de nettoyage", "vend": "l'entretien des parties communes" },
+      { "id": "vitrerie", "label": "Vitrerie, façades, panneaux solaires", "noun": "ton entreprise de vitrerie", "vend": "le nettoyage de vitres et de surfaces difficiles" },
+      { "id": "chantier", "label": "Fin de chantier et remise en état", "noun": "ton entreprise de nettoyage", "vend": "le nettoyage de fin de chantier et la remise en état" },
+      { "id": "domicile", "label": "Ménage chez les particuliers", "noun": "ton entreprise de services à domicile", "vend": "du ménage et de l'entretien chez les particuliers" },
+      { "id": "hotellerie", "label": "Hôtels, santé, sites sensibles", "noun": "ton entreprise de nettoyage", "vend": "l'entretien d'hôtels et d'établissements exigeants" },
+      { "id": "autre", "label": "Autre activité de nettoyage ou d'entretien", "noun": "ton entreprise de nettoyage", "vend": "des prestations de nettoyage" }
+    ]
+  },
+  "effectifLabel": "Combien de personnes travaillent pour toi, en équivalent temps plein, sans te compter ?",
+  "frein": {
+    "label": "Aujourd'hui, qu'est-ce qui t'empêche le plus de faire plus de chiffre ?",
+    "options": [
+      { "id": "dependance", "label": "Je gère les plannings, les remplacements, les devis et parfois le ménage moi-même" },
+      { "id": "contrats", "label": "Je connais le chiffre total, mais pas les contrats qui me font perdre de l'argent" },
+      { "id": "gros-client", "label": "Un ou deux gros clients font une grosse part de mon chiffre : s'ils partent, je tremble" },
+      { "id": "prix", "label": "Mes prix à l'heure sont trop bas et je n'ose pas les revoir" },
+      { "id": "recrutement", "label": "Je manque d'agents fiables, alors je refuse des contrats ou je perds en qualité" }
+    ]
+  },
+  "kpi": {
+    "label": "Quelle part de ton chiffre vient de contrats récurrents (chaque semaine ou chaque mois) ?",
+    "help": "Les contrats d'entretien réguliers, par opposition aux prestations ponctuelles.",
+    "options": [
+      { "id": "moins-30", "label": "Moins de 30 %", "level": "bas", "read": "Moins de 30 % du chiffre de {nom} est déjà prévu le mois prochain. Vendredi, prends les clients ponctuels des 3 derniers mois et appelle d'abord les 10 qui pourraient avoir besoin d'un passage régulier." },
+      { "id": "30-60", "label": "Entre 30 et 60 %", "level": "moyen", "read": "Une bonne partie du mois est prévue, mais le planning reste instable. Propose un passage régulier aux clients ponctuels satisfaits avant de démarcher plus loin." },
+      { "id": "60-plus", "label": "Plus de 60 %, répartis sur beaucoup de clients", "level": "bon", "read": "Plus de 60 % du chiffre est récurrent et réparti. Tu peux prévoir le planning et les recrutements avec ce qui rentre déjà le mois prochain." },
+      { "id": "60-plus-concentre", "label": "Plus de 60 %, mais surtout sur un ou deux clients", "level": "moyen", "read": "Ton chiffre est régulier, mais il tient à peu de signatures. Vendredi, calcule le pourcentage exact du premier client et le nombre de salaires que son départ mettrait en danger chez {noun}." },
+      { "id": "ne-sais-pas", "label": "Je ne sais pas", "level": "inconnu", "read": "Sors les factures des 3 derniers mois et fais deux piles : contrats réguliers et prestations ponctuelles. Additionne chaque pile. Une heure suffit, sans tableau compliqué." }
+    ]
+  },
+  "levers": {
+    "dependance": {
+      "title": "Ton chantier n°1 : donner les plannings à un chef d'équipe",
+      "diagnosis": "Les plannings, les absences, les remplacements et les clients qui appellent passent par toi. Tant que {nom} repose sur ton téléphone, tu ne peux pas garder un créneau pour vendre ou recruter, et tu retournes sur le terrain dès qu'un agent manque.",
+      "actions": [
+        "Choisis l'agent le plus fiable et teste-le pendant 30 jours sur un seul secteur. Écris ses 3 responsabilités : planning, remplacement, contrôle qualité. Avant de commencer, valide ses heures et sa rémunération avec la paie.",
+        "Sur les 3 sites qui posent le plus de problèmes, écris une check-list de fin de prestation de 10 cases maximum. L'agent la coche et le chef d'équipe contrôle une fois par semaine.",
+        "Fixe deux appels de 15 minutes, lundi et vendredi. Entre les deux, le chef t'appelle seulement pour une absence sans remplaçant, un incident de sécurité ou un client qui veut arrêter. Fais un contrôle surprise par semaine."
+      ],
+      "money": null,
+      "proof": "Rémi & Florian"
+    },
+    "contrats": {
+      "title": "Ton chantier n°1 : calculer la marge de tes 10 plus gros contrats",
+      "diagnosis": "Tu pilotes au chiffre total, mais tous tes contrats ne se valent pas. Entre les heures réelles, les salaires chargés, les produits et les trajets, certains clients de {nom} te coûtent plus qu'ils ne rapportent. Tant que tu ne le vois pas, tu continues à les servir.",
+      "actions": [
+        "Cette semaine, prends tes 10 plus gros contrats. Pour chacun, additionne heures réelles × coût chargé d'un agent, produits et trajets, puis enlève ce total du montant facturé.",
+        "Classe-les par euros gardés. Entoure les contrats à perte et vérifie pendant une semaine les heures réellement pointées avant d'appeler le client.",
+        "Ce mois-ci, propose par écrit deux choix aux contrats à perte : nouveau prix ou nombre d'heures revu. Avant d'arrêter un contrat, vérifie le préavis, les salariés affectés et le remplacement possible du chiffre."
+      ],
+      "money": { "pctOfCA": 0.05, "explain": "Ordre de grandeur affiché : chiffre annuel × 5 %. Remplace-le par le total réel des pertes sur les 10 contrats calculés." }
+    },
+    "gros-client": {
+      "title": "Ton chantier n°1 : baisser le poids de ton plus gros client",
+      "diagnosis": "Quand un client pèse une grosse part de ton chiffre, c'est lui qui fixe les règles : les prix, les délais, les exigences. S'il part, {nom} perd d'un coup une partie de ses salaires. Il faut construire une base de contrats récurrents à côté, avant d'en avoir besoin.",
+      "actions": [
+        "Cette semaine, prends le CA des 12 derniers mois. Divise le CA de chacun de tes 3 plus gros clients par ce total et écris le pourcentage sur une feuille.",
+        "Choisis la zone où tes agents travaillent déjà. Vendredi, appelle 5 syndics, agences ou entreprises de cette zone avec cette phrase : « Nos équipes passent déjà près de chez vous. Qui s'occupe de l'entretien de vos locaux aujourd'hui ? »",
+        "À la fin d'une prestation ponctuelle réussie, propose un passage régulier avec fréquence, nombre d'heures, tâches incluses et prix écrit. Commence par les 10 derniers clients satisfaits."
+      ],
+      "money": { "pctOfCA": 0.08, "explain": "Ordre de grandeur affiché : chiffre annuel × 8 %. Confirme-le avec la valeur annuelle des contrats réellement signés et recalcule ensuite le poids du plus gros client." }
+    },
+    "prix": {
+      "title": "Ton chantier n°1 : recalculer le vrai coût d'une heure d'agent",
+      "diagnosis": "Les salaires, les charges et les produits ont augmenté, tes prix non. Tu as peur de perdre le client, alors tu absorbes la différence. Résultat : {nom} travaille autant, voire plus, pour garder moins chaque mois.",
+      "actions": [
+        "Demande à la paie le coût chargé d'une heure d'agent. Ajoute, sur le mois, produits, matériel, trajets et temps de planning, puis divise par les heures facturables. Tu obtiens ton coût minimum par heure vendue.",
+        "Fais une page avec un prix par service : bureaux, vitres, fin de chantier et surfaces difficiles. Sous chaque prix, écris ce qui est inclus et ce qui est facturé en plus.",
+        "Applique la grille aux nouveaux devis dès lundi. Pour les clients actuels, vérifie d'abord le contrat et le préavis, puis annonce la révision par écrit avant le renouvellement."
+      ],
+      "money": { "pctOfCA": 0.06, "explain": "Ordre de grandeur affiché : chiffre annuel × 6 %. Confirme-le contrat par contrat avec ancien prix, nouveau prix, heures et date de renouvellement." }
+    },
+    "recrutement": {
+      "title": "Ton chantier n°1 : garder un vivier d'agents toute l'année",
+      "diagnosis": "Chaque contrat que tu refuses faute de bras, c'est du chiffre laissé à un concurrent. Et chaque recrutement fait dans l'urgence se paie en absences, en départs et en clients mécontents. {Noun} a besoin d'un recrutement qui tourne en permanence, pas d'une annonce quand quelqu'un s'en va.",
+      "actions": [
+        "Cette semaine, publie la même annonce sur 2 canaux. Indique zone, horaires réels, moyen de transport nécessaire et salaire. Garde les candidats rappelables avec leur zone et leurs disponibilités.",
+        "Demande à la paie de chiffrer une prime de cooptation, charges comprises. Annonce-la ensuite à l'équipe et verse-la seulement selon les conditions écrites avec la paie.",
+        "Prépare la première journée sur une page : règles, site, matériel, check-list et binôme. La première semaine, le chef d'équipe contrôle la fin de chaque service et note un seul point à corriger."
+      ],
+      "money": { "pctOfCA": 0.1, "explain": "Ordre de grandeur affiché : chiffre annuel × 10 %. Vérifie-le avec le montant des contrats réellement refusés faute d'agents et le coût des recrutements nécessaires." },
+      "proof": "Reda"
+    }
+  },
+  "proofs": ["Reda", "Rémi & Florian"]
+}
