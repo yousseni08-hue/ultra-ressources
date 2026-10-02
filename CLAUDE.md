@@ -17,6 +17,18 @@ Tu es le Claude de Mason. Ce repo est **prêt à déployer** : pages d'opt-in, r
 | `POST /api/optin` | Valide, notifie (Slack / Sheet / Close / webhook / ta base), renvoie la redirection |
 | `POST /api/objectif` | Objectif à 4 mois → Slack |
 
+## Checklist de lancement (rien ne part en story tant que tout n'est pas coché)
+1. **Déploiement** : Vercel + sous-domaine (`ressources.<domaine-ultra>`), `npm run check && npm run build` OK. Section ci-dessous.
+2. **Variables** : `SLACK_WEBHOOK_URL`, `LEAD_TOKEN_SECRET`, `NEXT_PUBLIC_ICLOSED_URL` (**avant** le build, sinon les boutons « Réserve un appel diagnostic avec l'équipe Ultra » ne mènent nulle part). Vérifier qu'aucune valeur ne finit par un retour à la ligne.
+3. **Slack** : canal `#leads-magnets`, setters dedans avec notifs mobiles. Un setter rappelle en moins de 5 minutes, pendant que le prospect lit.
+4. **Base / CRM** : brancher `saveToDatabase()` ou `LEAD_FORWARD_WEBHOOK_URL`. Dédoublonner sur le téléphone avec le diagnostic du site (`docs/POUR-MASON.md`).
+5. **CloseMate** (`docs/CLOSEMATE.md`) : 4 mots-clés `PLAN`, `BTP`, `PANIER`, `SOIN` en correspondance exacte (mot seul), lever le blocage « agent IA actif » pour ces mots, tag `LM-{MOTCLE}`, une activation par contact. Vérifier qu'aucune automation ManyChat n'écoute les mêmes mots.
+6. **Site ultra-consulting.eu** : double diagnostic à régler (`docs/POUR-MASON.md`).
+7. **Pixel Meta** (recommandé) : `NEXT_PUBLIC_META_PIXEL_ID`.
+8. **Suivi par mot-clé** : chaque lead porte `kw` et `utm_*`. Il faut pouvoir lire, par mot-clé : numéros laissés → appels réservés → ventes. Sans ça, impossible de savoir quelle ressource pousser en story.
+9. **Test final en prod** : un opt-in par ressource avec un numéro de l'équipe (le formulaire accepte tous les indicatifs du monde, tapés ou choisis via le drapeau) → notif Slack en moins de 2 s → bouton iClosed qui ouvre le bon calendrier.
+10. Prévenir Yakine et Sarah (stories) quand c'est en ligne, avec les 4 liens finaux.
+
 ## Déploiement (Vercel, ~15 min)
 1. `npm install && npm run check && npm run build` doivent passer.
 2. Créer le projet Vercel depuis ce repo (framework Next.js, aucun réglage spécial).
@@ -36,8 +48,8 @@ Un lien par ressource, avec UTM, pour mesurer proprement (le lien faux de la mas
 ```
 https://<sous-domaine>/plan?utm_medium=dm&utm_campaign=plan&kw=PLAN
 https://<sous-domaine>/btp?utm_medium=dm&utm_campaign=btp&kw=BTP
-https://<sous-domaine>/resto?utm_medium=dm&utm_campaign=resto&kw=RESTO
-https://<sous-domaine>/salon?utm_medium=dm&utm_campaign=salon&kw=SALON
+https://<sous-domaine>/resto?utm_medium=dm&utm_campaign=resto&kw=PANIER
+https://<sous-domaine>/salon?utm_medium=dm&utm_campaign=salon&kw=SOIN
 ```
 `utm_medium` = `story` / `reel` / `bio` / `dm` selon d'où vient le clic. Deux réglages CloseMate sont bloquants, voir `docs/CLOSEMATE.md`. Points côté site (double diagnostic, iClosed) : `docs/POUR-MASON.md`.
 

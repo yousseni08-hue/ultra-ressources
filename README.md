@@ -15,8 +15,8 @@ Ouvre les fichiers du dossier `apercu/` dans ton navigateur :
 |---|---|---|
 | `PLAN` | Le plan pour augmenter ton profit et sortir de l'opérationnel dans les 12 prochains mois | `/plan` |
 | `BTP` | Comment augmenter ton chiffre d'affaires de 30 % quand tu es artisan du BTP (+ tableau de relance Google Sheets offert) | `/btp` |
-| `RESTO` | La méthode pour augmenter ton panier moyen de 30 % et doubler ton chiffre d'affaires | `/resto` |
-| `SALON` | La ressource beauté : coiffure, barbier, institut, ongles, cils, spa (5 règles chiffrées de Marvin + calculateur) | `/salon` |
+| `PANIER` | La méthode pour augmenter ton panier moyen de 30 % et doubler ton chiffre d'affaires | `/resto` |
+| `SOIN` | La ressource beauté : coiffure, barbier, institut, ongles, cils, spa (5 règles chiffrées de Marvin + calculateur) | `/salon` |
 
 Tableau de relance BTP (modèle à copier) : https://docs.google.com/spreadsheets/d/11m97yTKMUbL8kAwbBYpjpCR6xXu9kl0svXvshS9Dwac/copy
 

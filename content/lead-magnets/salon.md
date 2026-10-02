@@ -1,6 +1,6 @@
 ---
 slug: salon
-keyword: SALON
+keyword: SOIN
 niche: Beauté
 title: "La méthode pour faire 30 % de chiffre d'affaires en plus avec les clientes que ton salon a déjà"
 promise: "En 10 minutes, tu sais si ton salon passe les 5 règles chiffrées de Marvin, lequel de tes chiffres bloque, et quoi changer dès lundi à la caisse, en cabine et dans ton agenda."

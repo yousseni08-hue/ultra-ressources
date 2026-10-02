@@ -1,6 +1,6 @@
 ---
 slug: resto
-keyword: RESTO
+keyword: PANIER
 niche: Restauration
 title: "La méthode pour augmenter ton panier moyen de 30 % et doubler ton chiffre d'affaires"
 promise: "Même salle, mêmes clients : repère les plats qui font ton résultat, forme ta salle pour bien les recommander et sers plus de couverts au coup de feu."
